@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+
+<html lang="en" class=" js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+        <title>数字化精益</title>
+        <meta content="Admin Dashboard" name="description">
+        <meta content="Themesbrand" name="author">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <!-- App Icons -->
+        <link rel="shortcut icon" href="./M2共享平台/images/纯化共享平台.ico">
+        <!--Morris Chart CSS -->
+        <link rel="stylesheet" href="./resource/morris.css">
+        <!-- Basic Css files -->
+        <link href="https://at.alicdn.com/t/font_2819188_cyeh0gm785p.css" rel="stylesheet" type="text/css">
+        <link href="./resource/iconfont/iconfont.css" rel="stylesheet" type="text/css">
+        <link href="./resource/bootstrap.min.css" rel="stylesheet" type="text/css">
+        <link href="./resource/metismenu.min.css" rel="stylesheet" type="text/css">
+        <link href="./resource/style.css" rel="stylesheet" type="text/css">
+    </head>
+    <body class="fixed-left" style="overflow: visible;">
+        <!-- Loader -->
+        <div id="preloader" style="display: none;">
+            <div id="status" style="display: none;">
+                <div class="spinner"></div>
+            </div>
+        </div>
+        <!-- Begin page -->
+        <div id="wrapper">
+            <!-- Top Bar Start -->
+            <div class="topbar">
+                <!-- LOGO -->
+                <div class="topbar-left">
+                    <a href="" class="logo">
+                        <img src="./resource/logo.png" alt="" height="20" class="logo-large">
+                        <img src="./resource/logo-sm.png" alt="" height="22" class="logo-sm">
+                    </a>
+                </div>
+				
+                <nav class="navbar-custom">
+				
+                    <!-- Search input -->
+                    <div class="search-wrap" id="search-wrap">
+                        <div class="search-bar">
+                            <input id="search-input" class="search-input" type="search" placeholder="Search">
+								<div id="datarea">
+									<p>共<span id="total-num"></span>条搜索结果</p>
+									<div id="showarea">
+										<ol id="data" type="1"></ol>
+									</div>
+								</div>
+							
+                            <a href="#" class="close-search toggle-search" data-target="#search-wrap">
+                                <i class="iconfont icon-icon-test42"></i>
+                            </a>
+                        </div>
+                    </div>
+					
+                    <ul class="navbar-right d-flex list-inline float-right mb-0">
+                        <li class="list-inline-item dropdown notification-list">
+                            <a id="search" class="nav-link waves-effect toggle-search" data-target="#search-wrap">
+                                <i class="iconfont icon-icon-test12"></i>
+                            </a>
+                        </li>
+                    </ul>
+					
+                    <ul class="list-inline menu-left mb-0">
+                        <li class="float-left">
+                            <button class="button-menu-mobile open-left waves-effect">
+                                <i class="iconfont icon-shousuohou"></i>
+                            </button>
+                        </li>
+                    </ul>
+					
+                </nav>
+            </div>
+            <!-- Top Bar End -->
+
+            <!-- ========== Left Sidebar Start ========== -->
+            <div class="left side-menu">
+                <div class="slimScrollDiv active" style="position: relative; overflow: hidden; width: auto;right: 1px">
+                    <div class="slimscroll-menu in" id="remove-scroll" style="overflow-X: hidden; width: auto; ">
+                        <!--- Sidemenu -->
+                        <div id="sidebar-menu" class="active">
+                            <!-- Left Menu Start -->
+                            <ul class="metismenu in" id="side-menu">
+                                <li class="menu-title">Main</li>
+                                <li class="active">
+                                    <a href=".\M2共享平台\M2共享平台.html" class="waves-effect active" aria-expanded="false">
+                                        <i class="iconfont icon-dashboard4"></i>
+                                        <span title="主页">主页 </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);" class="waves-effect" aria-expanded="false">
+                                        <i class="iconfont icon-plan"></i>
+                                        <span title="工作计划">工作计划 
+                                            
+                                            
+                                            
+                                            <span class="float-right menu-arrow">
+                                                <i class="iconfont icon-changyong_gengduo"></i>
+                                            </span>
+                                        </span>
+                                    </a>
+                                    <ul class="submenu collapse" aria-expanded="false">
+                                        <li>
+                                            <a href="javascript:void(0);" onclick="window.open('https://app.smartsheet.com/sheets/QFM2jWr5gHxggF3fXf8RpHC82547R2M6cqr4wgf1?view=gantt')">MES二期主计划</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);" onclick="window.open('http://shareedit/my/personal/tom_qian/Documents/%E6%95%B0%E5%AD%97%E5%8C%96%E7%B2%BE%E7%9B%8A%E9%83%A8%E9%97%A8%E5%B7%A5%E4%BD%9C%E8%A1%A8/2023%E4%B8%8A-%E6%95%B0%E5%AD%97%E5%8C%96%E7%B2%BE%E7%9B%8A%E9%83%A8%E9%97%A8%E5%B7%A5%E4%BD%9C%E8%A1%A8.xlsx?d=w01ce20683a39442bbb3151ac273fc2d3')">工作内容</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);" onclick="window.open('http://10.1.199.3:8081/aps/')">生产计划</a>
+                                        </li>
+
+
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);" class="waves-effect" aria-expanded="false">
+                                        <i class="iconfont icon-a-back_icon_52x"></i>
+                                        <span title="职责分工">职责分工</span>
+                                    </a>
+                                </li>
+								
+								
+                                <li class="menu-title">Lean</li>
+                                <li>
+                                    <a href="javascript:void(0);" class="waves-effect" aria-expanded="false">
+                                        <i class="iconfont icon-a-changyong_wenjianfuben"></i>
+                                        <span title="基础培训">
+                                            基础培训
+                                            
+                                            
+                                            
+                                            <span class="float-right menu-arrow">
+                                                <i class="iconfont icon-changyong_gengduo"></i>
+                                            </span>
+                                        </span>
+                                    </a>
+                                    <ul class="submenu collapse" aria-expanded="false">
+                                        <li>
+                                            <a href="#">精益学习</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">培训视频</a>
+                                        </li>
+                                       
+                                    </ul>
+                                </li> 
+								
+								
+                                <li class="menu-title">MES</li>
+                                <li>
+                                    <a href="javascript:void(0);" class="waves-effect" aria-expanded="false">
+                                        <i class="iconfont icon-a-changyong_wenjianfuben"></i>
+                                        <span title="基础培训">
+                                            基础培训
+                                            
+                                            
+                                            
+                                            <span class="float-right menu-arrow">
+                                                <i class="iconfont icon-changyong_gengduo"></i>
+                                            </span>
+                                        </span>
+                                    </a>
+                                    <ul class="submenu collapse" aria-expanded="false">
+                                        <li>
+                                            <a href=".\MES\基础培训\信达生物M2 MES项目一期培训材料_v1.2_20210908（附件2）.pdf">PharmaSuite概览</a>
+                                        </li>
+                                        <li>
+                                            <a href=".\MES\基础培训\培训视频\培训视频.html">培训视频</a>
+                                        </li>
+                                       
+                                    </ul>
+                                </li> 
+                                <li>
+                                    <a href="javascript:void(0);" class="waves-effect" aria-expanded="false">
+                                        <i class="iconfont icon-icon-test50"></i>
+                                        <span title="帮助文档">
+                                            帮助文档 
+                                            
+                                            
+                                            
+                                            <span class="float-right menu-arrow">
+                                                <i class="iconfont icon-changyong_gengduo"></i>
+                                            </span>
+                                        </span>
+                                    </a>
+                                    <ul class="submenu collapse" aria-expanded="false">
+                                        <li>
+                                            <a href="http://szit003dpxy01.mfg.local:8081/PlantOpsDownloads/docs/help/shopops/shopops.htm">Basic Operation</a>
+                                        </li>
+                                        <li>
+                                            <a href="http://szit003dpxy01.mfg.local:8080/PharmaSuite/documentationandhelp/pec/index.htm#9219.htm">Production Execution</a>
+                                        </li>
+                                        <li>
+                                            <a href="http://szit003dpxy01.mfg.local:8080/PharmaSuite/documentationandhelp/rwd/#8943.htm">Recipe Designer</a>
+                                        </li>
+                                        <li>
+                                            <a href="http://szit003dpxy01.mfg.local:8081/PlantOpsDownloads/docs/help/pd/index.htm">Process Designer</a>
+                                        </li>
+                                       
+                                    </ul>
+                                </li> 
+								<li>
+                                    <a href="javascript:void(0);" class="waves-effect" aria-expanded="false">
+                                        <i class="iconfont icon-a-back_icon_92x"></i>
+                                        <span title="技术文档">
+                                            技术文档 
+                                            
+                                            
+                                            
+                                            <span class="float-right menu-arrow">
+                                                <i class="iconfont icon-changyong_gengduo"></i>
+                                            </span>
+                                        </span>
+                                    </a>
+                                    <ul class="submenu collapse" aria-expanded="false">
+										<li>
+                                            <a href="javascript:void(0);" onclick="window.open('http://shareedit/DocLib/%E7%94%9F%E4%BA%A7%E9%83%A8/M1a%E4%B8%8B%E6%B8%B8%E7%BA%AF%E5%8C%96/%E7%BA%AF%E5%8C%96%E5%85%B1%E4%BA%AB%E5%B9%B3%E5%8F%B0/M2-MES/phase%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0?d=wcc9535a566f44c99b60e3fc54e9966b9')">phase学习笔记</a>
+                                        </li>
+										<li>
+                                            <a href="./MES/技术文档/Data Manager.pdf">Data Manager</a>
+                                        </li>
+										<li>
+                                            <a href="./MES/技术文档/DCS Phases.pdf">DCS Phases</a>
+                                        </li>
+										<li>
+                                            <a href="./MES/技术文档/Dispense and Weighing Phases.pdf">Dispense and Weighing</a>
+                                        </li>
+										<li>
+                                            <a href="./MES/技术文档/EBR Phases.pdf">EBR Phases</a>
+                                        </li>
+										<li>
+                                            <a href="./MES/技术文档/Equipment Phases.pdf">Equipment Phases</a>
+                                        </li>
+										<li>
+                                            <a href="./MES/技术文档/IPC Phases.pdf">IPC Phases</a>
+                                        </li>
+										<li>
+                                            <a href="./MES/技术文档/Material Tracking Phases.pdf">Material Tracking Phases</a>
+                                        </li>
+										<li>
+                                            <a href="./MES/技术文档/Production Execution Viewer.pdf">Production Execution Viewer</a>
+                                        </li>
+										<li>
+                                            <a href="./MES/技术文档/Production Execution.pdf">Production Execution</a>
+                                        </li>
+										<li>
+                                            <a href="./MES/技术文档/Production Management.pdf">Production Management</a>
+                                        </li>
+										<li>
+                                            <a href="./MES/技术文档/Production Responses.pdf">Production Responses</a>
+                                        </li>
+										<li>
+                                            <a href="./MES/技术文档/Recipe and Workflow-1.pdf">Recipe and Workflow-1</a>
+                                        </li>
+										<li>
+                                            <a href="./MES/技术文档/Recipe and Workflow-2.pdf">Recipe and Workflow-2</a>
+                                        </li>
+										<li>
+                                            <a href="./MES/技术文档/Recipe and Workflow-3.pdf">Recipe and Workflow-3</a>
+                                        </li>
+                                       
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);" class="waves-effect" aria-expanded="false">
+                                        <i class="iconfont icon-a-back_icon_162x"></i>
+                                        <span title="主数据">
+                                            主数据
+                                            
+                                            
+                                            
+                                            <span class="float-right menu-arrow">
+                                                <i class="iconfont icon-changyong_gengduo"></i>
+                                            </span>
+                                        </span>
+                                    </a>
+                                    <ul class="submenu collapse" aria-expanded="false">
+                                        <li>
+                                            <a href="javascript:void(0);" onclick="window.open('http://shareedit/_layouts/15/DocIdRedir.aspx?ID=4YJRYE6DF5UV-1972618624-23709')">区位主数据</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);" onclick="window.open('http://shareedit/_layouts/15/DocIdRedir.aspx?ID=4YJRYE6DF5UV-1972618624-23707')">物料主数据</a>
+                                        </li>                                        
+
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);" class="waves-effect" aria-expanded="false">
+                                        <i class="iconfont icon-a-back_icon_172x"></i>
+                                        <span title="相关信息">
+                                            相关信息
+                                            
+                                            
+                                            
+                                            <span class="float-right menu-arrow">
+                                                <i class="iconfont icon-changyong_gengduo"></i>
+                                            </span>
+                                        </span>
+                                    </a>
+                                    <ul class="submenu collapse" aria-expanded="false">
+									    <li>
+                                            <a href="javascript:void(0);" onclick="window.open('./MES/文件索引/IT MES/document.html')">IT MES</a>
+                                        </li>
+
+									    <li>
+                                            <a href="javascript:void(0);" onclick="window.open('http://10.1.198.28/redmine/projects/sz-m2-mes-ext/issues')">Redmine</a>
+                                        </li>
+
+                                        <li>
+                                            <a href="javascript:void(0);" onclick="window.open('http://shareedit/_layouts/15/DocIdRedir.aspx?ID=4YJRYE6DF5UV-1972618624-23749')">权限分配</a>
+                                        </li>
+										
+                                        <li>
+                                            <a href="javascript:void(0);" onclick="window.open('http://shareedit/_layouts/15/DocIdRedir.aspx?ID=4YJRYE6DF5UV-1972618624-23750')">UDA扩展字段</a>
+                                        </li>
+										
+                                        <li>
+                                            <a href="javascript:void(0);" onclick="window.open('http://shareedit/_layouts/15/DocIdRedir.aspx?ID=4YJRYE6DF5UV-1972618624-23757')">硬件清单</a>
+                                        </li>
+										
+										<li>
+                                            <a href="javascript:void(0);" onclick="window.open('http://shareedit/_layouts/15/DocIdRedir.aspx?ID=4YJRYE6DF5UV-1972618624-31168')">二期报表开发</a>
+                                        </li>
+                                     
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);" class="waves-effect" aria-expanded="false">
+                                        <i class="iconfont icon-process"></i>
+                                        <span title="业务流程">
+                                            业务流程<!--<span class="badge badge-pill badge-success float-right">8</span>
+											<span class="badge badge-pill badge-danger float-right">2</span>-->
+											<span class="float-right menu-arrow">
+                                                <i class="iconfont icon-changyong_gengduo"></i>
+                                            </span>
+
+                                        </span>
+                                    </a>
+                                    <ul class="submenu collapse" aria-expanded="false">
+                                        <li>
+                                            <a href="https://sjezkxsane.jiandaoyun.com/f/63bfa40c5258d9000aa40741">MES公共溶液处方申请</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://sjezkxsane.jiandaoyun.com/f/63c4e60678d22a00084f71ca">电子记录优化申请</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);" class="waves-effect" aria-expanded="false">
+                                        <i class="iconfont icon-a-back_icon_122x"></i>
+                                        <span title="接口信息">
+                                            接口信息<!--<span class="badge badge-pill badge-success float-right">8</span>
+											<span class="badge badge-pill badge-danger float-right">2</span>-->
+											
+                                            <span class="float-right menu-arrow">
+                                                <i class="iconfont icon-changyong_gengduo"></i>
+                                            </span>
+                                        </span>
+                                    </a>
+                                    <ul class="submenu collapse" aria-expanded="false">
+                                        <li>
+                                            <a href="javascript:void(0);" onclick="window.open('http://shareedit/_layouts/15/DocIdRedir.aspx?ID=4YJRYE6DF5UV-1972618624-23748')">接口规范文档</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);" onclick="window.open('http://shareedit/_layouts/15/DocIdRedir.aspx?ID=4YJRYE6DF5UV-1972618624-23725')">业务范围接口信息统计表</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                
+                                
+                                <li class="menu-title">Extras</li>
+								<li>
+                                    <a href="javascript:void(0);" class="waves-effect" aria-expanded="false">
+                                        <i class="iconfont icon-icon-yibiaopan"></i>
+                                        <span>
+                                            工具
+                                            
+                                            
+                                            
+                                            <span class="float-right menu-arrow">
+                                                <i class="iconfont icon-changyong_gengduo"></i>
+                                            </span>
+                                        </span>
+                                    </a>
+                                    <ul class="submenu collapse" aria-expanded="false">
+                                        <li>
+                                            <a href="https://web.baimiaoapp.com/">图片识别提取文字</a>
+                                        </li>
+                                        <li>
+                                            <a href=".\src\工具\qrcode.html">生成二维码</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);" onclick="window.open('https://translate.google.cn/')">google翻译</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://tableconvert.com/">表格转化</a>
+                                        </li>
+										<li>
+                                            <a href=".\src\工具\copy.html">copy</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- Sidebar -->
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="slimScrollBar" style="background: rgb(158, 165, 171); width: 5px; position: absolute; top: 0px; opacity: 0.4; display: none; border-radius: 7px; z-index: 99; right: 1px; height: 854.335px;"></div>
+                    <div class="slimScrollRail" style="width: 5px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; background: rgb(51, 51, 51); opacity: 0.2; z-index: 90; right: 1px;"></div>
+                </div>
+                <!-- Sidebar -left -->
+            </div>
+            <!-- Left Sidebar End -->
+            <!-- ============================================================== -->
+            <!-- Start right Content here -->
+            <!-- ============================================================== -->
+            <div class="content-page">
+                <!-- Start content -->
+                <iframe id="iframeMain" frameborder="0" src=".\M2共享平台\M2共享平台.html"></iframe>
+				
+            </div>
+            <!-- ============================================================== -->
+            <!-- End Right content here -->
+            <!-- ============================================================== -->
+        </div>
+        <!-- END wrapper -->
+        <!-- jQuery  -->
+        <script src="./resource/jquery.min.js"></script>
+        <script src="./resource/bootstrap.bundle.min.js"></script>
+        <script src="./resource/modernizr.min.js"></script>
+        <script src="./resource/metisMenu.min.js"></script>
+        <script src="./resource/jquery.slimscroll.js"></script>
+        <script src="./resource/waves.js"></script>
+        <script src="./resource/jquery.peity.min.js"></script>
+        <!--Morris Chart-->
+        <script src="./resource/morris.min.js"></script>
+        <script src="./resource/raphael-min.js"></script>
+        <script src="./resource/dashboard.js"></script>
+        <!-- App js -->
+        <script src="./resource/app.js"></script>
+		<script src="./resource/data.js"></script>
+    </body>
+</html>

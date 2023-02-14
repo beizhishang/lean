@@ -1,0 +1,1006 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Enterprise</title>
+  <meta charset="GBK">
+  <link rel="shortcut icon" href="http://edocapp/img/favicon.ico" type="image/x-icon">
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    $(function()
+    {
+      var items = $(".item");
+
+      items.on("click", function()
+      {
+        if ($(this).hasClass("active"))
+        {
+          $(this).toggleClass("active");
+          $(this).toggleClass("open");
+        }
+        else
+        {
+          $(this).siblings().removeClass("active");
+          $(this).siblings().removeClass("open");
+          $(this).toggleClass("active");
+          $(this).toggleClass("open");
+        }
+      });
+    });
+  </script>
+</head>
+
+<style>
+  body {
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+  }
+  
+  #home {
+    cursor: pointer;
+  }
+  
+  .sidebar {
+    position: fixed;
+    left: -400px;
+    width: 400px;
+    height: 100%;
+    background: #042331;
+    transition: all .5s ease;
+    overflow: hidden;
+  }
+  
+  #check {
+    display: none;
+  }
+  
+  label #btn,
+  label #cancel {
+    position: absolute;
+    cursor: pointer;
+    background: #042331;
+    border-radius: 6px;
+  }
+  
+  label #btn {
+    left: 40px;
+    top: 25px;
+    font-size: 35px;
+    color: white;
+    padding: 12px;
+    transition: all .5s;
+    position: fixed;
+  }
+  
+  label #cancel {
+    z-index: 1111;
+    left: -330px;
+    top: 17px;
+    font-size: 30px;
+    color: #0a5275;
+    padding: 6px;
+    background-color: gary;
+    transition: all .5s ease;
+    position: fixed;
+  }
+  
+  label #cancel:hover {
+    color: white;
+    background: none;
+  }
+  
+  #check:checked~.sidebar {
+    left: 0;
+  }
+  
+  #check:checked~label #btn {
+    left: 400px;
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  #check:checked~label #cancel {
+    left: 330px;
+  }
+  
+  section {
+    height: 100vh;
+    transition: all .5s ease;
+    overflow: hidden;
+  }
+  
+  #check:checked~section {
+    margin-left: 400px;
+  }
+  
+  .space {
+    width: 100%;
+    height: 30px;
+  }
+  
+  .accordion {
+    width: 416px;
+    margin: 30px auto;
+    border: 1px solid rgba(50, 50, 50, 0.25);
+  }
+  
+  .accordion .item {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    background-image: radial-gradient( circle farthest-corner at 1.3% 2.8%, rgba(239, 249, 249, 1) 0%, rgba(182, 199, 226, 1) 100.2%);
+  }
+  
+  .accordion .header {
+    padding: 15px 20px;
+    cursor: pointer;
+    background: #042331;
+    border-top: 1px solid rgba(255, 255, 255, .1);
+    border-bottom: 1px solid black;
+    color: white;
+    position: sticky;
+    top: 0;
+  }
+  
+  .accordion .header h3 {
+    margin: 0;
+  }
+  
+  h3 i {
+    margin-right: 20px;
+  }
+  
+  .accordion .content {
+    font-size: 15px;
+    line-height: 20px;
+    max-height: 0;
+    transition: all ease-in-out 0.2s;
+  }
+  
+  .accordion .item.open .content {
+    padding: 20px 0;
+    max-height: 60vh;
+  }
+  
+  .search,
+  .edit {
+    padding: 0 10px;
+    cursor: pointer;
+  }
+  
+  .file {
+    width: 250px;
+    padding: 8px 5px 8px 50px;
+    cursor: pointer;
+    text-indent: -17px;
+    margin-left: 25px;
+    font-size: 14px;
+  }
+  
+  .file:hover,
+  .search:hover,
+  .edit:hover {
+    background-image: linear-gradient( 177.9deg, rgba(58, 62, 88, 1) 3.6%, rgba(119, 127, 148, 1) 105.8%);
+    border-radius: 8px;
+    color: white;
+  }
+  
+  .file i {
+    margin-right: 15px;
+  }
+</style>
+
+<body>
+
+  <input type="checkbox" id="check">
+  <label for="check">
+        <i class="fa fa-list-alt" id="btn"></i>
+        <i class="fa fa-times-circle" id="cancel"></i>
+    </label>
+
+  <div class="sidebar">
+
+    <div class="accordion">
+      <div class="space"></div>
+      <div class="item">
+        <div class="header">
+          <h3><i class="fas fa-book"></i>标准管理规程（SMP）--- 原液生产</h3>
+        </div>
+        <div class="content">
+
+
+          <table border="0">
+
+            <tr>
+              <td class="file" title="SMP00023" onClick="parent.show.location.href='http://edocapp/otcs/llisapi.dll/fetch/2000/74269/80332/80343/80344/80345/80731/%E5%88%A9%E5%A6%A5%E6%98%94%E5%8D%95%E6%8A%97%E6%B3%A8%E5%B0%84%E6%B6%B2M1b_3000L%E7%BA%AF%E5%8C%96%E5%B7%A5%E8%89%BA%E8%A7%84%E7%A8%8B.PDF?nodeid=10316385&vernum=9'">
+                <i class="fas fa-file-powerpoint"></i>Bio-Welder_TC带液操作接管机使用、清洁与维护保养操作规程</td>
+              <td class="search" onClick="parent.show.location.href='http://edocapp/otcs/llisapi.dll?slice=3142&searchbarwidgetmode=fulltext&where1=SMP00029&ScopeSelection=3142%7C2000%7C%E5%9C%A8+Enterprise+%E5%86%85&lookfor1=allwords&modifier1=relatedto&boolean2=And&lookfor2=complexquery&typeDropDownId=1&boolean3=And&lookfor3=complexquery&dateDropDownId=1&func=search&objType=258&SearchBarSearch=TRUE&location_id1=2000&facets=user&fulltextMode=allwords'">
+                <i class="fas fa-search"></i></td>
+              <td class="edit" onClick="window.open('https://www.jb51.net')">
+                <i class="fas fa-user-edit"></i></td>
+            </tr>
+
+            <tr>
+              <td class="file" title="#" onClick="parent.show.location.href='#'">
+                <i class="fas fa-file-powerpoint"></i>清洁与维护保养操作规程</td>
+              <td class="search" onClick="parent.show.location.href='http://edocapp/otcs/llisapi.dll?slice=3142&searchbarwidgetmode=fulltext&where1=SMP00029&ScopeSelection=3142%7C2000%7C%E5%9C%A8+Enterprise+%E5%86%85&lookfor1=allwords&modifier1=relatedto&boolean2=And&lookfor2=complexquery&typeDropDownId=1&boolean3=And&lookfor3=complexquery&dateDropDownId=1&func=search&objType=258&SearchBarSearch=TRUE&location_id1=2000&facets=user&fulltextMode=allwords'">
+                <i class="fas fa-search"></i></td>
+              <td class="edit" onClick="window.open('#')">
+                <i class="fas fa-user-edit"></i></td>
+            </tr>
+
+            <tr>
+              <td class="file" title="#" onClick="parent.show.location.href='#'">
+                <i class="fas fa-file-powerpoint"></i>清洁与维护保养操作规程</td>
+              <td class="search" onClick="parent.show.location.href='http://edocapp/otcs/llisapi.dll?slice=3142&searchbarwidgetmode=fulltext&where1=SMP00029&ScopeSelection=3142%7C2000%7C%E5%9C%A8+Enterprise+%E5%86%85&lookfor1=allwords&modifier1=relatedto&boolean2=And&lookfor2=complexquery&typeDropDownId=1&boolean3=And&lookfor3=complexquery&dateDropDownId=1&func=search&objType=258&SearchBarSearch=TRUE&location_id1=2000&facets=user&fulltextMode=allwords'">
+                <i class="fas fa-search"></i></td>
+              <td class="edit" onClick="window.open('#')">
+                <i class="fas fa-user-edit"></i></td>
+            </tr>
+
+            <tr>
+              <td class="file" title="#" onClick="parent.show.location.href='#'">
+                <i class="fas fa-file-powerpoint"></i>清洁与维护保养操作规程</td>
+              <td class="search" onClick="parent.show.location.href='http://edocapp/otcs/llisapi.dll?slice=3142&searchbarwidgetmode=fulltext&where1=SMP00029&ScopeSelection=3142%7C2000%7C%E5%9C%A8+Enterprise+%E5%86%85&lookfor1=allwords&modifier1=relatedto&boolean2=And&lookfor2=complexquery&typeDropDownId=1&boolean3=And&lookfor3=complexquery&dateDropDownId=1&func=search&objType=258&SearchBarSearch=TRUE&location_id1=2000&facets=user&fulltextMode=allwords'">
+                <i class="fas fa-search"></i></td>
+              <td class="edit" onClick="window.open('#')">
+                <i class="fas fa-user-edit"></i></td>
+            </tr>
+
+            <tr>
+              <td class="file" title="#" onClick="parent.show.location.href='#'">
+                <i class="fas fa-file-powerpoint"></i>清洁与维护保养操作规程</td>
+              <td class="search" onClick="parent.show.location.href='http://edocapp/otcs/llisapi.dll?slice=3142&searchbarwidgetmode=fulltext&where1=SMP00029&ScopeSelection=3142%7C2000%7C%E5%9C%A8+Enterprise+%E5%86%85&lookfor1=allwords&modifier1=relatedto&boolean2=And&lookfor2=complexquery&typeDropDownId=1&boolean3=And&lookfor3=complexquery&dateDropDownId=1&func=search&objType=258&SearchBarSearch=TRUE&location_id1=2000&facets=user&fulltextMode=allwords'">
+                <i class="fas fa-search"></i></td>
+              <td class="edit" onClick="window.open('#')">
+                <i class="fas fa-user-edit"></i></td>
+            </tr>
+
+            <tr>
+              <td class="file" title="#" onClick="parent.show.location.href='#'">
+                <i class="fas fa-file-powerpoint"></i>清洁与维护保养操作规程</td>
+              <td class="search" onClick="parent.show.location.href='http://edocapp/otcs/llisapi.dll?slice=3142&searchbarwidgetmode=fulltext&where1=SMP00029&ScopeSelection=3142%7C2000%7C%E5%9C%A8+Enterprise+%E5%86%85&lookfor1=allwords&modifier1=relatedto&boolean2=And&lookfor2=complexquery&typeDropDownId=1&boolean3=And&lookfor3=complexquery&dateDropDownId=1&func=search&objType=258&SearchBarSearch=TRUE&location_id1=2000&facets=user&fulltextMode=allwords'">
+                <i class="fas fa-search"></i></td>
+              <td class="edit" onClick="window.open('#')">
+                <i class="fas fa-user-edit"></i></td>
+            </tr>
+
+            <tr>
+              <td class="file" title="#" onClick="parent.show.location.href='#'">
+                <i class="fas fa-file-powerpoint"></i>清洁与维护保养操作规程</td>
+              <td class="search" onClick="parent.show.location.href='http://edocapp/otcs/llisapi.dll?slice=3142&searchbarwidgetmode=fulltext&where1=SMP00029&ScopeSelection=3142%7C2000%7C%E5%9C%A8+Enterprise+%E5%86%85&lookfor1=allwords&modifier1=relatedto&boolean2=And&lookfor2=complexquery&typeDropDownId=1&boolean3=And&lookfor3=complexquery&dateDropDownId=1&func=search&objType=258&SearchBarSearch=TRUE&location_id1=2000&facets=user&fulltextMode=allwords'">
+                <i class="fas fa-search"></i></td>
+              <td class="edit" onClick="window.open('#')">
+                <i class="fas fa-user-edit"></i></td>
+            </tr>
+
+            <tr>
+              <td class="file" title="#" onClick="parent.show.location.href='#'">
+                <i class="fas fa-file-powerpoint"></i>清洁与维护保养操作规程</td>
+              <td class="search" onClick="parent.show.location.href='http://edocapp/otcs/llisapi.dll?slice=3142&searchbarwidgetmode=fulltext&where1=SMP00029&ScopeSelection=3142%7C2000%7C%E5%9C%A8+Enterprise+%E5%86%85&lookfor1=allwords&modifier1=relatedto&boolean2=And&lookfor2=complexquery&typeDropDownId=1&boolean3=And&lookfor3=complexquery&dateDropDownId=1&func=search&objType=258&SearchBarSearch=TRUE&location_id1=2000&facets=user&fulltextMode=allwords'">
+                <i class="fas fa-search"></i></td>
+              <td class="edit" onClick="window.open('#')">
+                <i class="fas fa-user-edit"></i></td>
+            </tr>
+
+            <tr>
+              <td class="file" title="#" onClick="parent.show.location.href='#'">
+                <i class="fas fa-file-powerpoint"></i>清洁与维护保养操作规程</td>
+              <td class="search" onClick="parent.show.location.href='http://edocapp/otcs/llisapi.dll?slice=3142&searchbarwidgetmode=fulltext&where1=SMP00029&ScopeSelection=3142%7C2000%7C%E5%9C%A8+Enterprise+%E5%86%85&lookfor1=allwords&modifier1=relatedto&boolean2=And&lookfor2=complexquery&typeDropDownId=1&boolean3=And&lookfor3=complexquery&dateDropDownId=1&func=search&objType=258&SearchBarSearch=TRUE&location_id1=2000&facets=user&fulltextMode=allwords'">
+                <i class="fas fa-search"></i></td>
+              <td class="edit" onClick="window.open('#')">
+                <i class="fas fa-user-edit"></i></td>
+            </tr>
+
+            <tr>
+              <td class="file" title="#" onClick="parent.show.location.href='#'">
+                <i class="fas fa-file-powerpoint"></i>清洁与维护保养操作规程</td>
+              <td class="search" onClick="parent.show.location.href='http://edocapp/otcs/llisapi.dll?slice=3142&searchbarwidgetmode=fulltext&where1=SMP00029&ScopeSelection=3142%7C2000%7C%E5%9C%A8+Enterprise+%E5%86%85&lookfor1=allwords&modifier1=relatedto&boolean2=And&lookfor2=complexquery&typeDropDownId=1&boolean3=And&lookfor3=complexquery&dateDropDownId=1&func=search&objType=258&SearchBarSearch=TRUE&location_id1=2000&facets=user&fulltextMode=allwords'">
+                <i class="fas fa-search"></i></td>
+              <td class="edit" onClick="window.open('#')">
+                <i class="fas fa-user-edit"></i></td>
+            </tr>
+
+            <tr>
+              <td class="file" title="#" onClick="parent.show.location.href='#'">
+                <i class="fas fa-file-powerpoint"></i>清洁与维护保养操作规程</td>
+              <td class="search" onClick="parent.show.location.href='http://edocapp/otcs/llisapi.dll?slice=3142&searchbarwidgetmode=fulltext&where1=SMP00029&ScopeSelection=3142%7C2000%7C%E5%9C%A8+Enterprise+%E5%86%85&lookfor1=allwords&modifier1=relatedto&boolean2=And&lookfor2=complexquery&typeDropDownId=1&boolean3=And&lookfor3=complexquery&dateDropDownId=1&func=search&objType=258&SearchBarSearch=TRUE&location_id1=2000&facets=user&fulltextMode=allwords'">
+                <i class="fas fa-search"></i></td>
+              <td class="edit" onClick="window.open('#')">
+                <i class="fas fa-user-edit"></i></td>
+            </tr>
+
+            <tr>
+              <td class="file" title="#" onClick="parent.show.location.href='#'">
+                <i class="fas fa-file-powerpoint"></i>清洁与维护保养操作规程</td>
+              <td class="search" onClick="parent.show.location.href='http://edocapp/otcs/llisapi.dll?slice=3142&searchbarwidgetmode=fulltext&where1=SMP00029&ScopeSelection=3142%7C2000%7C%E5%9C%A8+Enterprise+%E5%86%85&lookfor1=allwords&modifier1=relatedto&boolean2=And&lookfor2=complexquery&typeDropDownId=1&boolean3=And&lookfor3=complexquery&dateDropDownId=1&func=search&objType=258&SearchBarSearch=TRUE&location_id1=2000&facets=user&fulltextMode=allwords'">
+                <i class="fas fa-search"></i></td>
+              <td class="edit" onClick="window.open('#')">
+                <i class="fas fa-user-edit"></i></td>
+            </tr>
+
+            <tr>
+              <td class="file" title="#" onClick="parent.show.location.href='#'">
+                <i class="fas fa-file-powerpoint"></i>清洁与维护保养操作规程</td>
+              <td class="search" onClick="parent.show.location.href='http://edocapp/otcs/llisapi.dll?slice=3142&searchbarwidgetmode=fulltext&where1=SMP00029&ScopeSelection=3142%7C2000%7C%E5%9C%A8+Enterprise+%E5%86%85&lookfor1=allwords&modifier1=relatedto&boolean2=And&lookfor2=complexquery&typeDropDownId=1&boolean3=And&lookfor3=complexquery&dateDropDownId=1&func=search&objType=258&SearchBarSearch=TRUE&location_id1=2000&facets=user&fulltextMode=allwords'">
+                <i class="fas fa-search"></i></td>
+              <td class="edit" onClick="window.open('#')">
+                <i class="fas fa-user-edit"></i></td>
+            </tr>
+
+            <tr>
+              <td class="file" title="#" onClick="parent.show.location.href='#'">
+                <i class="fas fa-file-powerpoint"></i>清洁与维护保养操作规程</td>
+              <td class="search" onClick="parent.show.location.href='http://edocapp/otcs/llisapi.dll?slice=3142&searchbarwidgetmode=fulltext&where1=SMP00029&ScopeSelection=3142%7C2000%7C%E5%9C%A8+Enterprise+%E5%86%85&lookfor1=allwords&modifier1=relatedto&boolean2=And&lookfor2=complexquery&typeDropDownId=1&boolean3=And&lookfor3=complexquery&dateDropDownId=1&func=search&objType=258&SearchBarSearch=TRUE&location_id1=2000&facets=user&fulltextMode=allwords'">
+                <i class="fas fa-search"></i></td>
+              <td class="edit" onClick="window.open('#')">
+                <i class="fas fa-user-edit"></i></td>
+            </tr>
+
+            <tr>
+              <td class="file" title="#" onClick="parent.show.location.href='#'">
+                <i class="fas fa-file-powerpoint"></i>清洁与维护保养操作规程</td>
+              <td class="search" onClick="parent.show.location.href='http://edocapp/otcs/llisapi.dll?slice=3142&searchbarwidgetmode=fulltext&where1=SMP00029&ScopeSelection=3142%7C2000%7C%E5%9C%A8+Enterprise+%E5%86%85&lookfor1=allwords&modifier1=relatedto&boolean2=And&lookfor2=complexquery&typeDropDownId=1&boolean3=And&lookfor3=complexquery&dateDropDownId=1&func=search&objType=258&SearchBarSearch=TRUE&location_id1=2000&facets=user&fulltextMode=allwords'">
+                <i class="fas fa-search"></i></td>
+              <td class="edit" onClick="window.open('#')">
+                <i class="fas fa-user-edit"></i></td>
+            </tr>
+
+            <tr>
+              <td class="file" title="#" onClick="parent.show.location.href='#'">
+                <i class="fas fa-file-powerpoint"></i>清洁与维护保养操作规程</td>
+              <td class="search" onClick="parent.show.location.href='http://edocapp/otcs/llisapi.dll?slice=3142&searchbarwidgetmode=fulltext&where1=SMP00029&ScopeSelection=3142%7C2000%7C%E5%9C%A8+Enterprise+%E5%86%85&lookfor1=allwords&modifier1=relatedto&boolean2=And&lookfor2=complexquery&typeDropDownId=1&boolean3=And&lookfor3=complexquery&dateDropDownId=1&func=search&objType=258&SearchBarSearch=TRUE&location_id1=2000&facets=user&fulltextMode=allwords'">
+                <i class="fas fa-search"></i></td>
+              <td class="edit" onClick="window.open('#')">
+                <i class="fas fa-user-edit"></i></td>
+            </tr>
+
+          </table>
+
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="header">
+          <h3><i class="fas fa-flask"></i>标准操作规程（SOP）--- 生产运营</h3>
+        </div>
+        <div class="content">
+
+          <table border="0">
+
+            <tr>
+              <td class="file" title="SMP00023" onClick="parent.show.location.href='http://edocapp/otcs/llisapi.dll/fetch/2000/74269/80332/80343/80344/80345/80731/%E5%88%A9%E5%A6%A5%E6%98%94%E5%8D%95%E6%8A%97%E6%B3%A8%E5%B0%84%E6%B6%B2M1b_3000L%E7%BA%AF%E5%8C%96%E5%B7%A5%E8%89%BA%E8%A7%84%E7%A8%8B.PDF?nodeid=10316385&vernum=9'">
+                <i class="fas fa-file-powerpoint"></i>Bio-Welder_TC带液操作接管机使用、清洁与维护保养操作规程</td>
+              <td class="search" onClick="parent.show.location.href='http://edocapp/otcs/llisapi.dll?slice=3142&searchbarwidgetmode=fulltext&where1=SMP00029&ScopeSelection=3142%7C2000%7C%E5%9C%A8+Enterprise+%E5%86%85&lookfor1=allwords&modifier1=relatedto&boolean2=And&lookfor2=complexquery&typeDropDownId=1&boolean3=And&lookfor3=complexquery&dateDropDownId=1&func=search&objType=258&SearchBarSearch=TRUE&location_id1=2000&facets=user&fulltextMode=allwords'">
+                <i class="fas fa-search"></i></td>
+              <td class="edit" onClick="window.open('https://www.jb51.net')">
+                <i class="fas fa-user-edit"></i></td>
+            </tr>
+
+            <tr>
+              <td class="file" title="#" onClick="parent.show.location.href='#'">
+                <i class="fas fa-file-powerpoint"></i>清洁与维护保养操作规程</td>
+              <td class="search" onClick="parent.show.location.href='http://edocapp/otcs/llisapi.dll?slice=3142&searchbarwidgetmode=fulltext&where1=SMP00029&ScopeSelection=3142%7C2000%7C%E5%9C%A8+Enterprise+%E5%86%85&lookfor1=allwords&modifier1=relatedto&boolean2=And&lookfor2=complexquery&typeDropDownId=1&boolean3=And&lookfor3=complexquery&dateDropDownId=1&func=search&objType=258&SearchBarSearch=TRUE&location_id1=2000&facets=user&fulltextMode=allwords'">
+                <i class="fas fa-search"></i></td>
+              <td class="edit" onClick="window.open('#')">
+                <i class="fas fa-user-edit"></i></td>
+            </tr>
+
+            <tr>
+              <td class="file" title="#" onClick="parent.show.location.href='#'">
+                <i class="fas fa-file-powerpoint"></i>清洁与维护保养操作规程</td>
+              <td class="search" onClick="parent.show.location.href='http://edocapp/otcs/llisapi.dll?slice=3142&searchbarwidgetmode=fulltext&where1=SMP00029&ScopeSelection=3142%7C2000%7C%E5%9C%A8+Enterprise+%E5%86%85&lookfor1=allwords&modifier1=relatedto&boolean2=And&lookfor2=complexquery&typeDropDownId=1&boolean3=And&lookfor3=complexquery&dateDropDownId=1&func=search&objType=258&SearchBarSearch=TRUE&location_id1=2000&facets=user&fulltextMode=allwords'">
+                <i class="fas fa-search"></i></td>
+              <td class="edit" onClick="window.open('#')">
+                <i class="fas fa-user-edit"></i></td>
+            </tr>
+
+            <tr>
+              <td class="file" title="#" onClick="parent.show.location.href='#'">
+                <i class="fas fa-file-powerpoint"></i>清洁与维护保养操作规程</td>
+              <td class="search" onClick="parent.show.location.href='http://edocapp/otcs/llisapi.dll?slice=3142&searchbarwidgetmode=fulltext&where1=SMP00029&ScopeSelection=3142%7C2000%7C%E5%9C%A8+Enterprise+%E5%86%85&lookfor1=allwords&modifier1=relatedto&boolean2=And&lookfor2=complexquery&typeDropDownId=1&boolean3=And&lookfor3=complexquery&dateDropDownId=1&func=search&objType=258&SearchBarSearch=TRUE&location_id1=2000&facets=user&fulltextMode=allwords'">
+                <i class="fas fa-search"></i></td>
+              <td class="edit" onClick="window.open('#')">
+                <i class="fas fa-user-edit"></i></td>
+            </tr>
+
+            <tr>
+              <td class="file" title="#" onClick="parent.show.location.href='#'">
+                <i class="fas fa-file-powerpoint"></i>清洁与维护保养操作规程</td>
+              <td class="search" onClick="parent.show.location.href='http://edocapp/otcs/llisapi.dll?slice=3142&searchbarwidgetmode=fulltext&where1=SMP00029&ScopeSelection=3142%7C2000%7C%E5%9C%A8+Enterprise+%E5%86%85&lookfor1=allwords&modifier1=relatedto&boolean2=And&lookfor2=complexquery&typeDropDownId=1&boolean3=And&lookfor3=complexquery&dateDropDownId=1&func=search&objType=258&SearchBarSearch=TRUE&location_id1=2000&facets=user&fulltextMode=allwords'">
+                <i class="fas fa-search"></i></td>
+              <td class="edit" onClick="window.open('#')">
+                <i class="fas fa-user-edit"></i></td>
+            </tr>
+
+            <tr>
+              <td class="file" title="#" onClick="parent.show.location.href='#'">
+                <i class="fas fa-file-powerpoint"></i>清洁与维护保养操作规程</td>
+              <td class="search" onClick="parent.show.location.href='http://edocapp/otcs/llisapi.dll?slice=3142&searchbarwidgetmode=fulltext&where1=SMP00029&ScopeSelection=3142%7C2000%7C%E5%9C%A8+Enterprise+%E5%86%85&lookfor1=allwords&modifier1=relatedto&boolean2=And&lookfor2=complexquery&typeDropDownId=1&boolean3=And&lookfor3=complexquery&dateDropDownId=1&func=search&objType=258&SearchBarSearch=TRUE&location_id1=2000&facets=user&fulltextMode=allwords'">
+                <i class="fas fa-search"></i></td>
+              <td class="edit" onClick="window.open('#')">
+                <i class="fas fa-user-edit"></i></td>
+            </tr>
+
+            <tr>
+              <td class="file" title="#" onClick="parent.show.location.href='#'">
+                <i class="fas fa-file-powerpoint"></i>清洁与维护保养操作规程</td>
+              <td class="search" onClick="parent.show.location.href='http://edocapp/otcs/llisapi.dll?slice=3142&searchbarwidgetmode=fulltext&where1=SMP00029&ScopeSelection=3142%7C2000%7C%E5%9C%A8+Enterprise+%E5%86%85&lookfor1=allwords&modifier1=relatedto&boolean2=And&lookfor2=complexquery&typeDropDownId=1&boolean3=And&lookfor3=complexquery&dateDropDownId=1&func=search&objType=258&SearchBarSearch=TRUE&location_id1=2000&facets=user&fulltextMode=allwords'">
+                <i class="fas fa-search"></i></td>
+              <td class="edit" onClick="window.open('#')">
+                <i class="fas fa-user-edit"></i></td>
+            </tr>
+
+            <tr>
+              <td class="file" title="#" onClick="parent.show.location.href='#'">
+                <i class="fas fa-file-powerpoint"></i>清洁与维护保养操作规程</td>
+              <td class="search" onClick="parent.show.location.href='http://edocapp/otcs/llisapi.dll?slice=3142&searchbarwidgetmode=fulltext&where1=SMP00029&ScopeSelection=3142%7C2000%7C%E5%9C%A8+Enterprise+%E5%86%85&lookfor1=allwords&modifier1=relatedto&boolean2=And&lookfor2=complexquery&typeDropDownId=1&boolean3=And&lookfor3=complexquery&dateDropDownId=1&func=search&objType=258&SearchBarSearch=TRUE&location_id1=2000&facets=user&fulltextMode=allwords'">
+                <i class="fas fa-search"></i></td>
+              <td class="edit" onClick="window.open('#')">
+                <i class="fas fa-user-edit"></i></td>
+            </tr>
+
+            <tr>
+              <td class="file" title="#" onClick="parent.show.location.href='#'">
+                <i class="fas fa-file-powerpoint"></i>清洁与维护保养操作规程</td>
+              <td class="search" onClick="parent.show.location.href='http://edocapp/otcs/llisapi.dll?slice=3142&searchbarwidgetmode=fulltext&where1=SMP00029&ScopeSelection=3142%7C2000%7C%E5%9C%A8+Enterprise+%E5%86%85&lookfor1=allwords&modifier1=relatedto&boolean2=And&lookfor2=complexquery&typeDropDownId=1&boolean3=And&lookfor3=complexquery&dateDropDownId=1&func=search&objType=258&SearchBarSearch=TRUE&location_id1=2000&facets=user&fulltextMode=allwords'">
+                <i class="fas fa-search"></i></td>
+              <td class="edit" onClick="window.open('#')">
+                <i class="fas fa-user-edit"></i></td>
+            </tr>
+
+            <tr>
+              <td class="file" title="#" onClick="parent.show.location.href='#'">
+                <i class="fas fa-file-powerpoint"></i>清洁与维护保养操作规程</td>
+              <td class="search" onClick="parent.show.location.href='http://edocapp/otcs/llisapi.dll?slice=3142&searchbarwidgetmode=fulltext&where1=SMP00029&ScopeSelection=3142%7C2000%7C%E5%9C%A8+Enterprise+%E5%86%85&lookfor1=allwords&modifier1=relatedto&boolean2=And&lookfor2=complexquery&typeDropDownId=1&boolean3=And&lookfor3=complexquery&dateDropDownId=1&func=search&objType=258&SearchBarSearch=TRUE&location_id1=2000&facets=user&fulltextMode=allwords'">
+                <i class="fas fa-search"></i></td>
+              <td class="edit" onClick="window.open('#')">
+                <i class="fas fa-user-edit"></i></td>
+            </tr>
+
+            <tr>
+              <td class="file" title="#" onClick="parent.show.location.href='#'">
+                <i class="fas fa-file-powerpoint"></i>清洁与维护保养操作规程</td>
+              <td class="search" onClick="parent.show.location.href='http://edocapp/otcs/llisapi.dll?slice=3142&searchbarwidgetmode=fulltext&where1=SMP00029&ScopeSelection=3142%7C2000%7C%E5%9C%A8+Enterprise+%E5%86%85&lookfor1=allwords&modifier1=relatedto&boolean2=And&lookfor2=complexquery&typeDropDownId=1&boolean3=And&lookfor3=complexquery&dateDropDownId=1&func=search&objType=258&SearchBarSearch=TRUE&location_id1=2000&facets=user&fulltextMode=allwords'">
+                <i class="fas fa-search"></i></td>
+              <td class="edit" onClick="window.open('#')">
+                <i class="fas fa-user-edit"></i></td>
+            </tr>
+
+            <tr>
+              <td class="file" title="#" onClick="parent.show.location.href='#'">
+                <i class="fas fa-file-powerpoint"></i>清洁与维护保养操作规程</td>
+              <td class="search" onClick="parent.show.location.href='http://edocapp/otcs/llisapi.dll?slice=3142&searchbarwidgetmode=fulltext&where1=SMP00029&ScopeSelection=3142%7C2000%7C%E5%9C%A8+Enterprise+%E5%86%85&lookfor1=allwords&modifier1=relatedto&boolean2=And&lookfor2=complexquery&typeDropDownId=1&boolean3=And&lookfor3=complexquery&dateDropDownId=1&func=search&objType=258&SearchBarSearch=TRUE&location_id1=2000&facets=user&fulltextMode=allwords'">
+                <i class="fas fa-search"></i></td>
+              <td class="edit" onClick="window.open('#')">
+                <i class="fas fa-user-edit"></i></td>
+            </tr>
+
+            <tr>
+              <td class="file" title="#" onClick="parent.show.location.href='#'">
+                <i class="fas fa-file-powerpoint"></i>清洁与维护保养操作规程</td>
+              <td class="search" onClick="parent.show.location.href='http://edocapp/otcs/llisapi.dll?slice=3142&searchbarwidgetmode=fulltext&where1=SMP00029&ScopeSelection=3142%7C2000%7C%E5%9C%A8+Enterprise+%E5%86%85&lookfor1=allwords&modifier1=relatedto&boolean2=And&lookfor2=complexquery&typeDropDownId=1&boolean3=And&lookfor3=complexquery&dateDropDownId=1&func=search&objType=258&SearchBarSearch=TRUE&location_id1=2000&facets=user&fulltextMode=allwords'">
+                <i class="fas fa-search"></i></td>
+              <td class="edit" onClick="window.open('#')">
+                <i class="fas fa-user-edit"></i></td>
+            </tr>
+
+            <tr>
+              <td class="file" title="#" onClick="parent.show.location.href='#'">
+                <i class="fas fa-file-powerpoint"></i>清洁与维护保养操作规程</td>
+              <td class="search" onClick="parent.show.location.href='http://edocapp/otcs/llisapi.dll?slice=3142&searchbarwidgetmode=fulltext&where1=SMP00029&ScopeSelection=3142%7C2000%7C%E5%9C%A8+Enterprise+%E5%86%85&lookfor1=allwords&modifier1=relatedto&boolean2=And&lookfor2=complexquery&typeDropDownId=1&boolean3=And&lookfor3=complexquery&dateDropDownId=1&func=search&objType=258&SearchBarSearch=TRUE&location_id1=2000&facets=user&fulltextMode=allwords'">
+                <i class="fas fa-search"></i></td>
+              <td class="edit" onClick="window.open('#')">
+                <i class="fas fa-user-edit"></i></td>
+            </tr>
+
+            <tr>
+              <td class="file" title="#" onClick="parent.show.location.href='#'">
+                <i class="fas fa-file-powerpoint"></i>清洁与维护保养操作规程</td>
+              <td class="search" onClick="parent.show.location.href='http://edocapp/otcs/llisapi.dll?slice=3142&searchbarwidgetmode=fulltext&where1=SMP00029&ScopeSelection=3142%7C2000%7C%E5%9C%A8+Enterprise+%E5%86%85&lookfor1=allwords&modifier1=relatedto&boolean2=And&lookfor2=complexquery&typeDropDownId=1&boolean3=And&lookfor3=complexquery&dateDropDownId=1&func=search&objType=258&SearchBarSearch=TRUE&location_id1=2000&facets=user&fulltextMode=allwords'">
+                <i class="fas fa-search"></i></td>
+              <td class="edit" onClick="window.open('#')">
+                <i class="fas fa-user-edit"></i></td>
+            </tr>
+
+            <tr>
+              <td class="file" title="#" onClick="parent.show.location.href='#'">
+                <i class="fas fa-file-powerpoint"></i>清洁与维护保养操作规程</td>
+              <td class="search" onClick="parent.show.location.href='http://edocapp/otcs/llisapi.dll?slice=3142&searchbarwidgetmode=fulltext&where1=SMP00029&ScopeSelection=3142%7C2000%7C%E5%9C%A8+Enterprise+%E5%86%85&lookfor1=allwords&modifier1=relatedto&boolean2=And&lookfor2=complexquery&typeDropDownId=1&boolean3=And&lookfor3=complexquery&dateDropDownId=1&func=search&objType=258&SearchBarSearch=TRUE&location_id1=2000&facets=user&fulltextMode=allwords'">
+                <i class="fas fa-search"></i></td>
+              <td class="edit" onClick="window.open('#')">
+                <i class="fas fa-user-edit"></i></td>
+            </tr>
+
+          </table>
+
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="header">
+          <h3><i class="fas fa-virus"></i>标准操作规程（SOP）--- 上游细胞</h3>
+        </div>
+        <div class="content">
+
+          <table border="0">
+
+            <tr>
+              <td class="file" title="SMP00023" onClick="parent.show.location.href='http://edocapp/otcs/llisapi.dll/fetch/2000/74269/80332/80343/80344/80345/80731/%E5%88%A9%E5%A6%A5%E6%98%94%E5%8D%95%E6%8A%97%E6%B3%A8%E5%B0%84%E6%B6%B2M1b_3000L%E7%BA%AF%E5%8C%96%E5%B7%A5%E8%89%BA%E8%A7%84%E7%A8%8B.PDF?nodeid=10316385&vernum=9'">
+                <i class="fas fa-file-powerpoint"></i>Bio-Welder_TC带液操作接管机使用、清洁与维护保养操作规程</td>
+              <td class="search" onClick="parent.show.location.href='http://edocapp/otcs/llisapi.dll?slice=3142&searchbarwidgetmode=fulltext&where1=SMP00029&ScopeSelection=3142%7C2000%7C%E5%9C%A8+Enterprise+%E5%86%85&lookfor1=allwords&modifier1=relatedto&boolean2=And&lookfor2=complexquery&typeDropDownId=1&boolean3=And&lookfor3=complexquery&dateDropDownId=1&func=search&objType=258&SearchBarSearch=TRUE&location_id1=2000&facets=user&fulltextMode=allwords'">
+                <i class="fas fa-search"></i></td>
+              <td class="edit" onClick="window.open('https://www.jb51.net')">
+                <i class="fas fa-user-edit"></i></td>
+            </tr>
+
+            <tr>
+              <td class="file" title="#" onClick="parent.show.location.href='#'">
+                <i class="fas fa-file-powerpoint"></i>清洁与维护保养操作规程</td>
+              <td class="search" onClick="parent.show.location.href='http://edocapp/otcs/llisapi.dll?slice=3142&searchbarwidgetmode=fulltext&where1=SMP00029&ScopeSelection=3142%7C2000%7C%E5%9C%A8+Enterprise+%E5%86%85&lookfor1=allwords&modifier1=relatedto&boolean2=And&lookfor2=complexquery&typeDropDownId=1&boolean3=And&lookfor3=complexquery&dateDropDownId=1&func=search&objType=258&SearchBarSearch=TRUE&location_id1=2000&facets=user&fulltextMode=allwords'">
+                <i class="fas fa-search"></i></td>
+              <td class="edit" onClick="window.open('#')">
+                <i class="fas fa-user-edit"></i></td>
+            </tr>
+
+            <tr>
+              <td class="file" title="#" onClick="parent.show.location.href='#'">
+                <i class="fas fa-file-powerpoint"></i>清洁与维护保养操作规程</td>
+              <td class="search" onClick="parent.show.location.href='http://edocapp/otcs/llisapi.dll?slice=3142&searchbarwidgetmode=fulltext&where1=SMP00029&ScopeSelection=3142%7C2000%7C%E5%9C%A8+Enterprise+%E5%86%85&lookfor1=allwords&modifier1=relatedto&boolean2=And&lookfor2=complexquery&typeDropDownId=1&boolean3=And&lookfor3=complexquery&dateDropDownId=1&func=search&objType=258&SearchBarSearch=TRUE&location_id1=2000&facets=user&fulltextMode=allwords'">
+                <i class="fas fa-search"></i></td>
+              <td class="edit" onClick="window.open('#')">
+                <i class="fas fa-user-edit"></i></td>
+            </tr>
+
+            <tr>
+              <td class="file" title="#" onClick="parent.show.location.href='#'">
+                <i class="fas fa-file-powerpoint"></i>清洁与维护保养操作规程</td>
+              <td class="search" onClick="parent.show.location.href='http://edocapp/otcs/llisapi.dll?slice=3142&searchbarwidgetmode=fulltext&where1=SMP00029&ScopeSelection=3142%7C2000%7C%E5%9C%A8+Enterprise+%E5%86%85&lookfor1=allwords&modifier1=relatedto&boolean2=And&lookfor2=complexquery&typeDropDownId=1&boolean3=And&lookfor3=complexquery&dateDropDownId=1&func=search&objType=258&SearchBarSearch=TRUE&location_id1=2000&facets=user&fulltextMode=allwords'">
+                <i class="fas fa-search"></i></td>
+              <td class="edit" onClick="window.open('#')">
+                <i class="fas fa-user-edit"></i></td>
+            </tr>
+
+            <tr>
+              <td class="file" title="#" onClick="parent.show.location.href='#'">
+                <i class="fas fa-file-powerpoint"></i>清洁与维护保养操作规程</td>
+              <td class="search" onClick="parent.show.location.href='http://edocapp/otcs/llisapi.dll?slice=3142&searchbarwidgetmode=fulltext&where1=SMP00029&ScopeSelection=3142%7C2000%7C%E5%9C%A8+Enterprise+%E5%86%85&lookfor1=allwords&modifier1=relatedto&boolean2=And&lookfor2=complexquery&typeDropDownId=1&boolean3=And&lookfor3=complexquery&dateDropDownId=1&func=search&objType=258&SearchBarSearch=TRUE&location_id1=2000&facets=user&fulltextMode=allwords'">
+                <i class="fas fa-search"></i></td>
+              <td class="edit" onClick="window.open('#')">
+                <i class="fas fa-user-edit"></i></td>
+            </tr>
+
+            <tr>
+              <td class="file" title="#" onClick="parent.show.location.href='#'">
+                <i class="fas fa-file-powerpoint"></i>清洁与维护保养操作规程</td>
+              <td class="search" onClick="parent.show.location.href='http://edocapp/otcs/llisapi.dll?slice=3142&searchbarwidgetmode=fulltext&where1=SMP00029&ScopeSelection=3142%7C2000%7C%E5%9C%A8+Enterprise+%E5%86%85&lookfor1=allwords&modifier1=relatedto&boolean2=And&lookfor2=complexquery&typeDropDownId=1&boolean3=And&lookfor3=complexquery&dateDropDownId=1&func=search&objType=258&SearchBarSearch=TRUE&location_id1=2000&facets=user&fulltextMode=allwords'">
+                <i class="fas fa-search"></i></td>
+              <td class="edit" onClick="window.open('#')">
+                <i class="fas fa-user-edit"></i></td>
+            </tr>
+
+            <tr>
+              <td class="file" title="#" onClick="parent.show.location.href='#'">
+                <i class="fas fa-file-powerpoint"></i>清洁与维护保养操作规程</td>
+              <td class="search" onClick="parent.show.location.href='http://edocapp/otcs/llisapi.dll?slice=3142&searchbarwidgetmode=fulltext&where1=SMP00029&ScopeSelection=3142%7C2000%7C%E5%9C%A8+Enterprise+%E5%86%85&lookfor1=allwords&modifier1=relatedto&boolean2=And&lookfor2=complexquery&typeDropDownId=1&boolean3=And&lookfor3=complexquery&dateDropDownId=1&func=search&objType=258&SearchBarSearch=TRUE&location_id1=2000&facets=user&fulltextMode=allwords'">
+                <i class="fas fa-search"></i></td>
+              <td class="edit" onClick="window.open('#')">
+                <i class="fas fa-user-edit"></i></td>
+            </tr>
+
+            <tr>
+              <td class="file" title="#" onClick="parent.show.location.href='#'">
+                <i class="fas fa-file-powerpoint"></i>清洁与维护保养操作规程</td>
+              <td class="search" onClick="parent.show.location.href='http://edocapp/otcs/llisapi.dll?slice=3142&searchbarwidgetmode=fulltext&where1=SMP00029&ScopeSelection=3142%7C2000%7C%E5%9C%A8+Enterprise+%E5%86%85&lookfor1=allwords&modifier1=relatedto&boolean2=And&lookfor2=complexquery&typeDropDownId=1&boolean3=And&lookfor3=complexquery&dateDropDownId=1&func=search&objType=258&SearchBarSearch=TRUE&location_id1=2000&facets=user&fulltextMode=allwords'">
+                <i class="fas fa-search"></i></td>
+              <td class="edit" onClick="window.open('#')">
+                <i class="fas fa-user-edit"></i></td>
+            </tr>
+
+            <tr>
+              <td class="file" title="#" onClick="parent.show.location.href='#'">
+                <i class="fas fa-file-powerpoint"></i>清洁与维护保养操作规程</td>
+              <td class="search" onClick="parent.show.location.href='http://edocapp/otcs/llisapi.dll?slice=3142&searchbarwidgetmode=fulltext&where1=SMP00029&ScopeSelection=3142%7C2000%7C%E5%9C%A8+Enterprise+%E5%86%85&lookfor1=allwords&modifier1=relatedto&boolean2=And&lookfor2=complexquery&typeDropDownId=1&boolean3=And&lookfor3=complexquery&dateDropDownId=1&func=search&objType=258&SearchBarSearch=TRUE&location_id1=2000&facets=user&fulltextMode=allwords'">
+                <i class="fas fa-search"></i></td>
+              <td class="edit" onClick="window.open('#')">
+                <i class="fas fa-user-edit"></i></td>
+            </tr>
+
+            <tr>
+              <td class="file" title="#" onClick="parent.show.location.href='#'">
+                <i class="fas fa-file-powerpoint"></i>清洁与维护保养操作规程</td>
+              <td class="search" onClick="parent.show.location.href='http://edocapp/otcs/llisapi.dll?slice=3142&searchbarwidgetmode=fulltext&where1=SMP00029&ScopeSelection=3142%7C2000%7C%E5%9C%A8+Enterprise+%E5%86%85&lookfor1=allwords&modifier1=relatedto&boolean2=And&lookfor2=complexquery&typeDropDownId=1&boolean3=And&lookfor3=complexquery&dateDropDownId=1&func=search&objType=258&SearchBarSearch=TRUE&location_id1=2000&facets=user&fulltextMode=allwords'">
+                <i class="fas fa-search"></i></td>
+              <td class="edit" onClick="window.open('#')">
+                <i class="fas fa-user-edit"></i></td>
+            </tr>
+
+            <tr>
+              <td class="file" title="#" onClick="parent.show.location.href='#'">
+                <i class="fas fa-file-powerpoint"></i>清洁与维护保养操作规程</td>
+              <td class="search" onClick="parent.show.location.href='http://edocapp/otcs/llisapi.dll?slice=3142&searchbarwidgetmode=fulltext&where1=SMP00029&ScopeSelection=3142%7C2000%7C%E5%9C%A8+Enterprise+%E5%86%85&lookfor1=allwords&modifier1=relatedto&boolean2=And&lookfor2=complexquery&typeDropDownId=1&boolean3=And&lookfor3=complexquery&dateDropDownId=1&func=search&objType=258&SearchBarSearch=TRUE&location_id1=2000&facets=user&fulltextMode=allwords'">
+                <i class="fas fa-search"></i></td>
+              <td class="edit" onClick="window.open('#')">
+                <i class="fas fa-user-edit"></i></td>
+            </tr>
+
+            <tr>
+              <td class="file" title="#" onClick="parent.show.location.href='#'">
+                <i class="fas fa-file-powerpoint"></i>清洁与维护保养操作规程</td>
+              <td class="search" onClick="parent.show.location.href='http://edocapp/otcs/llisapi.dll?slice=3142&searchbarwidgetmode=fulltext&where1=SMP00029&ScopeSelection=3142%7C2000%7C%E5%9C%A8+Enterprise+%E5%86%85&lookfor1=allwords&modifier1=relatedto&boolean2=And&lookfor2=complexquery&typeDropDownId=1&boolean3=And&lookfor3=complexquery&dateDropDownId=1&func=search&objType=258&SearchBarSearch=TRUE&location_id1=2000&facets=user&fulltextMode=allwords'">
+                <i class="fas fa-search"></i></td>
+              <td class="edit" onClick="window.open('#')">
+                <i class="fas fa-user-edit"></i></td>
+            </tr>
+
+            <tr>
+              <td class="file" title="#" onClick="parent.show.location.href='#'">
+                <i class="fas fa-file-powerpoint"></i>清洁与维护保养操作规程</td>
+              <td class="search" onClick="parent.show.location.href='http://edocapp/otcs/llisapi.dll?slice=3142&searchbarwidgetmode=fulltext&where1=SMP00029&ScopeSelection=3142%7C2000%7C%E5%9C%A8+Enterprise+%E5%86%85&lookfor1=allwords&modifier1=relatedto&boolean2=And&lookfor2=complexquery&typeDropDownId=1&boolean3=And&lookfor3=complexquery&dateDropDownId=1&func=search&objType=258&SearchBarSearch=TRUE&location_id1=2000&facets=user&fulltextMode=allwords'">
+                <i class="fas fa-search"></i></td>
+              <td class="edit" onClick="window.open('#')">
+                <i class="fas fa-user-edit"></i></td>
+            </tr>
+
+            <tr>
+              <td class="file" title="#" onClick="parent.show.location.href='#'">
+                <i class="fas fa-file-powerpoint"></i>清洁与维护保养操作规程</td>
+              <td class="search" onClick="parent.show.location.href='http://edocapp/otcs/llisapi.dll?slice=3142&searchbarwidgetmode=fulltext&where1=SMP00029&ScopeSelection=3142%7C2000%7C%E5%9C%A8+Enterprise+%E5%86%85&lookfor1=allwords&modifier1=relatedto&boolean2=And&lookfor2=complexquery&typeDropDownId=1&boolean3=And&lookfor3=complexquery&dateDropDownId=1&func=search&objType=258&SearchBarSearch=TRUE&location_id1=2000&facets=user&fulltextMode=allwords'">
+                <i class="fas fa-search"></i></td>
+              <td class="edit" onClick="window.open('#')">
+                <i class="fas fa-user-edit"></i></td>
+            </tr>
+
+            <tr>
+              <td class="file" title="#" onClick="parent.show.location.href='#'">
+                <i class="fas fa-file-powerpoint"></i>清洁与维护保养操作规程</td>
+              <td class="search" onClick="parent.show.location.href='http://edocapp/otcs/llisapi.dll?slice=3142&searchbarwidgetmode=fulltext&where1=SMP00029&ScopeSelection=3142%7C2000%7C%E5%9C%A8+Enterprise+%E5%86%85&lookfor1=allwords&modifier1=relatedto&boolean2=And&lookfor2=complexquery&typeDropDownId=1&boolean3=And&lookfor3=complexquery&dateDropDownId=1&func=search&objType=258&SearchBarSearch=TRUE&location_id1=2000&facets=user&fulltextMode=allwords'">
+                <i class="fas fa-search"></i></td>
+              <td class="edit" onClick="window.open('#')">
+                <i class="fas fa-user-edit"></i></td>
+            </tr>
+
+            <tr>
+              <td class="file" title="#" onClick="parent.show.location.href='#'">
+                <i class="fas fa-file-powerpoint"></i>清洁与维护保养操作规程</td>
+              <td class="search" onClick="parent.show.location.href='http://edocapp/otcs/llisapi.dll?slice=3142&searchbarwidgetmode=fulltext&where1=SMP00029&ScopeSelection=3142%7C2000%7C%E5%9C%A8+Enterprise+%E5%86%85&lookfor1=allwords&modifier1=relatedto&boolean2=And&lookfor2=complexquery&typeDropDownId=1&boolean3=And&lookfor3=complexquery&dateDropDownId=1&func=search&objType=258&SearchBarSearch=TRUE&location_id1=2000&facets=user&fulltextMode=allwords'">
+                <i class="fas fa-search"></i></td>
+              <td class="edit" onClick="window.open('#')">
+                <i class="fas fa-user-edit"></i></td>
+            </tr>
+
+          </table>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="header">
+          <h3><i class="fas fa-tint"></i>标准操作规程（SOP）--- 下游纯化</h3>
+        </div>
+        <div class="content">
+
+          <table border="0">
+
+            <tr>
+              <td class="file" title="SMP00023" onClick="parent.show.location.href='http://edocapp/otcs/llisapi.dll/fetch/2000/74269/80332/80343/80344/80345/80731/%E5%88%A9%E5%A6%A5%E6%98%94%E5%8D%95%E6%8A%97%E6%B3%A8%E5%B0%84%E6%B6%B2M1b_3000L%E7%BA%AF%E5%8C%96%E5%B7%A5%E8%89%BA%E8%A7%84%E7%A8%8B.PDF?nodeid=10316385&vernum=9'">
+                <i class="fas fa-file-powerpoint"></i>Bio-Welder_TC带液操作接管机使用、清洁与维护保养操作规程</td>
+              <td class="search" onClick="parent.show.location.href='http://edocapp/otcs/llisapi.dll?slice=3142&searchbarwidgetmode=fulltext&where1=SMP00029&ScopeSelection=3142%7C2000%7C%E5%9C%A8+Enterprise+%E5%86%85&lookfor1=allwords&modifier1=relatedto&boolean2=And&lookfor2=complexquery&typeDropDownId=1&boolean3=And&lookfor3=complexquery&dateDropDownId=1&func=search&objType=258&SearchBarSearch=TRUE&location_id1=2000&facets=user&fulltextMode=allwords'">
+                <i class="fas fa-search"></i></td>
+              <td class="edit" onClick="window.open('https://www.jb51.net')">
+                <i class="fas fa-user-edit"></i></td>
+            </tr>
+
+            <tr>
+              <td class="file" title="#" onClick="parent.show.location.href='#'">
+                <i class="fas fa-file-powerpoint"></i>清洁与维护保养操作规程</td>
+              <td class="search" onClick="parent.show.location.href='http://edocapp/otcs/llisapi.dll?slice=3142&searchbarwidgetmode=fulltext&where1=SMP00029&ScopeSelection=3142%7C2000%7C%E5%9C%A8+Enterprise+%E5%86%85&lookfor1=allwords&modifier1=relatedto&boolean2=And&lookfor2=complexquery&typeDropDownId=1&boolean3=And&lookfor3=complexquery&dateDropDownId=1&func=search&objType=258&SearchBarSearch=TRUE&location_id1=2000&facets=user&fulltextMode=allwords'">
+                <i class="fas fa-search"></i></td>
+              <td class="edit" onClick="window.open('#')">
+                <i class="fas fa-user-edit"></i></td>
+            </tr>
+
+            <tr>
+              <td class="file" title="#" onClick="parent.show.location.href='#'">
+                <i class="fas fa-file-powerpoint"></i>清洁与维护保养操作规程</td>
+              <td class="search" onClick="parent.show.location.href='http://edocapp/otcs/llisapi.dll?slice=3142&searchbarwidgetmode=fulltext&where1=SMP00029&ScopeSelection=3142%7C2000%7C%E5%9C%A8+Enterprise+%E5%86%85&lookfor1=allwords&modifier1=relatedto&boolean2=And&lookfor2=complexquery&typeDropDownId=1&boolean3=And&lookfor3=complexquery&dateDropDownId=1&func=search&objType=258&SearchBarSearch=TRUE&location_id1=2000&facets=user&fulltextMode=allwords'">
+                <i class="fas fa-search"></i></td>
+              <td class="edit" onClick="window.open('#')">
+                <i class="fas fa-user-edit"></i></td>
+            </tr>
+
+            <tr>
+              <td class="file" title="#" onClick="parent.show.location.href='#'">
+                <i class="fas fa-file-powerpoint"></i>清洁与维护保养操作规程</td>
+              <td class="search" onClick="parent.show.location.href='http://edocapp/otcs/llisapi.dll?slice=3142&searchbarwidgetmode=fulltext&where1=SMP00029&ScopeSelection=3142%7C2000%7C%E5%9C%A8+Enterprise+%E5%86%85&lookfor1=allwords&modifier1=relatedto&boolean2=And&lookfor2=complexquery&typeDropDownId=1&boolean3=And&lookfor3=complexquery&dateDropDownId=1&func=search&objType=258&SearchBarSearch=TRUE&location_id1=2000&facets=user&fulltextMode=allwords'">
+                <i class="fas fa-search"></i></td>
+              <td class="edit" onClick="window.open('#')">
+                <i class="fas fa-user-edit"></i></td>
+            </tr>
+
+            <tr>
+              <td class="file" title="#" onClick="parent.show.location.href='#'">
+                <i class="fas fa-file-powerpoint"></i>清洁与维护保养操作规程</td>
+              <td class="search" onClick="parent.show.location.href='http://edocapp/otcs/llisapi.dll?slice=3142&searchbarwidgetmode=fulltext&where1=SMP00029&ScopeSelection=3142%7C2000%7C%E5%9C%A8+Enterprise+%E5%86%85&lookfor1=allwords&modifier1=relatedto&boolean2=And&lookfor2=complexquery&typeDropDownId=1&boolean3=And&lookfor3=complexquery&dateDropDownId=1&func=search&objType=258&SearchBarSearch=TRUE&location_id1=2000&facets=user&fulltextMode=allwords'">
+                <i class="fas fa-search"></i></td>
+              <td class="edit" onClick="window.open('#')">
+                <i class="fas fa-user-edit"></i></td>
+            </tr>
+
+            <tr>
+              <td class="file" title="#" onClick="parent.show.location.href='#'">
+                <i class="fas fa-file-powerpoint"></i>清洁与维护保养操作规程</td>
+              <td class="search" onClick="parent.show.location.href='http://edocapp/otcs/llisapi.dll?slice=3142&searchbarwidgetmode=fulltext&where1=SMP00029&ScopeSelection=3142%7C2000%7C%E5%9C%A8+Enterprise+%E5%86%85&lookfor1=allwords&modifier1=relatedto&boolean2=And&lookfor2=complexquery&typeDropDownId=1&boolean3=And&lookfor3=complexquery&dateDropDownId=1&func=search&objType=258&SearchBarSearch=TRUE&location_id1=2000&facets=user&fulltextMode=allwords'">
+                <i class="fas fa-search"></i></td>
+              <td class="edit" onClick="window.open('#')">
+                <i class="fas fa-user-edit"></i></td>
+            </tr>
+
+            <tr>
+              <td class="file" title="#" onClick="parent.show.location.href='#'">
+                <i class="fas fa-file-powerpoint"></i>清洁与维护保养操作规程</td>
+              <td class="search" onClick="parent.show.location.href='http://edocapp/otcs/llisapi.dll?slice=3142&searchbarwidgetmode=fulltext&where1=SMP00029&ScopeSelection=3142%7C2000%7C%E5%9C%A8+Enterprise+%E5%86%85&lookfor1=allwords&modifier1=relatedto&boolean2=And&lookfor2=complexquery&typeDropDownId=1&boolean3=And&lookfor3=complexquery&dateDropDownId=1&func=search&objType=258&SearchBarSearch=TRUE&location_id1=2000&facets=user&fulltextMode=allwords'">
+                <i class="fas fa-search"></i></td>
+              <td class="edit" onClick="window.open('#')">
+                <i class="fas fa-user-edit"></i></td>
+            </tr>
+
+            <tr>
+              <td class="file" title="#" onClick="parent.show.location.href='#'">
+                <i class="fas fa-file-powerpoint"></i>清洁与维护保养操作规程</td>
+              <td class="search" onClick="parent.show.location.href='http://edocapp/otcs/llisapi.dll?slice=3142&searchbarwidgetmode=fulltext&where1=SMP00029&ScopeSelection=3142%7C2000%7C%E5%9C%A8+Enterprise+%E5%86%85&lookfor1=allwords&modifier1=relatedto&boolean2=And&lookfor2=complexquery&typeDropDownId=1&boolean3=And&lookfor3=complexquery&dateDropDownId=1&func=search&objType=258&SearchBarSearch=TRUE&location_id1=2000&facets=user&fulltextMode=allwords'">
+                <i class="fas fa-search"></i></td>
+              <td class="edit" onClick="window.open('#')">
+                <i class="fas fa-user-edit"></i></td>
+            </tr>
+
+            <tr>
+              <td class="file" title="#" onClick="parent.show.location.href='#'">
+                <i class="fas fa-file-powerpoint"></i>清洁与维护保养操作规程</td>
+              <td class="search" onClick="parent.show.location.href='http://edocapp/otcs/llisapi.dll?slice=3142&searchbarwidgetmode=fulltext&where1=SMP00029&ScopeSelection=3142%7C2000%7C%E5%9C%A8+Enterprise+%E5%86%85&lookfor1=allwords&modifier1=relatedto&boolean2=And&lookfor2=complexquery&typeDropDownId=1&boolean3=And&lookfor3=complexquery&dateDropDownId=1&func=search&objType=258&SearchBarSearch=TRUE&location_id1=2000&facets=user&fulltextMode=allwords'">
+                <i class="fas fa-search"></i></td>
+              <td class="edit" onClick="window.open('#')">
+                <i class="fas fa-user-edit"></i></td>
+            </tr>
+
+            <tr>
+              <td class="file" title="#" onClick="parent.show.location.href='#'">
+                <i class="fas fa-file-powerpoint"></i>清洁与维护保养操作规程</td>
+              <td class="search" onClick="parent.show.location.href='http://edocapp/otcs/llisapi.dll?slice=3142&searchbarwidgetmode=fulltext&where1=SMP00029&ScopeSelection=3142%7C2000%7C%E5%9C%A8+Enterprise+%E5%86%85&lookfor1=allwords&modifier1=relatedto&boolean2=And&lookfor2=complexquery&typeDropDownId=1&boolean3=And&lookfor3=complexquery&dateDropDownId=1&func=search&objType=258&SearchBarSearch=TRUE&location_id1=2000&facets=user&fulltextMode=allwords'">
+                <i class="fas fa-search"></i></td>
+              <td class="edit" onClick="window.open('#')">
+                <i class="fas fa-user-edit"></i></td>
+            </tr>
+
+            <tr>
+              <td class="file" title="#" onClick="parent.show.location.href='#'">
+                <i class="fas fa-file-powerpoint"></i>清洁与维护保养操作规程</td>
+              <td class="search" onClick="parent.show.location.href='http://edocapp/otcs/llisapi.dll?slice=3142&searchbarwidgetmode=fulltext&where1=SMP00029&ScopeSelection=3142%7C2000%7C%E5%9C%A8+Enterprise+%E5%86%85&lookfor1=allwords&modifier1=relatedto&boolean2=And&lookfor2=complexquery&typeDropDownId=1&boolean3=And&lookfor3=complexquery&dateDropDownId=1&func=search&objType=258&SearchBarSearch=TRUE&location_id1=2000&facets=user&fulltextMode=allwords'">
+                <i class="fas fa-search"></i></td>
+              <td class="edit" onClick="window.open('#')">
+                <i class="fas fa-user-edit"></i></td>
+            </tr>
+
+            <tr>
+              <td class="file" title="#" onClick="parent.show.location.href='#'">
+                <i class="fas fa-file-powerpoint"></i>清洁与维护保养操作规程</td>
+              <td class="search" onClick="parent.show.location.href='http://edocapp/otcs/llisapi.dll?slice=3142&searchbarwidgetmode=fulltext&where1=SMP00029&ScopeSelection=3142%7C2000%7C%E5%9C%A8+Enterprise+%E5%86%85&lookfor1=allwords&modifier1=relatedto&boolean2=And&lookfor2=complexquery&typeDropDownId=1&boolean3=And&lookfor3=complexquery&dateDropDownId=1&func=search&objType=258&SearchBarSearch=TRUE&location_id1=2000&facets=user&fulltextMode=allwords'">
+                <i class="fas fa-search"></i></td>
+              <td class="edit" onClick="window.open('#')">
+                <i class="fas fa-user-edit"></i></td>
+            </tr>
+
+            <tr>
+              <td class="file" title="#" onClick="parent.show.location.href='#'">
+                <i class="fas fa-file-powerpoint"></i>清洁与维护保养操作规程</td>
+              <td class="search" onClick="parent.show.location.href='http://edocapp/otcs/llisapi.dll?slice=3142&searchbarwidgetmode=fulltext&where1=SMP00029&ScopeSelection=3142%7C2000%7C%E5%9C%A8+Enterprise+%E5%86%85&lookfor1=allwords&modifier1=relatedto&boolean2=And&lookfor2=complexquery&typeDropDownId=1&boolean3=And&lookfor3=complexquery&dateDropDownId=1&func=search&objType=258&SearchBarSearch=TRUE&location_id1=2000&facets=user&fulltextMode=allwords'">
+                <i class="fas fa-search"></i></td>
+              <td class="edit" onClick="window.open('#')">
+                <i class="fas fa-user-edit"></i></td>
+            </tr>
+
+            <tr>
+              <td class="file" title="#" onClick="parent.show.location.href='#'">
+                <i class="fas fa-file-powerpoint"></i>清洁与维护保养操作规程</td>
+              <td class="search" onClick="parent.show.location.href='http://edocapp/otcs/llisapi.dll?slice=3142&searchbarwidgetmode=fulltext&where1=SMP00029&ScopeSelection=3142%7C2000%7C%E5%9C%A8+Enterprise+%E5%86%85&lookfor1=allwords&modifier1=relatedto&boolean2=And&lookfor2=complexquery&typeDropDownId=1&boolean3=And&lookfor3=complexquery&dateDropDownId=1&func=search&objType=258&SearchBarSearch=TRUE&location_id1=2000&facets=user&fulltextMode=allwords'">
+                <i class="fas fa-search"></i></td>
+              <td class="edit" onClick="window.open('#')">
+                <i class="fas fa-user-edit"></i></td>
+            </tr>
+
+            <tr>
+              <td class="file" title="#" onClick="parent.show.location.href='#'">
+                <i class="fas fa-file-powerpoint"></i>清洁与维护保养操作规程</td>
+              <td class="search" onClick="parent.show.location.href='http://edocapp/otcs/llisapi.dll?slice=3142&searchbarwidgetmode=fulltext&where1=SMP00029&ScopeSelection=3142%7C2000%7C%E5%9C%A8+Enterprise+%E5%86%85&lookfor1=allwords&modifier1=relatedto&boolean2=And&lookfor2=complexquery&typeDropDownId=1&boolean3=And&lookfor3=complexquery&dateDropDownId=1&func=search&objType=258&SearchBarSearch=TRUE&location_id1=2000&facets=user&fulltextMode=allwords'">
+                <i class="fas fa-search"></i></td>
+              <td class="edit" onClick="window.open('#')">
+                <i class="fas fa-user-edit"></i></td>
+            </tr>
+
+            <tr>
+              <td class="file" title="#" onClick="parent.show.location.href='#'">
+                <i class="fas fa-file-powerpoint"></i>清洁与维护保养操作规程</td>
+              <td class="search" onClick="parent.show.location.href='http://edocapp/otcs/llisapi.dll?slice=3142&searchbarwidgetmode=fulltext&where1=SMP00029&ScopeSelection=3142%7C2000%7C%E5%9C%A8+Enterprise+%E5%86%85&lookfor1=allwords&modifier1=relatedto&boolean2=And&lookfor2=complexquery&typeDropDownId=1&boolean3=And&lookfor3=complexquery&dateDropDownId=1&func=search&objType=258&SearchBarSearch=TRUE&location_id1=2000&facets=user&fulltextMode=allwords'">
+                <i class="fas fa-search"></i></td>
+              <td class="edit" onClick="window.open('#')">
+                <i class="fas fa-user-edit"></i></td>
+            </tr>
+
+          </table>
+
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="header">
+          <h3><i class="fas fa-tint"></i>标准操作规程（SOP）--- 公共规程</h3>
+        </div>
+        <div class="content">
+
+          <table border="0">
+
+            <tr>
+              <td class="file" title="SMP00023" onClick="parent.show.location.href='http://edocapp/otcs/llisapi.dll/fetch/2000/74269/80332/80343/80344/80345/80731/%E5%88%A9%E5%A6%A5%E6%98%94%E5%8D%95%E6%8A%97%E6%B3%A8%E5%B0%84%E6%B6%B2M1b_3000L%E7%BA%AF%E5%8C%96%E5%B7%A5%E8%89%BA%E8%A7%84%E7%A8%8B.PDF?nodeid=10316385&vernum=9'">
+                <i class="fas fa-file-powerpoint"></i>Bio-Welder_TC带液操作接管机使用、清洁与维护保养操作规程</td>
+              <td class="search" onClick="parent.show.location.href='http://edocapp/otcs/llisapi.dll?slice=3142&searchbarwidgetmode=fulltext&where1=SMP00029&ScopeSelection=3142%7C2000%7C%E5%9C%A8+Enterprise+%E5%86%85&lookfor1=allwords&modifier1=relatedto&boolean2=And&lookfor2=complexquery&typeDropDownId=1&boolean3=And&lookfor3=complexquery&dateDropDownId=1&func=search&objType=258&SearchBarSearch=TRUE&location_id1=2000&facets=user&fulltextMode=allwords'">
+                <i class="fas fa-search"></i></td>
+              <td class="edit" onClick="window.open('https://www.jb51.net')">
+                <i class="fas fa-user-edit"></i></td>
+            </tr>
+
+            <tr>
+              <td class="file" title="#" onClick="parent.show.location.href='#'">
+                <i class="fas fa-file-powerpoint"></i>清洁与维护保养操作规程</td>
+              <td class="search" onClick="parent.show.location.href='http://edocapp/otcs/llisapi.dll?slice=3142&searchbarwidgetmode=fulltext&where1=SMP00029&ScopeSelection=3142%7C2000%7C%E5%9C%A8+Enterprise+%E5%86%85&lookfor1=allwords&modifier1=relatedto&boolean2=And&lookfor2=complexquery&typeDropDownId=1&boolean3=And&lookfor3=complexquery&dateDropDownId=1&func=search&objType=258&SearchBarSearch=TRUE&location_id1=2000&facets=user&fulltextMode=allwords'">
+                <i class="fas fa-search"></i></td>
+              <td class="edit" onClick="window.open('#')">
+                <i class="fas fa-user-edit"></i></td>
+            </tr>
+
+            <tr>
+              <td class="file" title="#" onClick="parent.show.location.href='#'">
+                <i class="fas fa-file-powerpoint"></i>清洁与维护保养操作规程</td>
+              <td class="search" onClick="parent.show.location.href='http://edocapp/otcs/llisapi.dll?slice=3142&searchbarwidgetmode=fulltext&where1=SMP00029&ScopeSelection=3142%7C2000%7C%E5%9C%A8+Enterprise+%E5%86%85&lookfor1=allwords&modifier1=relatedto&boolean2=And&lookfor2=complexquery&typeDropDownId=1&boolean3=And&lookfor3=complexquery&dateDropDownId=1&func=search&objType=258&SearchBarSearch=TRUE&location_id1=2000&facets=user&fulltextMode=allwords'">
+                <i class="fas fa-search"></i></td>
+              <td class="edit" onClick="window.open('#')">
+                <i class="fas fa-user-edit"></i></td>
+            </tr>
+
+            <tr>
+              <td class="file" title="#" onClick="parent.show.location.href='#'">
+                <i class="fas fa-file-powerpoint"></i>清洁与维护保养操作规程</td>
+              <td class="search" onClick="parent.show.location.href='http://edocapp/otcs/llisapi.dll?slice=3142&searchbarwidgetmode=fulltext&where1=SMP00029&ScopeSelection=3142%7C2000%7C%E5%9C%A8+Enterprise+%E5%86%85&lookfor1=allwords&modifier1=relatedto&boolean2=And&lookfor2=complexquery&typeDropDownId=1&boolean3=And&lookfor3=complexquery&dateDropDownId=1&func=search&objType=258&SearchBarSearch=TRUE&location_id1=2000&facets=user&fulltextMode=allwords'">
+                <i class="fas fa-search"></i></td>
+              <td class="edit" onClick="window.open('#')">
+                <i class="fas fa-user-edit"></i></td>
+            </tr>
+
+            <tr>
+              <td class="file" title="#" onClick="parent.show.location.href='#'">
+                <i class="fas fa-file-powerpoint"></i>清洁与维护保养操作规程</td>
+              <td class="search" onClick="parent.show.location.href='http://edocapp/otcs/llisapi.dll?slice=3142&searchbarwidgetmode=fulltext&where1=SMP00029&ScopeSelection=3142%7C2000%7C%E5%9C%A8+Enterprise+%E5%86%85&lookfor1=allwords&modifier1=relatedto&boolean2=And&lookfor2=complexquery&typeDropDownId=1&boolean3=And&lookfor3=complexquery&dateDropDownId=1&func=search&objType=258&SearchBarSearch=TRUE&location_id1=2000&facets=user&fulltextMode=allwords'">
+                <i class="fas fa-search"></i></td>
+              <td class="edit" onClick="window.open('#')">
+                <i class="fas fa-user-edit"></i></td>
+            </tr>
+
+            <tr>
+              <td class="file" title="#" onClick="parent.show.location.href='#'">
+                <i class="fas fa-file-powerpoint"></i>清洁与维护保养操作规程</td>
+              <td class="search" onClick="parent.show.location.href='http://edocapp/otcs/llisapi.dll?slice=3142&searchbarwidgetmode=fulltext&where1=SMP00029&ScopeSelection=3142%7C2000%7C%E5%9C%A8+Enterprise+%E5%86%85&lookfor1=allwords&modifier1=relatedto&boolean2=And&lookfor2=complexquery&typeDropDownId=1&boolean3=And&lookfor3=complexquery&dateDropDownId=1&func=search&objType=258&SearchBarSearch=TRUE&location_id1=2000&facets=user&fulltextMode=allwords'">
+                <i class="fas fa-search"></i></td>
+              <td class="edit" onClick="window.open('#')">
+                <i class="fas fa-user-edit"></i></td>
+            </tr>
+
+            <tr>
+              <td class="file" title="#" onClick="parent.show.location.href='#'">
+                <i class="fas fa-file-powerpoint"></i>清洁与维护保养操作规程</td>
+              <td class="search" onClick="parent.show.location.href='http://edocapp/otcs/llisapi.dll?slice=3142&searchbarwidgetmode=fulltext&where1=SMP00029&ScopeSelection=3142%7C2000%7C%E5%9C%A8+Enterprise+%E5%86%85&lookfor1=allwords&modifier1=relatedto&boolean2=And&lookfor2=complexquery&typeDropDownId=1&boolean3=And&lookfor3=complexquery&dateDropDownId=1&func=search&objType=258&SearchBarSearch=TRUE&location_id1=2000&facets=user&fulltextMode=allwords'">
+                <i class="fas fa-search"></i></td>
+              <td class="edit" onClick="window.open('#')">
+                <i class="fas fa-user-edit"></i></td>
+            </tr>
+
+            <tr>
+              <td class="file" title="#" onClick="parent.show.location.href='#'">
+                <i class="fas fa-file-powerpoint"></i>清洁与维护保养操作规程</td>
+              <td class="search" onClick="parent.show.location.href='http://edocapp/otcs/llisapi.dll?slice=3142&searchbarwidgetmode=fulltext&where1=SMP00029&ScopeSelection=3142%7C2000%7C%E5%9C%A8+Enterprise+%E5%86%85&lookfor1=allwords&modifier1=relatedto&boolean2=And&lookfor2=complexquery&typeDropDownId=1&boolean3=And&lookfor3=complexquery&dateDropDownId=1&func=search&objType=258&SearchBarSearch=TRUE&location_id1=2000&facets=user&fulltextMode=allwords'">
+                <i class="fas fa-search"></i></td>
+              <td class="edit" onClick="window.open('#')">
+                <i class="fas fa-user-edit"></i></td>
+            </tr>
+
+            <tr>
+              <td class="file" title="#" onClick="parent.show.location.href='#'">
+                <i class="fas fa-file-powerpoint"></i>清洁与维护保养操作规程</td>
+              <td class="search" onClick="parent.show.location.href='http://edocapp/otcs/llisapi.dll?slice=3142&searchbarwidgetmode=fulltext&where1=SMP00029&ScopeSelection=3142%7C2000%7C%E5%9C%A8+Enterprise+%E5%86%85&lookfor1=allwords&modifier1=relatedto&boolean2=And&lookfor2=complexquery&typeDropDownId=1&boolean3=And&lookfor3=complexquery&dateDropDownId=1&func=search&objType=258&SearchBarSearch=TRUE&location_id1=2000&facets=user&fulltextMode=allwords'">
+                <i class="fas fa-search"></i></td>
+              <td class="edit" onClick="window.open('#')">
+                <i class="fas fa-user-edit"></i></td>
+            </tr>
+
+            <tr>
+              <td class="file" title="#" onClick="parent.show.location.href='#'">
+                <i class="fas fa-file-powerpoint"></i>清洁与维护保养操作规程</td>
+              <td class="search" onClick="parent.show.location.href='http://edocapp/otcs/llisapi.dll?slice=3142&searchbarwidgetmode=fulltext&where1=SMP00029&ScopeSelection=3142%7C2000%7C%E5%9C%A8+Enterprise+%E5%86%85&lookfor1=allwords&modifier1=relatedto&boolean2=And&lookfor2=complexquery&typeDropDownId=1&boolean3=And&lookfor3=complexquery&dateDropDownId=1&func=search&objType=258&SearchBarSearch=TRUE&location_id1=2000&facets=user&fulltextMode=allwords'">
+                <i class="fas fa-search"></i></td>
+              <td class="edit" onClick="window.open('#')">
+                <i class="fas fa-user-edit"></i></td>
+            </tr>
+
+            <tr>
+              <td class="file" title="#" onClick="parent.show.location.href='#'">
+                <i class="fas fa-file-powerpoint"></i>清洁与维护保养操作规程</td>
+              <td class="search" onClick="parent.show.location.href='http://edocapp/otcs/llisapi.dll?slice=3142&searchbarwidgetmode=fulltext&where1=SMP00029&ScopeSelection=3142%7C2000%7C%E5%9C%A8+Enterprise+%E5%86%85&lookfor1=allwords&modifier1=relatedto&boolean2=And&lookfor2=complexquery&typeDropDownId=1&boolean3=And&lookfor3=complexquery&dateDropDownId=1&func=search&objType=258&SearchBarSearch=TRUE&location_id1=2000&facets=user&fulltextMode=allwords'">
+                <i class="fas fa-search"></i></td>
+              <td class="edit" onClick="window.open('#')">
+                <i class="fas fa-user-edit"></i></td>
+            </tr>
+
+            <tr>
+              <td class="file" title="#" onClick="parent.show.location.href='#'">
+                <i class="fas fa-file-powerpoint"></i>清洁与维护保养操作规程</td>
+              <td class="search" onClick="parent.show.location.href='http://edocapp/otcs/llisapi.dll?slice=3142&searchbarwidgetmode=fulltext&where1=SMP00029&ScopeSelection=3142%7C2000%7C%E5%9C%A8+Enterprise+%E5%86%85&lookfor1=allwords&modifier1=relatedto&boolean2=And&lookfor2=complexquery&typeDropDownId=1&boolean3=And&lookfor3=complexquery&dateDropDownId=1&func=search&objType=258&SearchBarSearch=TRUE&location_id1=2000&facets=user&fulltextMode=allwords'">
+                <i class="fas fa-search"></i></td>
+              <td class="edit" onClick="window.open('#')">
+                <i class="fas fa-user-edit"></i></td>
+            </tr>
+
+            <tr>
+              <td class="file" title="#" onClick="parent.show.location.href='#'">
+                <i class="fas fa-file-powerpoint"></i>清洁与维护保养操作规程</td>
+              <td class="search" onClick="parent.show.location.href='http://edocapp/otcs/llisapi.dll?slice=3142&searchbarwidgetmode=fulltext&where1=SMP00029&ScopeSelection=3142%7C2000%7C%E5%9C%A8+Enterprise+%E5%86%85&lookfor1=allwords&modifier1=relatedto&boolean2=And&lookfor2=complexquery&typeDropDownId=1&boolean3=And&lookfor3=complexquery&dateDropDownId=1&func=search&objType=258&SearchBarSearch=TRUE&location_id1=2000&facets=user&fulltextMode=allwords'">
+                <i class="fas fa-search"></i></td>
+              <td class="edit" onClick="window.open('#')">
+                <i class="fas fa-user-edit"></i></td>
+            </tr>
+
+            <tr>
+              <td class="file" title="#" onClick="parent.show.location.href='#'">
+                <i class="fas fa-file-powerpoint"></i>清洁与维护保养操作规程</td>
+              <td class="search" onClick="parent.show.location.href='http://edocapp/otcs/llisapi.dll?slice=3142&searchbarwidgetmode=fulltext&where1=SMP00029&ScopeSelection=3142%7C2000%7C%E5%9C%A8+Enterprise+%E5%86%85&lookfor1=allwords&modifier1=relatedto&boolean2=And&lookfor2=complexquery&typeDropDownId=1&boolean3=And&lookfor3=complexquery&dateDropDownId=1&func=search&objType=258&SearchBarSearch=TRUE&location_id1=2000&facets=user&fulltextMode=allwords'">
+                <i class="fas fa-search"></i></td>
+              <td class="edit" onClick="window.open('#')">
+                <i class="fas fa-user-edit"></i></td>
+            </tr>
+
+            <tr>
+              <td class="file" title="#" onClick="parent.show.location.href='#'">
+                <i class="fas fa-file-powerpoint"></i>清洁与维护保养操作规程</td>
+              <td class="search" onClick="parent.show.location.href='http://edocapp/otcs/llisapi.dll?slice=3142&searchbarwidgetmode=fulltext&where1=SMP00029&ScopeSelection=3142%7C2000%7C%E5%9C%A8+Enterprise+%E5%86%85&lookfor1=allwords&modifier1=relatedto&boolean2=And&lookfor2=complexquery&typeDropDownId=1&boolean3=And&lookfor3=complexquery&dateDropDownId=1&func=search&objType=258&SearchBarSearch=TRUE&location_id1=2000&facets=user&fulltextMode=allwords'">
+                <i class="fas fa-search"></i></td>
+              <td class="edit" onClick="window.open('#')">
+                <i class="fas fa-user-edit"></i></td>
+            </tr>
+
+            <tr>
+              <td class="file" title="#" onClick="parent.show.location.href='#'">
+                <i class="fas fa-file-powerpoint"></i>清洁与维护保养操作规程</td>
+              <td class="search" onClick="parent.show.location.href='http://edocapp/otcs/llisapi.dll?slice=3142&searchbarwidgetmode=fulltext&where1=SMP00029&ScopeSelection=3142%7C2000%7C%E5%9C%A8+Enterprise+%E5%86%85&lookfor1=allwords&modifier1=relatedto&boolean2=And&lookfor2=complexquery&typeDropDownId=1&boolean3=And&lookfor3=complexquery&dateDropDownId=1&func=search&objType=258&SearchBarSearch=TRUE&location_id1=2000&facets=user&fulltextMode=allwords'">
+                <i class="fas fa-search"></i></td>
+              <td class="edit" onClick="window.open('#')">
+                <i class="fas fa-user-edit"></i></td>
+            </tr>
+
+          </table>
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <section>
+    <iframe name="show" height="100%" width="100%" frameborder="0" src="http://edocapp/otcs/llisapi.dll?func=llworkspace"></iframe>
+  </section>
+
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>pic</title>
+    <style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+        #main
+        {
+            column-width: 250px;
+			column-gap: 10px;
+        }
+
+        .pic
+        {
+            border:1px solid #ccc;
+            border-radius:10px;
+			margin: 10px 0;
+        }
+        .pic>img
+        {
+			border-radius: 10px;
+            width:100%;
+            height:auto;
+        }
+		
+    </style>
+	<script src="./pic.js" type="text/javascript"></script>
+ 
+</head>
+<body>
+    <div id="main">
+ 
+ 
+    </div>
+</body>
+<script type="text/javascript">
+	var main = document.querySelector("#main");
+	for(i = 0; i < pic.length; i ++){
+		var divElement = document.createElement("div");
+		divElement.classList.add("pic");
+		var imgElement = document.createElement("img");
+		imgElement.src = "./1.png";
+		var dataurl = document.createAttribute("data-url");
+		dataurl.nodeValue = pic[i];
+		imgElement.attributes.setNamedItem(dataurl);
+		imgElement.title= pic[i];
+		divElement.appendChild(imgElement);
+		main.appendChild(divElement);
+	}
+	var imgs = document.getElementsByTagName('img')
+	scrollFn()
+	// 监听滚动事件
+	window.onscroll = scrollFn
+	function scrollFn() {
+		var clietH = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+		var scrollTop = document.documentElement.scrollTop || window.pageYOffset ||  document.body.scrollTop;
+		console.log(clietH, scrollTop);
+		Array.from(imgs).forEach((item) =>{
+			let eleTop = item.offsetTop
+			// console.log(eleTop)
+			let count = scrollTop + clietH - eleTop
+			console.log(count)
+			// 可设置为>100 查看懒加载效果
+			if (count > 0) {
+				//从data-url中取出真实的图片地址赋值给scr
+				item.setAttribute('src', item.getAttribute('data-url')) 
+			}
+		})
+	}
+</script>
+
+</html>

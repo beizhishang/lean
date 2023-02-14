@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>copy</title>
+    <meta charset="UTF-8">
+</head>
+
+<style>
+    body {
+        font-family: 'Roboto', sans-serif;
+    }
+
+	table,td{
+		border: solid 1px black;
+		border-collapse:collapse;
+		}
+	td{
+		cursor: pointer;
+		padding: 5px;
+		user-select: none;
+		}
+	tr:nth-child(even){
+		background: #2196f330;
+	}
+	tr:nth-child(odd){
+		background: #cddc3940;
+	}
+	tr:first-child{
+		background: #3f51b58f;
+		font-weight: 900;
+		color: white;
+		text-align: center;
+	}
+	tr td:nth-child(1){
+		text-align: center;
+	}
+	.copied{
+		position: fixed;
+		display: block;
+		width: 50px;
+		height: 18px;
+		border-radius: 3px;
+		text-align: center;
+		background-color: white;
+		color: black;
+		box-shadow: 2px 2px 8px;
+	}
+	.copied::before{
+		content: "";
+		display: block;
+		width: 5px;
+		height: 5px;
+		background-color: white;
+		transform: rotate(30deg);
+		z-index: -1;
+		position: fixed;
+		margin-top: 10px;
+		margin-left: -1px;
+	}
+</style>
+
+<body>
+
+<table>
+    <tr>
+        <td>序号</td>
+        <td>处方名称</td>
+        <td>工序</td>
+        <td>描述</td>
+        <td>中间品物料</td>
+        <td>BOM序列号</td>
+        <td>溶液批量</td>
+
+        <td>溶液有效期</td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>W001(DS10-308001B)</td>
+        <td>培养基</td>
+        <td>M2 IBI308种子培养基</td>
+        <td>W001</td>
+        <td>3080011</td>
+        <td>27 kg</td>
+        
+        <td>不超2个月</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>W002-01(DS10-308001B)</td>
+        <td>培养基</td>
+        <td>M2 IBI308去压种子培养基-150L</td>
+        <td>W002</td>
+        <td>3080011</td>
+        <td>145 kg</td>
+        
+        <td>N+3天</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>W002-02(DS10-308001B)</td>
+        <td>培养基</td>
+        <td>M2 IBI308去压种子培养基-750L</td>
+        <td>W002</td>
+        <td>3080012</td>
+        <td>610 kg</td>
+        
+        <td>N+3天</td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td>W003(DS10-308001B)</td>
+        <td>培养基</td>
+        <td>M2 IBI308基础培养基</td>
+        <td>W003</td>
+        <td>3080011</td>
+        <td>1700 kg</td>
+        
+        <td>N+3天</td>
+    </tr>
+    <tr>
+        <td>5</td>
+        <td>W004(DS10-308001B)</td>
+        <td>培养基</td>
+        <td>M2 IBI308流加试剂B</td>
+        <td>W004</td>
+        <td>3080011</td>
+        <td>105 kg</td>
+        
+        <td>N+3天</td>
+    </tr>
+    <tr>
+        <td>6</td>
+        <td>W005(DS10-308001B)</td>
+        <td>培养基</td>
+        <td>M2 IBI308流加试剂C</td>
+        <td>W005</td>
+        <td>3080011</td>
+        <td>680 kg</td>
+        
+        <td>N+3天</td>
+    </tr>
+    <tr>
+        <td>7</td>
+        <td>W006(DS10-308001B)</td>
+        <td>培养基</td>
+        <td>M2 IBI308葡萄糖浓缩液</td>
+        <td>W006</td>
+        <td>3080011</td>
+        <td>250 kg</td>
+        
+        <td>不超3个月</td>
+    </tr>
+    <tr>
+        <td>8</td>
+        <td>W007(DS10-308001B)</td>
+        <td>培养基</td>
+        <td>M2 IBI308谷氨酰胺浓缩液</td>
+        <td>W007</td>
+        <td>3080011</td>
+        <td>50 kg</td>
+        
+        <td>不超1个月</td>
+    </tr>
+    <tr>
+        <td>9</td>
+        <td>W021(DS10-308001B)</td>
+        <td>缓冲液</td>
+        <td>M2 IBI308 洗滤缓冲液</td>
+        <td>W021</td>
+        <td>3080011</td>
+        <td>3000 kg</td>
+        
+        <td>185h</td>
+    </tr>
+    <tr>
+        <td>10</td>
+        <td>W022(DS10-308001B)</td>
+        <td>缓冲液</td>
+        <td>M2 IBI308 2mol／L CitricAcid 辅料级</td>
+        <td>W022</td>
+        <td>3080011</td>
+        <td>20 kg</td>
+        
+        <td>24h</td>
+    </tr>
+    <tr>
+        <td>11</td>
+        <td>W023(DS10-308001B)</td>
+        <td>缓冲液</td>
+        <td>M2 IBI308 2mol／L CitricAcid 药用级</td>
+        <td>W023</td>
+        <td>3080011</td>
+        <td>200 kg</td>
+        
+        <td>30天</td>
+    </tr>
+    <tr>
+        <td>12</td>
+        <td>W024(DS10-308001B)</td>
+        <td>缓冲液</td>
+        <td>M2 IBI308 2mol/L Tris Base</td>
+        <td>W024</td>
+        <td>3080011</td>
+        <td>200 kg</td>
+        
+        <td>30天</td>
+    </tr>
+    <tr>
+        <td>13</td>
+        <td>W025(DS10-308001B)</td>
+        <td>缓冲液</td>
+        <td>M2 IBI308 2％苯甲醇溶液</td>
+        <td>W025</td>
+        <td>3080011</td>
+        <td>2000 kg</td>
+        
+        <td>720h</td>
+    </tr>
+    <tr>
+        <td>14</td>
+        <td>W026(DS10-308001B)</td>
+        <td>缓冲液</td>
+        <td>M2 IBI308 50倍聚山梨酯-80母液</td>
+        <td>W026</td>
+        <td>3080011</td>
+        <td>10 kg</td>
+        
+        <td>8天</td>
+    </tr>
+    <tr>
+        <td>15</td>
+        <td>W027-01(DS10-308001B)</td>
+        <td>缓冲液</td>
+        <td>M2 IBI308 0.5mol／L氢氧化钠溶液</td>
+        <td>W027</td>
+        <td>3080011</td>
+        <td>9000 kg</td>
+        
+        <td>720h</td>
+    </tr>
+    <tr>
+        <td>16</td>
+        <td>W027-02(DS10-308001B)</td>
+        <td>缓冲液</td>
+        <td>M2 IBI308 0.5mol／L氢氧化钠溶液</td>
+        <td>W027</td>
+        <td>3080012</td>
+        <td>3000 kg</td>
+        
+        <td>720h</td>
+    </tr>
+    <tr>
+        <td>17</td>
+        <td>W028(DS10-308001B)</td>
+        <td>缓冲液</td>
+        <td>M2 IBI308 0.1mol／L氢氧化钠溶液</td>
+        <td>W028</td>
+        <td>3080011</td>
+        <td>6000 kg</td>
+        
+        <td>720h</td>
+    </tr>
+    <tr>
+        <td>18</td>
+        <td>W029-01(DS10-308001B)</td>
+        <td>缓冲液</td>
+        <td>M2 IBI308亲和平衡液-1</td>
+        <td>W029</td>
+        <td>3080011</td>
+        <td>3000 kg</td>
+        
+        <td>185h</td>
+    </tr>
+    <tr>
+        <td>19</td>
+        <td>W029-02(DS10-308001B)</td>
+        <td>缓冲液</td>
+        <td>M2 IBI308亲和平衡液-2</td>
+        <td>W029</td>
+        <td>3080012</td>
+        <td>9000 kg</td>
+        
+        <td>185h</td>
+    </tr>
+    <tr>
+        <td>20</td>
+        <td>W030(DS10-308001B)</td>
+        <td>缓冲液</td>
+        <td>M2 IBI308亲和洗脱液</td>
+        <td>W030</td>
+        <td>3080011</td>
+        <td>3000 kg</td>
+        
+        <td>185h</td>
+    </tr>
+    <tr>
+        <td>21</td>
+        <td>W031(DS10-308001B)</td>
+        <td>缓冲液</td>
+        <td>M2 IBI308亲和再生液</td>
+        <td>W031</td>
+        <td>3080011</td>
+        <td>2000 kg</td>
+        
+        <td>185h</td>
+    </tr>
+    <tr>
+        <td>22</td>
+        <td>W032(DS10-308001B)</td>
+        <td>缓冲液</td>
+        <td>M2 IBI308亲和冲洗液</td>
+        <td>W032</td>
+        <td>3080011</td>
+        <td>3000 kg</td>
+        
+        <td>185h</td>
+    </tr>
+    <tr>
+        <td>23</td>
+        <td>W033(DS10-308001B)</td>
+        <td>缓冲液</td>
+        <td>M2 IBI308阳离子洗脱液</td>
+        <td>W033</td>
+        <td>3080011</td>
+        <td>3000 kg</td>
+        
+        <td>185h</td>
+    </tr>
+    <tr>
+        <td>24</td>
+        <td>W034(DS10-308001B)</td>
+        <td>缓冲液</td>
+        <td>M2 IBI308阳离子平衡液</td>
+        <td>W034</td>
+        <td>3080011</td>
+        <td>6000 kg</td>
+        
+        <td>185h</td>
+    </tr>
+    <tr>
+        <td>25</td>
+        <td>W035(DS10-308001B)</td>
+        <td>缓冲液</td>
+        <td>M2 IBI308阴离子稀释液</td>
+        <td>W035</td>
+        <td>3080011</td>
+        <td>2000 kg</td>
+        
+        <td>185h</td>
+    </tr>
+    <tr>
+        <td>26</td>
+        <td>W036(DS10-308001B)</td>
+        <td>缓冲液</td>
+        <td>M2 IBI308阴离子平衡液</td>
+        <td>W036</td>
+        <td>3080011</td>
+        <td>3000 kg</td>
+        
+        <td>185h</td>
+    </tr>
+    <tr>
+        <td>27</td>
+        <td>W037(DS10-308001B)</td>
+        <td>缓冲液</td>
+        <td>M2 IBI308阴离子再生液</td>
+        <td>W037</td>
+        <td>3080011</td>
+        <td>3000 kg</td>
+        
+        <td>185h</td>
+    </tr>
+    <tr>
+        <td>28</td>
+        <td>W038-01(DS10-308001B)</td>
+        <td>缓冲液</td>
+        <td>M2 IBI308膜过滤平衡液-1</td>
+        <td>W038</td>
+        <td>3080011</td>
+        <td>3300 kg</td>
+        
+        <td>185h</td>
+    </tr>
+    <tr>
+        <td>29</td>
+        <td>W038-02(DS10-308001B)</td>
+        <td>缓冲液</td>
+        <td>M2 IBI308膜过滤平衡液-2</td>
+        <td>W038</td>
+        <td>3080012</td>
+        <td>1000 kg</td>
+        
+        <td>185h</td>
+    </tr>
+    <tr>
+        <td>30</td>
+        <td>W038-03(DS10-308001B)</td>
+        <td>缓冲液</td>
+        <td>M2 IBI308膜过滤平衡液-3</td>
+        <td>W038</td>
+        <td>3080013</td>
+        <td>1500 kg</td>
+        
+        <td>185h</td>
+    </tr>
+</table>
+</body>
+<script>
+const copyToClipboard = str => {
+    const el = document.createElement('textarea');
+    el.value = str;
+    el.setAttribute('readonly', '');
+    el.style.position = 'absolute';
+    el.style.left = '-9999px';
+    document.body.appendChild(el);
+    const selected =
+        document.getSelection().rangeCount > 0 ? document.getSelection().getRangeAt(0) : false;
+    el.select();
+    document.execCommand('copy');
+    document.body.removeChild(el);
+    if (selected) {
+        document.getSelection().removeAllRanges();
+        document.getSelection().addRange(selected);
+    }
+};
+
+var tds = document.querySelectorAll("td");
+var body = document.querySelector("body");
+for (i=0; i<tds.length; i++){
+	tds[i].addEventListener("click",function(e){
+	this.style.backgroundColor = "lightgreen";
+	copyToClipboard(this.innerText);
+	var span = document.createElement("span");
+	span.classList.add("copied");
+	span.innerText = "copied";
+	span.style.setProperty("left",e.clientX+"px");
+	span.style.setProperty("top",e.clientY+"px");
+	body.appendChild(span);
+	setTimeout(function(){
+		span.remove();
+	},1000);
+	});
+}
+
+</script>
+</html>
