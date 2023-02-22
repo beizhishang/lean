@@ -1,0 +1,10 @@
+[System]
+Name=PRD
+Client=800
+[User]
+Name=05030028
+Language=1
+[Function]
+Command=PA30
+Title=维护人力资源主数据
+Type=Transaction

@@ -1,0 +1,246 @@
+﻿<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" name="viewport"> 
+    <link rel="shortcut icon" 
+          href="..\images\纯化共享平台.ico"> 
+    <title>缩略词查询</title> 
+    
+    <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+    <style type="text/css"> 
+        *{ 
+            padding: 0; 
+            margin: 0; 
+        } 
+
+        body{
+           height: 100vh;
+           width: 100vw;
+           overflow: hidden;
+           background-color: rgba(167,220,225,1);
+       }
+ 
+        #logo{
+             position: fixed;
+             width: 140px;
+             height: 40px;
+             padding: 10px;
+             margin-top: 25px;
+             margin-left:  30px;
+             cursor: pointer;
+             transition: all .5s ease;
+             border-radius: 5px;
+        }
+        
+       #logo:hover{
+             box-shadow: 0 0 20px;
+        }
+ 
+       #logo:active{
+             transform: translateY(8px);
+        }
+
+        .container{
+            width: 100vw;
+            height: 10vh;
+            background-color: rgba(167,220,225,1);
+      }
+
+        .inner{
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 6%;
+        }
+ 
+        .input1{ 
+            height: 40px;
+            width: 400px; 
+            padding: 0 20px; 
+            font-size:1.2em; 
+            text-align: center; 
+            font-weight: 700;
+            border-radius: 8px;
+            border: none; 
+            background-color: #2cb7b5; 
+            color: white;
+            position: relative;
+            left: 20%;
+        } 
+ 
+        .input1::placeholder{ 
+            color: white; 
+            font-weight: 200; 
+            opacity: 0.8; 
+        } 
+ 
+        .input1:focus,.input2:focus{ 
+            outline: none; 
+        } 
+ 
+        .input2{ 
+            height: 40px;
+            width: 80px;
+            position: relative;
+            left: 20%;
+            font-size:1.2em;
+            text-align: center; 
+            border-radius: 5px; 
+            font-weight: 700;
+            border: none; 
+            background-image: linear-gradient( to left, #2cb7b5, rgb(5, 150, 118) 12.9% ,#2cb7b5); 
+            color: white; 
+            background-size: 200%; 
+            transition: 0.4s; 
+            cursor: pointer; 
+        } 
+ 
+        .input2:hover{ 
+            background-position: right; 
+            color: #f8e8ed; 
+        } 
+ 
+        .input2:active{ 
+            transform:translateY(4px); 
+        } 
+ 
+        .explain{ 
+            position: relative; 
+            width: 800px; 
+            height: 100%; 
+            padding: 20px;
+            margin-top: 3%;
+            border-radius: 8px;
+        }
+ 
+        p{ 
+            font-size: 1.4em; 
+            margin: 10px 0;
+            line-height: 1.8em; 
+            letter-spacing: 1px; 
+            color: #0d8278; 
+        } 
+ 
+        a{ 
+            cursor: pointer; 
+        }
+
+        .card{
+            width: 100vw;
+            height: 80vh;
+        }
+ 
+       #cancel{
+            width: 20px;
+            height: 20px;
+            background-image: url('https://trello-attachments.s3.amazonaws.com/5d870c0418f7104546584cfb/5f531cee9a6672401310fc51/055cbc68793e6c7563b2815b714ada59/delete.png');
+            background-size: cover;
+            border-radius: 15px;
+            position: absolute;
+            right: 20px;
+            transition: 0.5s;
+            opacity: 0;
+            cursor: pointer;
+       }
+       
+       #cancel:hover{
+            transform: rotate(180deg);
+      }
+
+
+ 
+    </style> 
+</head> 
+ 
+<body> 
+<div id="logo" onclick="javascript:window.location.href='../M2共享平台.html'"><img width="140px" src="..\images\innovent-large-logo.png" /></div>
+<div class="container"> 
+    <div class="inner">
+        <input type="search" class="input1" placeholder="请输入需要查询的缩略词" list="slc" style="" id="context1" onkeypress="sender()">
+        <input type="button" class="input2" value="Search" onclick="search()"> 
+    <datalist id="slc"> 
+    </datalist> 
+
+ 
+    <div class="explain" id="explain"> 
+        <div id="cancel" onclick="cancel()"></div>
+        <p id="context2"></p> 
+        <p id="context3"></p> 
+        <p id="context4"></p> 
+    </div>
+    </div>
+
+
+</div>
+<iframe class="card" frameborder="0" src="card.html"></iframe>
+</body>
+
+<script src="缩略词数据.js"></script>
+<script type="text/javascript"> 
+
+var slc = document.getElementById("slc");
+for(i = 0; i < obj.length; i++){
+    var node = document.createElement("option");
+    var textnode=document.createTextNode(obj[i].paraphrase);
+    node.appendChild(textnode);
+    slc.appendChild(node);
+} ;
+
+var option = document.querySelectorAll("option");
+for(i = 0; i < option.length; i++ ){
+    option[i].value = obj[i].abb;
+}
+
+ 
+function sender(){ 
+    if(event.keyCode===13){ 
+       search(); 
+      } 
+} 
+   
+function cancel(){
+        document.getElementById("explain").style.opacity="0";
+};
+
+function search() { 
+
+        var context1 = document.getElementById("context1"); 
+        var  m = document.getElementById("explain");
+        m.style.backgroundColor="rgba(167,220,225,.9)";
+        m.style.boxShadow="2px 2px 20px, -3px -3px 9px white";
+        m.style.opacity="1";
+        var n =document.getElementById("cancel");
+        n.style.opacity="1"; 
+
+     if(
+            context1.value == ""
+       ){
+            m.style.opacity="0";
+       }
+
+
+//     if(
+//            context1.value == ""
+//       ){
+//           document.getElementById("context2").innerHTML="非常抱歉，暂未收录该词条"; 
+//           document.getElementById("context3").innerHTML="<a href=\"mailto:pengyun.xu@innoventbio.com?subject=缩略词收录&body=请描述清楚词条信息\">点击此处收录该词条</a>"; 
+//           document.getElementById("context4").innerHTML="<a href=\"http://shareedit/_layouts/15/WopiFrame2.aspx?sourcedoc={F5385DCF-AD29-4310-B346-320C0FA5227F}&file=%E7%BA%AF%E5%8C%96%E6%9C%AF%E8%AF%AD.xlsx&action=default\" target='_blank'>查看已收录词条<a/>";  
+//       }
+
+    for(i = 0; i < obj.length; i++){
+        if(
+            context1.value == obj[i].abb
+          ){
+            document.getElementById("context2").innerHTML="全称："+obj[i].translation;
+            document.getElementById("context3").innerHTML="释义："+obj[i].paraphrase;
+            document.getElementById("context4").innerHTML="定义："+obj[i].definition;
+        }
+    }
+}
+
+
+</script> 
+
+</html> 

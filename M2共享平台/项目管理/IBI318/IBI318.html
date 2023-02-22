@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>IBI318</title>
+    <meta charset="GBK">
+    <link href="https://trello-attachments.s3.amazonaws.com/5d870c0418f7104546584cfb/5dcbcaedb6ca803685cc6fa0/a83d2af9b74ca6ddceec6ed84190fa15/Purification_(2).ico"
+      rel="shortcut icon">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+
+<style>
+    body {
+        font-family: 'Roboto', sans-serif;
+    }
+
+    *{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        text-decoration: none;
+    }
+
+     #home{
+        cursor: pointer;
+    }
+
+    .sidebar{
+        position: fixed;
+        left: -250px;
+        width: 250px;
+        height: 100%;
+        background: #042331;
+        transition: all .5s ease;
+    }
+
+    .sidebar header{
+        font-size: 22px;
+        color: white;
+        text-align: left;
+        padding-left: 30px;
+        line-height: 70px;
+        background: #063146;
+        user-select: none;
+    }
+
+    .sidebar ul a{
+        display: block;
+        height: 100%;
+        width: 100%;
+        line-height: 50px;
+        font-size: 16px;
+        color: white;
+        padding-left: 20px;
+        box-sizing: border-box;
+        border-top: 1px solid rgba(255,255,255,.1);
+        border-bottom: 1px solid black;
+        transition: .4s;
+        cursor: pointer;
+    }
+
+    ul li:hover a{
+        padding-left: 25px;
+        background-image: linear-gradient( 177.9deg,  rgba(58,62,88,1) 3.6%, rgba(119,127,148,1) 105.8% );
+    }
+
+    .sidebar ul a i{
+        margin-right: 16px;
+    }
+
+    #check{
+        display: none;
+    }
+
+    label #btn, label #cancel{
+        position: absolute;
+        cursor: pointer;
+        background: #042331;
+        border-radius: 3px;
+    }
+
+    label #btn{
+        left: 40px;
+        top: 25px;
+        font-size: 35px;
+        color: white;
+        padding: 6px 12px;
+        transition: all .5s;
+        position: fixed;
+    }
+
+    label #cancel{
+        z-index: 1111;
+        left: -195px;
+        top: 17px;
+        font-size: 30px;
+        color: #0a5275;
+        padding: 4px 9px;
+        transition: all .5s ease;
+        position: fixed;
+    }
+
+    #check:checked ~ .sidebar{
+        left: 0;
+        
+    }
+
+    #check:checked ~ label #btn{
+        left: 250px;
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    #check:checked ~ label #cancel{
+        left: 195px;
+    }
+
+    section{
+        height: 100vh;
+        transition: all .5s ease;
+        overflow: hidden;
+    }
+
+    #check:checked ~ section{
+        margin-left: 250px;
+    }
+
+</style>
+
+<body>
+
+    <input type="checkbox" id="check">
+    <label for="check">
+        <i class="fa fa-bars" id="btn"></i>
+        <i class="fa fa-times" id="cancel"></i>
+    </label>
+
+    <div class="sidebar">
+        <header><i class="fa fa-home" id="home" onclick="javascript:window.location.href='../项目.html'"></i>&nbsp;&nbsp;&nbsp;&nbsp;IBI318</header>
+        <p >
+        <ul>
+
+            <!--<li><a onClick="parent.show.location.href='http://edocapp/otcs/llisapi.dll/fetch/2000/74269/80332/80343/80344/80345/80731/%E4%BF%A1%E8%BF%AA%E5%88%A9%E5%8D%95%E6%8A%97%E6%B3%A8%E5%B0%84%E6%B6%B2M1b_3000L%E4%B8%8A%E6%B8%B8%E5%B7%A5%E8%89%BA%E8%A7%84%E7%A8%8B.PDF?nodeid=7558831&vernum=33'">
+                  <i class="fas fa-file-contract"></i>细胞培养工艺规程</a></li>
+
+            <li><a onClick="parent.show.location.href='http://edocapp/otcs/llisapi.dll/fetch/2000/74269/80332/80343/80344/80345/80731/%E4%BF%A1%E8%BF%AA%E5%88%A9%E5%8D%95%E6%8A%97%E6%B3%A8%E5%B0%84%E6%B6%B2%E4%BA%8C%E4%BB%A3%E7%BB%86%E8%83%9E%E6%A0%AAM1b_3000L%E4%B8%8A%E6%B8%B8%E5%B7%A5%E8%89%BA%E8%A7%84%E7%A8%8B.PDF?nodeid=14717917&vernum=7'">
+                  <i class="fas fa-file-contract"></i>细胞培养工艺规程(二代)</a></li>-->
+
+            <li><a onClick="parent.show.location.href='IDC-PD-3-IBI318-R-001-02 IBI318纯化工艺描述文件.pdf'">
+                  <i class="fas fa-file-alt"></i>纯化工艺描述文件</a></li>
+
+            <li><a onClick="parent.show.location.href='http://edocapp/otcs/llisapi.dll?func=ll&objId=3110223&objAction=Open&vernum=11&nexturl=%2Fotcs%2Fllisapi%2Edll%3Ffunc%3Dsrch%2ESearchCache%26cacheId%3D1401562400&logStopConditionID=1273695_2137928300_1_open'">
+                  <i class="fas fa-file-powerpoint"></i>纯化工艺规程</a></li>
+
+            <!--<li><a onClick="parent.show.location.href='http://edocapp/otcs/llisapi.dll/fetch/2000/74269/80332/80343/80344/80345/80731/%E4%BF%A1%E8%BF%AA%E5%88%A9%E5%8D%95%E6%8A%97%E6%B3%A8%E5%B0%84%E6%B6%B2%EF%BC%88%E4%BA%8C%E4%BB%A3%E7%BB%86%E8%83%9E%E6%A0%AA%EF%BC%893000L%E5%8E%9F%E6%B6%B2%E7%BA%AF%E5%8C%96%E5%B7%A5%E8%89%BA%E8%A7%84%E7%A8%8B.PDF?nodeid=15340644&vernum=17'">
+                  <i class="fas fa-file-powerpoint"></i>纯化工艺规程(二代)</a></li>
+
+            <li><a onClick="parent.show.location.href='http://edocapp/otcs/llisapi.dll/fetch/2000/74269/80332/80343/80344/80354/80816/%E4%BF%A1%E8%BF%AA%E5%88%A9%E5%8D%95%E6%8A%97%E6%B3%A8%E5%B0%84%E6%B6%B2M1b_3000L%E5%8E%9F%E6%B6%B2%E7%BA%AF%E5%8C%96%E6%89%B9%E7%94%9F%E4%BA%A7%E8%AE%B0%E5%BD%95.PDF?nodeid=8498237&vernum=40'">
+                  <i class="fas fa-book"></i>纯化批生产记录</a></li>
+
+            <li><a onClick="parent.show.location.href='http://edocapp/otcs/llisapi.dll/fetch/2000/74269/80332/80343/80344/80354/80816/%E4%BF%A1%E8%BF%AA%E5%88%A9%E5%8D%95%E6%8A%97%E6%B3%A8%E5%B0%84%E6%B6%B2%EF%BC%88%E4%BA%8C%E4%BB%A3%E7%BB%86%E8%83%9E%E6%A0%AA%EF%BC%89M1b_3000L%E5%8E%9F%E6%B6%B2%E7%BA%AF%E5%8C%96%E6%89%B9%E7%94%9F%E4%BA%A7%E8%AE%B0%E5%BD%95.PDF?nodeid=15681465&vernum=4'">
+                  <i class="fas fa-book"></i>纯化批生产记录(二代)</a></li>
+
+            <li><a onClick="parent.show.location.href='M2IBI301工艺.pdf'">
+                  <i class="fas fa-project-diagram"></i>纯化工艺流程图</a></li>-->
+
+            <!--<li><a onClick="parent.show.location.href='批记录扫描件.pdf'">
+                  <i class="fas fa-file-pdf"></i>纯化批记录扫描件</a></li>-->
+
+            <!--<li><a onClick="parent.show.location.href='IBI301 M1b3000L PV process monitoring.htm'">
+                 <i class="fas fa-chart-bar"></i>纯化监控数据</a></li>
+
+            <li><a onClick="parent.show.location.href='http://edocapp/otcs/llisapi.dll/fetch/2000/74269/80336/80349/80350/80744/80810/%E4%BF%A1%E8%BF%AA%E5%88%A9%E5%8D%95%E6%8A%97%E6%B3%A8%E5%B0%84%E6%B6%B2%E9%99%A4%E7%97%85%E6%AF%92%E8%BF%87%E6%BB%A4%E8%BF%94%E5%B7%A5%E5%90%8C%E6%AD%A5%E9%AA%8C%E8%AF%81%E6%96%B9%E6%A1%88.PDF?nodeid=8212699&vernum=9'">
+                <i class="fas fa-life-ring"></i>除病毒过滤返工方案</a></li>
+
+            <li><a onClick="parent.show.location.href='http://edocapp/otcs/llisapi.dll/fetch/2000/74269/80336/80349/80350/80744/80810/%E4%BF%A1%E8%BF%AA%E5%88%A9%E5%8D%95%E6%8A%97%E6%B3%A8%E5%B0%84%E6%B6%B2%E5%8E%9F%E6%B6%B2%E8%BF%87%E6%BB%A4%E8%BF%94%E5%B7%A5%E5%90%8C%E6%AD%A5%E9%AA%8C%E8%AF%81%E6%96%B9%E6%A1%88.PDF?nodeid=8249138&vernum=8'">
+               <i class="fas fa-life-ring"></i>原液过滤返工方案</a></li>
+
+            <li><a onClick="parent.show.location.href='http://edocapp/otcs/llisapi.dll/fetch/2000/74269/80332/80343/80344/80345/80820/%E4%BF%A1%E8%BF%AA%E5%88%A9%E5%8D%95%E6%8A%97%E6%B3%A8%E5%B0%84%E6%B6%B2M1b_3000L_%E5%8E%9F%E6%B6%B2%E8%B4%A8%E9%87%8F%E6%A0%87%E5%87%86.PDF?nodeid=7647156&vernum=12'">
+               <i class="fas fa-syringe"></i>原液质量标准</a></li>-->
+
+        </ul>
+    </div>
+    <section>
+        <iframe name="show" height="100%" width="100%" frameborder="0" src="http://edocapp/otcs/llisapi.dll?func=ll&objId=3110223&objAction=Open&vernum=11&nexturl=%2Fotcs%2Fllisapi%2Edll%3Ffunc%3Dsrch%2ESearchCache%26cacheId%3D1401562400&logStopConditionID=1273695_2137928300_1_open"></iframe>
+    </section>
+
+</body>
+
+</html>

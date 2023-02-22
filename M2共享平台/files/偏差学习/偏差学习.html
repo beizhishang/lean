@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="GBK">
+    <link rel="shortcut icon" href="..\..\images\纯化共享平台.ico">
+    <title>偏差学习</title>
+    <style type="text/css">
+        html{
+            padding:0;
+            margin: 0;
+            background-color: darkseagreen;
+            height: 100%;
+        }
+        .div1{
+            height: 720px;
+            width: 1280px;
+            background-image: url("偏差学习/幻灯片1.png");
+            background-repeat: no-repeat;
+            background-position: center;
+            position: relative;
+            float: left;
+            margin-top: 100px;
+            margin-left: 500px;
+            box-shadow: 0px 0px 80px;
+            border: solid white;
+            background-color: white;
+        }
+        .div1:hover{
+            box-shadow: 0px 0px 20px 5px red;
+            border: solid aqua; 
+       }
+        .div1>div{
+            color: red;
+        }
+        .menu{
+            float: left;
+            background-color: white;
+            margin-top: 70px;
+            padding-top: 10px;
+            padding-right: 30px;
+            height: 800px;
+            box-shadow: 4px 4px 10px, -4px -4px 10px;
+            position:fixed;
+            overflow:scroll;
+            font-size: 15px;
+        }
+        ul{
+            list-style-position: inside;
+        }
+        li{
+            padding:10px;
+            border-radius: 10px;
+        }
+        li:hover{
+            background: black;
+            color: white;
+            cursor:pointer;
+        }
+
+        .head{
+      text-align: center;
+      margin-bottom: 20px;
+      position:fixed;
+      margin-top: 20px;
+      margin-left: 200px;
+      font-size: 25px;
+}
+      a:hover{
+
+       color: red;
+}
+a{
+      text-decoration:none;
+      color: black;
+      font-weight: 700;
+}
+
+    </style>
+</head>
+<body>
+<div class="head"><a href="http://shareedit/_layouts/15/WopiFrame.aspx?sourcedoc={59828745-CFA7-4318-A14B-C506966E1AE0}&file=%E5%81%8F%E5%B7%AE%E5%AD%A6%E4%B9%A0.pptx&action=default" target="_blank" title="偏差是指对正常情况例如批准的GMP规程、指令，标准或预期结果的无计划偏离。包括任何偏离生产工艺、操作规程、物料平衡超出限度、关键设备异常等情况，也包括药品生产、运输、配送的全过程和各种相关影响因素引起的偏离">偏差</a></div>
+<div class="menu">
+    <ul>
+        <li style="color:red;list-style:none;padding-left:160px;font-weight:900;" >2019</li>
+        <li onclick="f1(2)">缓冲液pH调过</li>
+        <li onclick="f1(3)">平皿超期未送样</li>
+        <li onclick="f1(4)">不清楚设备状态的情况下对设备进行计量</li>
+        <li onclick="f1(5)">辅助记录使用错误</li>
+        <li onclick="f1(6)">批记录使用错误</li>
+        <li onclick="f1(7)">纸质文件传入C/D级自净时间未满30min</li>
+        <li onclick="f1(8)">蛋白含量检测稀释液送错</li>
+        <li onclick="f1(9)">因培养基破损导致检测结果收到干扰</li>
+        <li onclick="f1(10)">层析溶液用错</li>
+        <li onclick="f1(11)">完整性检测方法调用错误</li>
+        <li onclick="f1(12)">完整性检测仪设备时间异常</li>
+        <li onclick="f1(13)">冻融容器破损导致原液泄漏</li>
+        <li onclick="f1(14)">阳离子收集液pH调过</li>
+        <li onclick="f1(15)">计算器显示不清导致蛋白含量计算错误</li>
+        <li onclick="f1(16)">物料标签与原厂标签不一致</li>
+        <li onclick="f1(17)">溶液批号写错</li>
+        <li onclick="f1(18)">物料发放未按照先进先出原则</li>
+        <li onclick="f1(19)">亲和图谱拖尾</li>
+        <li style="color:red;list-style:none;padding-left:160px;font-weight:900;" >2018</li>
+        <li onclick="f1(20)">生产使用了同名的非生产文件</li>
+        <li onclick="f1(21)">AkTa排气冲洗时间≤2min</li>
+        <li onclick="f1(22)">冰箱未进行每年度除霜导致超过标准温度范围</li>
+        <li onclick="f1(23)">填料使用长期保存溶液选择错误</li>
+        <li onclick="f1(24)">未按照操作规程上的流速测柱效</li>
+        <li onclick="f1(25)">层析方法中流速与工艺要求不一致</li>
+        <li onclick="f1(26)">异常情况未按SOP的处理方式执行操作</li>
+        <li onclick="f1(27)">收样过程中无意关闭管夹</li>
+        <li onclick="f1(28)">除病毒过滤超载量</li>
+        <li onclick="f1(29)">电子秤精度有限导致无法满足称量需求</li>
+        <li onclick="f1(30)">断电导致数据工作站数据丢失</li>
+        <li onclick="f1(31)">层析方法修改后没有执行洗脱程序</li>
+        <li onclick="f1(32)">物料中发现死苍蝇</li>
+        <li onclick="f1(33)">记录中物料编码与实际使用不一致</li>
+        <li onclick="f1(34)">投料太快导致溶质未溶解</li>
+        <li onclick="f1(35)">误关通气阀导致收集液未通气</li>
+        <li onclick="f1(36)">设备时钟时区修改未设置权限</li>
+        <li onclick="f1(37)">试剂存储超过存储有效期</li>
+        <li onclick="f1(38)">溶液配制定容超限</li>
+        <li onclick="f1(39)">酸碱调节剂加入过量导致pH超限</li>
+        <li onclick="f1(40)">原液请验单生产日期写错</li>
+        <li onclick="f1(41)">平衡液提前排放导致后续溶液量不够</li>
+        <li onclick="f1(42)">投料时发现物料中有黑色小虫</li>
+    </ul>
+</div>
+<div class="div1" id="show">
+
+</div>
+</body>
+<script type="text/javascript">
+    function f1(i){
+        var a="url("+"偏差学习/幻灯片"+i+".png)";
+        document.getElementById("show").style.backgroundImage=a;
+    }
+</script>
+</html>

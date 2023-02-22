@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meat http-equiv="X-UA-Compatible" content="ie=edge">
+<title>IT MES</title>
+<style>
+*{ 
+    margin: 0; 
+    padding: 0;
+}
+html{
+    height:100%;
+	background-color: #c8f5c8;
+}
+a{
+	display: block;
+	padding: 8px;
+	text-decoration: none;
+	color: darkblue;
+	font-size: 14px;
+	border-radius: 5px;
+}
+a:hover{
+	background-color: black;
+	color: white;
+}
+#search{
+	font-size: 20px;
+	padding-left: 38px;
+	position: fixed;
+	background-color: #ffffffd9;
+	width: 100%;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	box-shadow: 0 0 5px;
+}
+#container{
+	padding: 60px 30px 30px 30px;
+	font-size: 16px;
+}
+input{
+	font-size: 18px;
+	margin-right: 20px;
+	width: 300px;
+	height: 30px;
+	padding-left: 8px;
+}
+
+#searchbtn{
+	padding: 5px;
+	font-size: 16px;
+	width: 80px;
+}
+
+button{
+	padding: 5px;
+	margin-left: 10px;
+}
+</style>
+</head>
+
+<body>
+<div id="search">
+	<input id="input" type="text" onchange="search()"><button id="searchbtn" onclick="search()">搜索</button>
+</div>
+
+<div id="container"></div>
+
+</body>
+<script type="text/javascript" src="document.js"></script>
+<script type="text/javascript">
+
+var container = document.getElementById("container");
+var searchText = document.querySelector("#input");
+
+window.onload = function(){
+	initial();
+	changeColor();
+	copyLink();
+	};
+
+function initial(){
+	for(i = 0; i < link.length; i ++){
+		var source = document.createElement("a");
+		var textNode = document.createTextNode(link[i]);
+		source.appendChild(textNode);
+		source.href = link[i];
+		source.setAttribute("target","_blank");
+		container.appendChild(source);
+	};
+};
+
+function changeColor(){
+	var atag = document.querySelectorAll("a");
+	for(i = 0; i < atag.length; i++){
+		atag[i].addEventListener("click",function(){
+			this.style.color="gray";
+		});
+	}
+};
+
+const copyLink = () => {
+	var atag = document.querySelectorAll("a");
+	for(i = 0; i < atag.length; i++){
+		var button = document.createElement("button");
+		var buttonNode = document.createTextNode("复制地址");
+		button.appendChild(buttonNode);
+		atag[i].appendChild(button);
+	}
+	var buttonLink = document.querySelectorAll("button");
+	for(i = 0; i < buttonLink.length; i ++){
+		buttonLink[i].addEventListener("click",function(e){
+			e.preventDefault();
+			copyToClipboard(this.parentNode.firstChild.nodeValue);
+			//alert("复制路径成功\n" + this.parentNode.firstChild.nodeValue)
+		});
+	}
+}
+
+function search() {
+	container.innerHTML = "";
+	for(i = 0; i < link.length; i ++){
+		if(link[i].indexOf(searchText.value) >= 0){
+			var source = document.createElement("a");
+			var textNode = document.createTextNode(link[i]);
+			var button = document.createElement("button");
+			var buttonNode = document.createTextNode("复制地址");
+			button.appendChild(buttonNode)
+			source.appendChild(textNode);
+			source.href = link[i];
+			source.setAttribute("target","_blank");
+			container.appendChild(source);
+		}
+	}
+	changeColor();
+	copyLink();
+}
+
+const copyToClipboard = str => {
+    const el = document.createElement('textarea');
+    el.value = str;
+    el.setAttribute('readonly', '');
+    el.style.position = 'absolute';
+    el.style.left = '-9999px';
+    document.body.appendChild(el);
+    const selected =
+        document.getSelection().rangeCount > 0 ? document.getSelection().getRangeAt(0) : false;
+    el.select();
+    document.execCommand('copy');
+    document.body.removeChild(el);
+    if (selected) {
+        document.getSelection().removeAllRanges();
+        document.getSelection().addRange(selected);
+    }
+};
+
+</script>
+
+</html>
+

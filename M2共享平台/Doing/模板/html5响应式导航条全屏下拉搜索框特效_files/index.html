@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<!-- saved from url=(0101)https://www.17sucai.com/preview/1/2016-02-20/%E5%93%8D%E5%BA%94%E5%BC%8F%E5%AF%BC%E8%88%AA/index.html -->
+<html lang="zh" class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths" style=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>jQuery下拉高级搜索框特效</title>
+
+<link href="https://fonts.useso.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="./reset.css"> <!-- CSS reset -->
+<link rel="stylesheet" type="text/css" href="./demo(1).css">
+<link rel="stylesheet" href="./style.css"> <!-- Resource style -->
+<script src="./modernizr.js.下载"></script> <!-- Modernizr -->
+</head>
+<body>
+<header class="cd-main-header animate-search">
+	<div class="cd-logo"><a href="https://www.17sucai.com/preview/1/2016-02-20/%E5%93%8D%E5%BA%94%E5%BC%8F%E5%AF%BC%E8%88%AA/index.html#0"><img src="./cd-logo.svg" alt="Logo"></a></div>
+
+	 <!-- .cd-main-nav-wrapper -->
+
+	<nav class="cd-main-nav-wrapper">
+		<a href="https://www.17sucai.com/preview/1/2016-02-20/%E5%93%8D%E5%BA%94%E5%BC%8F%E5%AF%BC%E8%88%AA/index.html#search" class="cd-search-trigger cd-text-replace">Search</a>
+		
+		<ul class="cd-main-nav">
+			<li><a href="https://www.17sucai.com/preview/1/2016-02-20/%E5%93%8D%E5%BA%94%E5%BC%8F%E5%AF%BC%E8%88%AA/index.html#0">Products</a></li>
+			<li><a href="https://www.17sucai.com/preview/1/2016-02-20/%E5%93%8D%E5%BA%94%E5%BC%8F%E5%AF%BC%E8%88%AA/index.html#0">Store</a></li>
+			<li><a href="https://www.17sucai.com/preview/1/2016-02-20/%E5%93%8D%E5%BA%94%E5%BC%8F%E5%AF%BC%E8%88%AA/index.html#0">Blog</a></li>
+			<li><a href="https://www.17sucai.com/preview/1/2016-02-20/%E5%93%8D%E5%BA%94%E5%BC%8F%E5%AF%BC%E8%88%AA/index.html#0">Contact</a></li>
+		</ul> <!-- .cd-main-nav -->
+	</nav><div id="search" class="cd-main-search">
+	<form>
+		<input type="search" placeholder="Search...">
+
+		<div class="cd-select">
+			<span>in</span>
+			<select name="select-category">
+				<option value="all-categories">all Categories</option>
+				<option value="category1">Category 1</option>
+				<option value="category2">Category 2</option>
+				<option value="category3">Category 3</option>
+			</select>
+			<span class="selected-value">all Categories</span>
+		</div>
+	</form>
+
+	<div class="cd-search-suggestions">
+		<div class="news">
+			<h3>News</h3>
+			<ul>
+				<li>
+					<a class="image-wrapper" href="https://www.17sucai.com/preview/1/2016-02-20/%E5%93%8D%E5%BA%94%E5%BC%8F%E5%AF%BC%E8%88%AA/index.html#0"><img src="./placeholder.png" alt="News image"></a>
+					<h4><a class="cd-nowrap" href="https://www.17sucai.com/preview/1/2016-02-20/%E5%93%8D%E5%BA%94%E5%BC%8F%E5%AF%BC%E8%88%AA/index.html#0">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a></h4>
+					<time datetime="2016-01-12">Feb 03, 2016</time>
+				</li>
+
+				<li>
+					<a class="image-wrapper" href="https://www.17sucai.com/preview/1/2016-02-20/%E5%93%8D%E5%BA%94%E5%BC%8F%E5%AF%BC%E8%88%AA/index.html#0"><img src="./placeholder.png" alt="News image"></a>
+					<h4><a class="cd-nowrap" href="https://www.17sucai.com/preview/1/2016-02-20/%E5%93%8D%E5%BA%94%E5%BC%8F%E5%AF%BC%E8%88%AA/index.html#0">Incidunt voluptatem adipisci voluptates fugit beatae culpa eum, distinctio, assumenda est ad</a></h4>
+					<time datetime="2016-01-12">Jan 28, 2016</time>
+				</li>
+
+				<li>
+					<a class="image-wrapper" href="https://www.17sucai.com/preview/1/2016-02-20/%E5%93%8D%E5%BA%94%E5%BC%8F%E5%AF%BC%E8%88%AA/index.html#0"><img src="./placeholder.png" alt="News image"></a>
+					<h4><a class="cd-nowrap" href="https://www.17sucai.com/preview/1/2016-02-20/%E5%93%8D%E5%BA%94%E5%BC%8F%E5%AF%BC%E8%88%AA/index.html#0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, esse.</a></h4>
+					<time datetime="2016-01-12">Jan 12, 2016</time>
+				</li>
+			</ul>
+		</div> <!-- .news -->
+
+		<div class="quick-links">
+			<h3>Quick Links</h3>
+			<ul>
+				<li><a href="https://www.17sucai.com/preview/1/2016-02-20/%E5%93%8D%E5%BA%94%E5%BC%8F%E5%AF%BC%E8%88%AA/index.html#0">Find a store</a></li>
+				<li><a href="https://www.17sucai.com/preview/1/2016-02-20/%E5%93%8D%E5%BA%94%E5%BC%8F%E5%AF%BC%E8%88%AA/index.html#0">Accessories</a></li>
+				<li><a href="https://www.17sucai.com/preview/1/2016-02-20/%E5%93%8D%E5%BA%94%E5%BC%8F%E5%AF%BC%E8%88%AA/index.html#0">Warranty info</a></li>
+				<li><a href="https://www.17sucai.com/preview/1/2016-02-20/%E5%93%8D%E5%BA%94%E5%BC%8F%E5%AF%BC%E8%88%AA/index.html#0">Support</a></li>
+				<li><a href="https://www.17sucai.com/preview/1/2016-02-20/%E5%93%8D%E5%BA%94%E5%BC%8F%E5%AF%BC%E8%88%AA/index.html#0">Contact us</a></li>
+			</ul>
+		</div> <!-- .quick-links -->
+	</div> <!-- .cd-search-suggestions -->
+
+	<a href="https://www.17sucai.com/preview/1/2016-02-20/%E5%93%8D%E5%BA%94%E5%BC%8F%E5%AF%BC%E8%88%AA/index.html#0" class="close cd-text-replace">Close Form</a>
+</div><a href="https://www.17sucai.com/preview/1/2016-02-20/%E5%93%8D%E5%BA%94%E5%BC%8F%E5%AF%BC%E8%88%AA/index.html#0" class="cd-nav-trigger cd-text-replace">Menu<span></span></a>
+</header>
+
+<main class="cd-main-content">
+
+</main>
+
+ <!-- .cd-main-search -->
+<div class="cd-cover-layer"></div> <!-- cover main content when search form is open -->
+
+
+<script src="./jquery-2.1.1.min.js.下载" type="text/javascript"></script>
+<script src="./main.js.下载"></script> <!-- Resource jQuery -->
+
+</body></html>

@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>abb</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="gallery">
+    <ul class="cards">
+	
+    </ul>
+
+    <div class="actions">
+        <button class="prev">Prev</button>
+        <button class="next">Next</button>
+    </div>
+</div>
+
+
+<script src="缩略词数据.js"></script>
+<script>
+
+var card = document.querySelector(".cards")
+for(i=0; i<obj.length; i++){
+    var li = document.createElement("li");
+    var att =["abb","full-name","definition","page"];
+    for(j=0; j<4; j++){
+        var p = document.createElement("p");
+        p.classList.add(att[j]);
+        li.appendChild(p);
+     }
+    card.appendChild(li);
+    li.style.backgroundColor = obj[i].color;
+    var abb = document.createTextNode(obj[i].abb);
+    var translation = document.createTextNode(obj[i].translation);
+    var paraphrase = document.createTextNode(obj[i].paraphrase);
+    var list = document.createTextNode(obj[i].list);
+    document.querySelectorAll(".abb")[i].appendChild(abb);
+    document.querySelectorAll(".full-name")[i].appendChild(translation);
+    document.querySelectorAll(".definition")[i].appendChild(paraphrase);
+    document.querySelectorAll(".page")[i].appendChild(list);
+}
+
+
+
+</script>
+<script src='gsap.min.js'></script>
+<script src='ScrollTrigger.min.js'></script>
+<script src="script.js"></script>
+</body>
+</html>

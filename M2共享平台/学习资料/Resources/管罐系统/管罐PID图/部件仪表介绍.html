@@ -1,0 +1,1251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="GBK">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"
+          name="viewport">
+    <title>部件仪表介绍</title>
+    <link rel="shortcut icon"
+          href="https://trello-attachments.s3.amazonaws.com/5d870c0418f7104546584cfb/5dcbcaedb6ca803685cc6fa0/a83d2af9b74ca6ddceec6ed84190fa15/Purification_(2).ico">
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+       
+        a{
+             text-decoration: none;
+             color: black;
+       }
+
+        #list{
+            position: fixed;
+            right: 100px;
+            top: 30px;
+            font-size: 16px;
+            padding: 10px;
+            background-color: lightpink;
+            border-radius: 8px;
+      }
+
+        #list:hover{
+            background-color: black;
+            color: white;
+      }
+
+       body{
+           background-image: linear-gradient( 135deg, #5EFCE8 10%, #736EFE 100%);
+           width: 100vw;
+           height: 100vh;
+
+       }
+
+     .nav{
+           margin: 20px 0;
+           position: fixed;
+           float: left;
+           height: 83vh;
+           width: 10vw;
+           padding: 0 60px 0 0;
+           overflow-x: hidden;
+           overflow-y: scroll;
+           font-size: 18px;
+           text-align: right;
+           margin-left: 10vw;
+}
+
+       .nav>a{
+           display: block;
+           width: 200px;
+           border-radius: 5px;
+           padding: 2px 15px 2px 0;
+}
+        
+       .nav> a:hover{
+           background: black;
+           color: white;
+}
+
+     .show{
+           float: left;
+           width: 50vw;
+
+           margin-top: 20px;
+           margin-left: 25vw;
+           background-color: pink;
+           padding: 50px 60px;
+           font-size: 16px;
+           border-radius: 10px;
+ }
+       
+         h3{
+           margin-bottom: 10px;
+            
+}
+
+        h3:before{
+           content: "";
+           display: block;
+           width: 20px;
+           height: 22px;
+           background-color: #736EFE;
+           position: relative;
+           top: 25px;
+           right: 30px;
+}
+
+        h3:after{
+           content: "";
+           display: block;
+           width: 52vw;
+           height: 2px;
+           background-color: #736EFE;
+           position: relative;
+           right: 30px;
+}
+
+         h4{
+           margin: 10px 0;
+}
+
+         h4:before{
+           content:"";
+           display: block;
+           width: 12px;
+           height: 12px;
+           border-radius: 12px;
+           background-image: linear-gradient( 135deg, #5EFCE8 10%, #736EFE 100%);
+           position: relative;
+           top: 17px;
+           right: 16px;
+}
+
+
+         .legend{
+           height: 40px;
+           position: relative;
+           top: 12px;
+  }
+
+        .code td{
+           width: 300px;
+           
+}
+
+         .code span{
+            font-weight: 700;
+}
+    
+        .components{
+           width: 150px;
+           margin: 10px;
+           border-radius: 8px;
+           box-shadow: 3px 3px 10px;
+           transition: .5s ease-in-out;
+}
+
+         .components:hover{
+           transform: scale(1.5);
+          
+}
+
+        p{
+           text-indent: 2em;
+           line-height: 150%;
+}
+
+
+
+     
+
+ /*回到顶部*/ 
+        .arrow{ 
+            border: 9px solid transparent; 
+            border-bottom-color: #3DA0DB; 
+            width: 0; 
+            height: 0; 
+            top:0; 
+        } 
+        .stick{ 
+            width: 8px; 
+            height: 14px; 
+            border-radius: 1px; 
+            background-color: #3DA0DB; 
+            top:15px; 
+        } 
+        #back_top div{ 
+            position: absolute; 
+            margin: auto; 
+            right: 0; 
+            left: 0; 
+        } 
+        #back_top{ 
+            background-color: #dddddd; 
+            height: 38px; 
+            width: 38px; 
+            border-radius: 3px; 
+            display: block; 
+            cursor: pointer; 
+            position: fixed; 
+            right: 50px; 
+            bottom: 100px; 
+            display: none; 
+        } 
+        /*回到顶部结束*/ 
+
+
+
+    </style>
+</head>
+<body>
+    <a id="list" href="http://shareedit/_layouts/15/WopiFrame.aspx?sourcedoc={B04845E5-1A96-4380-BB02-0855C88F5DD6}&file=%E9%83%A8%E4%BB%B6%E4%BB%AA%E8%A1%A8%E6%B8%85%E5%8D%95.xlsx&action=default" target="_blank">部件仪表清单</a>
+
+    <div class="nav">
+        <a href="#list1">Y型过滤器</a>
+        <a href="#list2">人孔</a> 
+        <a href="#list3">分配阀</a> 
+        <a href="#list4">卫生型止回阀</a> 
+        <a href="#list5">取样口</a> 
+        <a href="#list6">取样阀</a> 
+        <a href="#list7">同心变径</a> 
+        <a href="#list8">安全阀</a> 
+        <a href="#list9">异心转径</a> 
+        <a href="#list10">手动球阀</a> 
+        <a href="#list11">手动隔膜阀</a> 
+        <a href="#list12">模块阀</a> 
+        <a href="#list13">止回阀</a> 
+        <a href="#list14">死堵</a> 
+        <a href="#list15">比例调节阀</a> 
+        <a href="#list16">气动球阀</a> 
+        <a href="#list17">气动隔膜阀</a> 
+        <a href="#list18">流量计</a> 
+        <a href="#list19">浮球式疏水阀</a> 
+        <a href="#list20">液位传感器</a> 
+        <a href="#list21">温度传感器</a> 
+        <a href="#list22">温度控制阀</a> 
+        <a href="#list23">温度表</a> 
+        <a href="#list24">滤壳</a> 
+        <a href="#list25">漏斗</a> 
+        <a href="#list26">热排换热器</a> 
+        <a href="#list27">疏水阀</a> 
+        <a href="#list28">磁力搅拌</a> 
+        <a href="#list29">离心泵</a> 
+        <a href="#list30">称重单元</a> 
+        <a href="#list31">组合阀</a> 
+        <a href="#list32">罐壳式换热器</a> 
+        <a href="#list33">罐底阀</a> 
+        <a href="#list34">膨胀箱</a> 
+        <a href="#list35">自力式减压阀</a> 
+        <a href="#list36">视灯</a> 
+        <a href="#list37">视镜</a> 
+        <a href="#list38">计量泵</a> 
+        <a href="#list39">质量流量计</a> 
+        <a href="#list40">软管</a> 
+        <a href="#list41">过滤器</a> 
+        <a href="#list42">隔膜泵</a> 
+
+
+    </div>
+
+    <div class="show">
+
+        <div>
+            <h3 id="list1">Y型过滤器</h3>
+            <table class="code">
+               <tr>
+                    <td><h4>代码：SV</h4></td>
+                    <td><h4>全称：Sampling Valve</h4></td>
+                    <td><span>图例：</span><img class="legend" src="\\NAS.xdsw.local\UserFolder\pengyun.xu\桌面\1.png"></td>
+               </tr>
+            </table>
+            <h4>工作原理</h4>
+                 <video style="border-radius: 10px;" width="500px" controls="controls" src="http://inn-qc.iqiaomai.com/0915%E5%90%AF%E8%88%AA%E8%AE%A1%E5%88%92%E5%9F%B9%E8%AE%AD%E6%80%BB%28%E9%AB%98%E6%B8%85%29.mp4"></video>
+            <h4>介绍</h4>
+                  <p>Y型过滤器是输送介质的管道系统不可缺少的一种过滤装置，Y型过滤器通常安装在减压阀、泄压阀、定水位阀或其它设备的进口端，用来清除介质中的杂质，以保护阀门及设备的正常使用。Y型过滤器具有结构先进，阻力小，排污方便等特点。Y型过滤器适用介质可为水、油、气。一般通水网为18~30目，通气网为10~100目，通油网为100~480目。 篮式过滤器主要由接管、主管、滤蓝、法兰、法兰盖及紧固件等组成。当液体通过主管进入滤蓝后，固体杂质颗粒被阻挡在滤蓝内，而洁净的流体通过滤蓝、由过滤器出口排出。</p>
+            <h4>相关图片</h4>
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+         </div>
+
+
+        <div>
+            <h3 id="list2">人孔</h3>
+            <table class="code">
+               <tr>
+                    <td><h4>代码：SV</h4></td>
+                    <td><h4>全称：Sampling Valve</h4></td>
+                    <td><span>图例：</span><img class="legend" src="\\NAS.xdsw.local\UserFolder\pengyun.xu\桌面\1.png"></td>
+               </tr>
+            </table>
+            <h4>工作原理</h4>
+                 <video style="border-radius: 10px;" width="500px" controls="controls" src="http://inn-qc.iqiaomai.com/0915%E5%90%AF%E8%88%AA%E8%AE%A1%E5%88%92%E5%9F%B9%E8%AE%AD%E6%80%BB%28%E9%AB%98%E6%B8%85%29.mp4"></video>
+            <h4>介绍</h4>
+                  <p>Y型过滤器是输送介质的管道系统不可缺少的一种过滤装置，Y型过滤器通常安装在减压阀、泄压阀、定水位阀或其它设备的进口端，用来清除介质中的杂质，以保护阀门及设备的正常使用。Y型过滤器具有结构先进，阻力小，排污方便等特点。Y型过滤器适用介质可为水、油、气。一般通水网为18~30目，通气网为10~100目，通油网为100~480目。 篮式过滤器主要由接管、主管、滤蓝、法兰、法兰盖及紧固件等组成。当液体通过主管进入滤蓝后，固体杂质颗粒被阻挡在滤蓝内，而洁净的流体通过滤蓝、由过滤器出口排出。</p>
+            <h4>相关图片</h4>
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+         </div>
+
+
+        <div>
+            <h3 id="list3">分配阀</h3>
+            <table class="code">
+               <tr>
+                    <td><h4>代码：SV</h4></td>
+                    <td><h4>全称：Sampling Valve</h4></td>
+                    <td><span>图例：</span><img class="legend" src="\\NAS.xdsw.local\UserFolder\pengyun.xu\桌面\1.png"></td>
+               </tr>
+            </table>
+            <h4>工作原理</h4>
+                 <video style="border-radius: 10px;" width="500px" controls="controls" src="http://inn-qc.iqiaomai.com/0915%E5%90%AF%E8%88%AA%E8%AE%A1%E5%88%92%E5%9F%B9%E8%AE%AD%E6%80%BB%28%E9%AB%98%E6%B8%85%29.mp4"></video>
+            <h4>介绍</h4>
+                  <p>Y型过滤器是输送介质的管道系统不可缺少的一种过滤装置，Y型过滤器通常安装在减压阀、泄压阀、定水位阀或其它设备的进口端，用来清除介质中的杂质，以保护阀门及设备的正常使用。Y型过滤器具有结构先进，阻力小，排污方便等特点。Y型过滤器适用介质可为水、油、气。一般通水网为18~30目，通气网为10~100目，通油网为100~480目。 篮式过滤器主要由接管、主管、滤蓝、法兰、法兰盖及紧固件等组成。当液体通过主管进入滤蓝后，固体杂质颗粒被阻挡在滤蓝内，而洁净的流体通过滤蓝、由过滤器出口排出。</p>
+            <h4>相关图片</h4>
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+         </div>
+
+
+        <div>
+            <h3 id="list4">止回阀</h3>
+            <table class="code">
+               <tr>
+                    <td><h4>代码：SV</h4></td>
+                    <td><h4>全称：Sampling Valve</h4></td>
+                    <td><span>图例：</span><img class="legend" src="\\NAS.xdsw.local\UserFolder\pengyun.xu\桌面\1.png"></td>
+               </tr>
+            </table>
+            <h4>工作原理</h4>
+                 <video style="border-radius: 10px;" width="500px" controls="controls" src="http://inn-qc.iqiaomai.com/0915%E5%90%AF%E8%88%AA%E8%AE%A1%E5%88%92%E5%9F%B9%E8%AE%AD%E6%80%BB%28%E9%AB%98%E6%B8%85%29.mp4"></video>
+            <h4>介绍</h4>
+                  <p>Y型过滤器是输送介质的管道系统不可缺少的一种过滤装置，Y型过滤器通常安装在减压阀、泄压阀、定水位阀或其它设备的进口端，用来清除介质中的杂质，以保护阀门及设备的正常使用。Y型过滤器具有结构先进，阻力小，排污方便等特点。Y型过滤器适用介质可为水、油、气。一般通水网为18~30目，通气网为10~100目，通油网为100~480目。 篮式过滤器主要由接管、主管、滤蓝、法兰、法兰盖及紧固件等组成。当液体通过主管进入滤蓝后，固体杂质颗粒被阻挡在滤蓝内，而洁净的流体通过滤蓝、由过滤器出口排出。</p>
+            <h4>相关图片</h4>
+                  <img class="components" title="卫生型止回阀" src="..\..\..\images\管罐系统部件\卫生型止回阀.jpg" />
+                  <img class="components" src="..\..\..\images\管罐系统部件\止回阀.jpg" />
+                  <img class="components" src="..\..\..\images\管罐系统部件\止回阀2.jpg" />
+             
+         </div>
+
+
+        <div>
+            <h3 id="list5">取样口</h3>
+            <table class="code">
+               <tr>
+                    <td><h4>代码：SV</h4></td>
+                    <td><h4>全称：Sampling Valve</h4></td>
+                    <td><span>图例：</span><img class="legend" src="\\NAS.xdsw.local\UserFolder\pengyun.xu\桌面\1.png"></td>
+               </tr>
+            </table>
+            <h4>工作原理</h4>
+                 <video style="border-radius: 10px;" width="500px" controls="controls" src="http://inn-qc.iqiaomai.com/0915%E5%90%AF%E8%88%AA%E8%AE%A1%E5%88%92%E5%9F%B9%E8%AE%AD%E6%80%BB%28%E9%AB%98%E6%B8%85%29.mp4"></video>
+            <h4>介绍</h4>
+                  <p>Y型过滤器是输送介质的管道系统不可缺少的一种过滤装置，Y型过滤器通常安装在减压阀、泄压阀、定水位阀或其它设备的进口端，用来清除介质中的杂质，以保护阀门及设备的正常使用。Y型过滤器具有结构先进，阻力小，排污方便等特点。Y型过滤器适用介质可为水、油、气。一般通水网为18~30目，通气网为10~100目，通油网为100~480目。 篮式过滤器主要由接管、主管、滤蓝、法兰、法兰盖及紧固件等组成。当液体通过主管进入滤蓝后，固体杂质颗粒被阻挡在滤蓝内，而洁净的流体通过滤蓝、由过滤器出口排出。</p>
+            <h4>相关图片</h4>
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+         </div>
+
+
+        <div>
+            <h3 id="list6">取样阀</h3>
+            <table class="code">
+               <tr>
+                    <td><h4>代码：SV</h4></td>
+                    <td><h4>全称：Sampling Valve</h4></td>
+                    <td><span>图例：</span><img class="legend" src="\\NAS.xdsw.local\UserFolder\pengyun.xu\桌面\1.png"></td>
+               </tr>
+            </table>
+            <h4>工作原理</h4>
+                 <video style="border-radius: 10px;" width="500px" controls="controls" src="http://inn-qc.iqiaomai.com/0915%E5%90%AF%E8%88%AA%E8%AE%A1%E5%88%92%E5%9F%B9%E8%AE%AD%E6%80%BB%28%E9%AB%98%E6%B8%85%29.mp4"></video>
+            <h4>介绍</h4>
+                  <p>Y型过滤器是输送介质的管道系统不可缺少的一种过滤装置，Y型过滤器通常安装在减压阀、泄压阀、定水位阀或其它设备的进口端，用来清除介质中的杂质，以保护阀门及设备的正常使用。Y型过滤器具有结构先进，阻力小，排污方便等特点。Y型过滤器适用介质可为水、油、气。一般通水网为18~30目，通气网为10~100目，通油网为100~480目。 篮式过滤器主要由接管、主管、滤蓝、法兰、法兰盖及紧固件等组成。当液体通过主管进入滤蓝后，固体杂质颗粒被阻挡在滤蓝内，而洁净的流体通过滤蓝、由过滤器出口排出。</p>
+            <h4>相关图片</h4>
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+         </div>
+
+
+        <div>
+            <h3 id="list7">同心变径</h3>
+            <table class="code">
+               <tr>
+                    <td><h4>代码：SV</h4></td>
+                    <td><h4>全称：Sampling Valve</h4></td>
+                    <td><span>图例：</span><img class="legend" src="\\NAS.xdsw.local\UserFolder\pengyun.xu\桌面\1.png"></td>
+               </tr>
+            </table>
+            <h4>工作原理</h4>
+                 <video style="border-radius: 10px;" width="500px" controls="controls" src="http://inn-qc.iqiaomai.com/0915%E5%90%AF%E8%88%AA%E8%AE%A1%E5%88%92%E5%9F%B9%E8%AE%AD%E6%80%BB%28%E9%AB%98%E6%B8%85%29.mp4"></video>
+            <h4>介绍</h4>
+                  <p>Y型过滤器是输送介质的管道系统不可缺少的一种过滤装置，Y型过滤器通常安装在减压阀、泄压阀、定水位阀或其它设备的进口端，用来清除介质中的杂质，以保护阀门及设备的正常使用。Y型过滤器具有结构先进，阻力小，排污方便等特点。Y型过滤器适用介质可为水、油、气。一般通水网为18~30目，通气网为10~100目，通油网为100~480目。 篮式过滤器主要由接管、主管、滤蓝、法兰、法兰盖及紧固件等组成。当液体通过主管进入滤蓝后，固体杂质颗粒被阻挡在滤蓝内，而洁净的流体通过滤蓝、由过滤器出口排出。</p>
+            <h4>相关图片</h4>
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+         </div>
+
+
+        <div>
+            <h3 id="list8">安全阀</h3>
+            <table class="code">
+               <tr>
+                    <td><h4>代码：SV</h4></td>
+                    <td><h4>全称：Sampling Valve</h4></td>
+                    <td><span>图例：</span><img class="legend" src="\\NAS.xdsw.local\UserFolder\pengyun.xu\桌面\1.png"></td>
+               </tr>
+            </table>
+            <h4>工作原理</h4>
+                 <video style="border-radius: 10px;" width="500px" controls="controls" src="http://inn-qc.iqiaomai.com/0915%E5%90%AF%E8%88%AA%E8%AE%A1%E5%88%92%E5%9F%B9%E8%AE%AD%E6%80%BB%28%E9%AB%98%E6%B8%85%29.mp4"></video>
+            <h4>介绍</h4>
+                  <p>Y型过滤器是输送介质的管道系统不可缺少的一种过滤装置，Y型过滤器通常安装在减压阀、泄压阀、定水位阀或其它设备的进口端，用来清除介质中的杂质，以保护阀门及设备的正常使用。Y型过滤器具有结构先进，阻力小，排污方便等特点。Y型过滤器适用介质可为水、油、气。一般通水网为18~30目，通气网为10~100目，通油网为100~480目。 篮式过滤器主要由接管、主管、滤蓝、法兰、法兰盖及紧固件等组成。当液体通过主管进入滤蓝后，固体杂质颗粒被阻挡在滤蓝内，而洁净的流体通过滤蓝、由过滤器出口排出。</p>
+            <h4>相关图片</h4>
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+         </div>
+
+
+        <div>
+            <h3 id="list9">异心转径</h3>
+            <table class="code">
+               <tr>
+                    <td><h4>代码：SV</h4></td>
+                    <td><h4>全称：Sampling Valve</h4></td>
+                    <td><span>图例：</span><img class="legend" src="\\NAS.xdsw.local\UserFolder\pengyun.xu\桌面\1.png"></td>
+               </tr>
+            </table>
+            <h4>工作原理</h4>
+                 <video style="border-radius: 10px;" width="500px" controls="controls" src="http://inn-qc.iqiaomai.com/0915%E5%90%AF%E8%88%AA%E8%AE%A1%E5%88%92%E5%9F%B9%E8%AE%AD%E6%80%BB%28%E9%AB%98%E6%B8%85%29.mp4"></video>
+            <h4>介绍</h4>
+                  <p>Y型过滤器是输送介质的管道系统不可缺少的一种过滤装置，Y型过滤器通常安装在减压阀、泄压阀、定水位阀或其它设备的进口端，用来清除介质中的杂质，以保护阀门及设备的正常使用。Y型过滤器具有结构先进，阻力小，排污方便等特点。Y型过滤器适用介质可为水、油、气。一般通水网为18~30目，通气网为10~100目，通油网为100~480目。 篮式过滤器主要由接管、主管、滤蓝、法兰、法兰盖及紧固件等组成。当液体通过主管进入滤蓝后，固体杂质颗粒被阻挡在滤蓝内，而洁净的流体通过滤蓝、由过滤器出口排出。</p>
+            <h4>相关图片</h4>
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+         </div>
+
+
+        <div>
+            <h3 id="list10">手动球阀</h3>
+            <table class="code">
+               <tr>
+                    <td><h4>代码：SV</h4></td>
+                    <td><h4>全称：Sampling Valve</h4></td>
+                    <td><span>图例：</span><img class="legend" src="\\NAS.xdsw.local\UserFolder\pengyun.xu\桌面\1.png"></td>
+               </tr>
+            </table>
+            <h4>工作原理</h4>
+                 <video style="border-radius: 10px;" width="500px" controls="controls" src="http://inn-qc.iqiaomai.com/0915%E5%90%AF%E8%88%AA%E8%AE%A1%E5%88%92%E5%9F%B9%E8%AE%AD%E6%80%BB%28%E9%AB%98%E6%B8%85%29.mp4"></video>
+            <h4>介绍</h4>
+                  <p>Y型过滤器是输送介质的管道系统不可缺少的一种过滤装置，Y型过滤器通常安装在减压阀、泄压阀、定水位阀或其它设备的进口端，用来清除介质中的杂质，以保护阀门及设备的正常使用。Y型过滤器具有结构先进，阻力小，排污方便等特点。Y型过滤器适用介质可为水、油、气。一般通水网为18~30目，通气网为10~100目，通油网为100~480目。 篮式过滤器主要由接管、主管、滤蓝、法兰、法兰盖及紧固件等组成。当液体通过主管进入滤蓝后，固体杂质颗粒被阻挡在滤蓝内，而洁净的流体通过滤蓝、由过滤器出口排出。</p>
+            <h4>相关图片</h4>
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+         </div>
+
+
+        <div>
+            <h3 id="list10">手动球阀</h3>
+            <table class="code">
+               <tr>
+                    <td><h4>代码：SV</h4></td>
+                    <td><h4>全称：Sampling Valve</h4></td>
+                    <td><span>图例：</span><img class="legend" src="\\NAS.xdsw.local\UserFolder\pengyun.xu\桌面\1.png"></td>
+               </tr>
+            </table>
+            <h4>工作原理</h4>
+                 <video style="border-radius: 10px;" width="500px" controls="controls" src="http://inn-qc.iqiaomai.com/0915%E5%90%AF%E8%88%AA%E8%AE%A1%E5%88%92%E5%9F%B9%E8%AE%AD%E6%80%BB%28%E9%AB%98%E6%B8%85%29.mp4"></video>
+            <h4>介绍</h4>
+                  <p>Y型过滤器是输送介质的管道系统不可缺少的一种过滤装置，Y型过滤器通常安装在减压阀、泄压阀、定水位阀或其它设备的进口端，用来清除介质中的杂质，以保护阀门及设备的正常使用。Y型过滤器具有结构先进，阻力小，排污方便等特点。Y型过滤器适用介质可为水、油、气。一般通水网为18~30目，通气网为10~100目，通油网为100~480目。 篮式过滤器主要由接管、主管、滤蓝、法兰、法兰盖及紧固件等组成。当液体通过主管进入滤蓝后，固体杂质颗粒被阻挡在滤蓝内，而洁净的流体通过滤蓝、由过滤器出口排出。</p>
+            <h4>相关图片</h4>
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+         </div>
+
+
+        <div>
+            <h3 id="list10">手动球阀</h3>
+            <table class="code">
+               <tr>
+                    <td><h4>代码：SV</h4></td>
+                    <td><h4>全称：Sampling Valve</h4></td>
+                    <td><span>图例：</span><img class="legend" src="\\NAS.xdsw.local\UserFolder\pengyun.xu\桌面\1.png"></td>
+               </tr>
+            </table>
+            <h4>工作原理</h4>
+                 <video style="border-radius: 10px;" width="500px" controls="controls" src="http://inn-qc.iqiaomai.com/0915%E5%90%AF%E8%88%AA%E8%AE%A1%E5%88%92%E5%9F%B9%E8%AE%AD%E6%80%BB%28%E9%AB%98%E6%B8%85%29.mp4"></video>
+            <h4>介绍</h4>
+                  <p>Y型过滤器是输送介质的管道系统不可缺少的一种过滤装置，Y型过滤器通常安装在减压阀、泄压阀、定水位阀或其它设备的进口端，用来清除介质中的杂质，以保护阀门及设备的正常使用。Y型过滤器具有结构先进，阻力小，排污方便等特点。Y型过滤器适用介质可为水、油、气。一般通水网为18~30目，通气网为10~100目，通油网为100~480目。 篮式过滤器主要由接管、主管、滤蓝、法兰、法兰盖及紧固件等组成。当液体通过主管进入滤蓝后，固体杂质颗粒被阻挡在滤蓝内，而洁净的流体通过滤蓝、由过滤器出口排出。</p>
+            <h4>相关图片</h4>
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+         </div>
+
+
+        <div>
+            <h3 id="list10">手动球阀</h3>
+            <table class="code">
+               <tr>
+                    <td><h4>代码：SV</h4></td>
+                    <td><h4>全称：Sampling Valve</h4></td>
+                    <td><span>图例：</span><img class="legend" src="\\NAS.xdsw.local\UserFolder\pengyun.xu\桌面\1.png"></td>
+               </tr>
+            </table>
+            <h4>工作原理</h4>
+                 <video style="border-radius: 10px;" width="500px" controls="controls" src="http://inn-qc.iqiaomai.com/0915%E5%90%AF%E8%88%AA%E8%AE%A1%E5%88%92%E5%9F%B9%E8%AE%AD%E6%80%BB%28%E9%AB%98%E6%B8%85%29.mp4"></video>
+            <h4>介绍</h4>
+                  <p>Y型过滤器是输送介质的管道系统不可缺少的一种过滤装置，Y型过滤器通常安装在减压阀、泄压阀、定水位阀或其它设备的进口端，用来清除介质中的杂质，以保护阀门及设备的正常使用。Y型过滤器具有结构先进，阻力小，排污方便等特点。Y型过滤器适用介质可为水、油、气。一般通水网为18~30目，通气网为10~100目，通油网为100~480目。 篮式过滤器主要由接管、主管、滤蓝、法兰、法兰盖及紧固件等组成。当液体通过主管进入滤蓝后，固体杂质颗粒被阻挡在滤蓝内，而洁净的流体通过滤蓝、由过滤器出口排出。</p>
+            <h4>相关图片</h4>
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+         </div>
+
+
+        <div>
+            <h3 id="list11">手动隔膜阀</h3>
+            <table class="code">
+               <tr>
+                    <td><h4>代码：SV</h4></td>
+                    <td><h4>全称：Sampling Valve</h4></td>
+                    <td><span>图例：</span><img class="legend" src="\\NAS.xdsw.local\UserFolder\pengyun.xu\桌面\1.png"></td>
+               </tr>
+            </table>
+            <h4>工作原理</h4>
+                 <video style="border-radius: 10px;" width="500px" controls="controls" src="http://inn-qc.iqiaomai.com/0915%E5%90%AF%E8%88%AA%E8%AE%A1%E5%88%92%E5%9F%B9%E8%AE%AD%E6%80%BB%28%E9%AB%98%E6%B8%85%29.mp4"></video>
+            <h4>介绍</h4>
+                  <p>Y型过滤器是输送介质的管道系统不可缺少的一种过滤装置，Y型过滤器通常安装在减压阀、泄压阀、定水位阀或其它设备的进口端，用来清除介质中的杂质，以保护阀门及设备的正常使用。Y型过滤器具有结构先进，阻力小，排污方便等特点。Y型过滤器适用介质可为水、油、气。一般通水网为18~30目，通气网为10~100目，通油网为100~480目。 篮式过滤器主要由接管、主管、滤蓝、法兰、法兰盖及紧固件等组成。当液体通过主管进入滤蓝后，固体杂质颗粒被阻挡在滤蓝内，而洁净的流体通过滤蓝、由过滤器出口排出。</p>
+            <h4>相关图片</h4>
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+         </div>
+
+
+        <div>
+            <h3 id="list12">模块阀</h3>
+            <table class="code">
+               <tr>
+                    <td><h4>代码：SV</h4></td>
+                    <td><h4>全称：Sampling Valve</h4></td>
+                    <td><span>图例：</span><img class="legend" src="\\NAS.xdsw.local\UserFolder\pengyun.xu\桌面\1.png"></td>
+               </tr>
+            </table>
+            <h4>工作原理</h4>
+                 <video style="border-radius: 10px;" width="500px" controls="controls" src="http://inn-qc.iqiaomai.com/0915%E5%90%AF%E8%88%AA%E8%AE%A1%E5%88%92%E5%9F%B9%E8%AE%AD%E6%80%BB%28%E9%AB%98%E6%B8%85%29.mp4"></video>
+            <h4>介绍</h4>
+                  <p>Y型过滤器是输送介质的管道系统不可缺少的一种过滤装置，Y型过滤器通常安装在减压阀、泄压阀、定水位阀或其它设备的进口端，用来清除介质中的杂质，以保护阀门及设备的正常使用。Y型过滤器具有结构先进，阻力小，排污方便等特点。Y型过滤器适用介质可为水、油、气。一般通水网为18~30目，通气网为10~100目，通油网为100~480目。 篮式过滤器主要由接管、主管、滤蓝、法兰、法兰盖及紧固件等组成。当液体通过主管进入滤蓝后，固体杂质颗粒被阻挡在滤蓝内，而洁净的流体通过滤蓝、由过滤器出口排出。</p>
+            <h4>相关图片</h4>
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+         </div>
+
+
+        <div>
+            <h3 id="list13">止回阀</h3>
+            <table class="code">
+               <tr>
+                    <td><h4>代码：SV</h4></td>
+                    <td><h4>全称：Sampling Valve</h4></td>
+                    <td><span>图例：</span><img class="legend" src="\\NAS.xdsw.local\UserFolder\pengyun.xu\桌面\1.png"></td>
+               </tr>
+            </table>
+            <h4>工作原理</h4>
+                 <video style="border-radius: 10px;" width="500px" controls="controls" src="http://inn-qc.iqiaomai.com/0915%E5%90%AF%E8%88%AA%E8%AE%A1%E5%88%92%E5%9F%B9%E8%AE%AD%E6%80%BB%28%E9%AB%98%E6%B8%85%29.mp4"></video>
+            <h4>介绍</h4>
+                  <p>Y型过滤器是输送介质的管道系统不可缺少的一种过滤装置，Y型过滤器通常安装在减压阀、泄压阀、定水位阀或其它设备的进口端，用来清除介质中的杂质，以保护阀门及设备的正常使用。Y型过滤器具有结构先进，阻力小，排污方便等特点。Y型过滤器适用介质可为水、油、气。一般通水网为18~30目，通气网为10~100目，通油网为100~480目。 篮式过滤器主要由接管、主管、滤蓝、法兰、法兰盖及紧固件等组成。当液体通过主管进入滤蓝后，固体杂质颗粒被阻挡在滤蓝内，而洁净的流体通过滤蓝、由过滤器出口排出。</p>
+            <h4>相关图片</h4>
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+         </div>
+
+
+        <div>
+            <h3 id="list14">死堵</h3>
+            <table class="code">
+               <tr>
+                    <td><h4>代码：SV</h4></td>
+                    <td><h4>全称：Sampling Valve</h4></td>
+                    <td><span>图例：</span><img class="legend" src="\\NAS.xdsw.local\UserFolder\pengyun.xu\桌面\1.png"></td>
+               </tr>
+            </table>
+            <h4>工作原理</h4>
+                 <video style="border-radius: 10px;" width="500px" controls="controls" src="http://inn-qc.iqiaomai.com/0915%E5%90%AF%E8%88%AA%E8%AE%A1%E5%88%92%E5%9F%B9%E8%AE%AD%E6%80%BB%28%E9%AB%98%E6%B8%85%29.mp4"></video>
+            <h4>介绍</h4>
+                  <p>Y型过滤器是输送介质的管道系统不可缺少的一种过滤装置，Y型过滤器通常安装在减压阀、泄压阀、定水位阀或其它设备的进口端，用来清除介质中的杂质，以保护阀门及设备的正常使用。Y型过滤器具有结构先进，阻力小，排污方便等特点。Y型过滤器适用介质可为水、油、气。一般通水网为18~30目，通气网为10~100目，通油网为100~480目。 篮式过滤器主要由接管、主管、滤蓝、法兰、法兰盖及紧固件等组成。当液体通过主管进入滤蓝后，固体杂质颗粒被阻挡在滤蓝内，而洁净的流体通过滤蓝、由过滤器出口排出。</p>
+            <h4>相关图片</h4>
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+         </div>
+
+
+        <div>
+            <h3 id="list15">比例调节阀</h3>
+            <table class="code">
+               <tr>
+                    <td><h4>代码：SV</h4></td>
+                    <td><h4>全称：Sampling Valve</h4></td>
+                    <td><span>图例：</span><img class="legend" src="\\NAS.xdsw.local\UserFolder\pengyun.xu\桌面\1.png"></td>
+               </tr>
+            </table>
+            <h4>工作原理</h4>
+                 <video style="border-radius: 10px;" width="500px" controls="controls" src="http://inn-qc.iqiaomai.com/0915%E5%90%AF%E8%88%AA%E8%AE%A1%E5%88%92%E5%9F%B9%E8%AE%AD%E6%80%BB%28%E9%AB%98%E6%B8%85%29.mp4"></video>
+            <h4>介绍</h4>
+                  <p>Y型过滤器是输送介质的管道系统不可缺少的一种过滤装置，Y型过滤器通常安装在减压阀、泄压阀、定水位阀或其它设备的进口端，用来清除介质中的杂质，以保护阀门及设备的正常使用。Y型过滤器具有结构先进，阻力小，排污方便等特点。Y型过滤器适用介质可为水、油、气。一般通水网为18~30目，通气网为10~100目，通油网为100~480目。 篮式过滤器主要由接管、主管、滤蓝、法兰、法兰盖及紧固件等组成。当液体通过主管进入滤蓝后，固体杂质颗粒被阻挡在滤蓝内，而洁净的流体通过滤蓝、由过滤器出口排出。</p>
+            <h4>相关图片</h4>
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+         </div>
+
+
+        <div>
+            <h3 id="list16">气动球阀</h3>
+            <table class="code">
+               <tr>
+                    <td><h4>代码：SV</h4></td>
+                    <td><h4>全称：Sampling Valve</h4></td>
+                    <td><span>图例：</span><img class="legend" src="\\NAS.xdsw.local\UserFolder\pengyun.xu\桌面\1.png"></td>
+               </tr>
+            </table>
+            <h4>工作原理</h4>
+                 <video style="border-radius: 10px;" width="500px" controls="controls" src="http://inn-qc.iqiaomai.com/0915%E5%90%AF%E8%88%AA%E8%AE%A1%E5%88%92%E5%9F%B9%E8%AE%AD%E6%80%BB%28%E9%AB%98%E6%B8%85%29.mp4"></video>
+            <h4>介绍</h4>
+                  <p>Y型过滤器是输送介质的管道系统不可缺少的一种过滤装置，Y型过滤器通常安装在减压阀、泄压阀、定水位阀或其它设备的进口端，用来清除介质中的杂质，以保护阀门及设备的正常使用。Y型过滤器具有结构先进，阻力小，排污方便等特点。Y型过滤器适用介质可为水、油、气。一般通水网为18~30目，通气网为10~100目，通油网为100~480目。 篮式过滤器主要由接管、主管、滤蓝、法兰、法兰盖及紧固件等组成。当液体通过主管进入滤蓝后，固体杂质颗粒被阻挡在滤蓝内，而洁净的流体通过滤蓝、由过滤器出口排出。</p>
+            <h4>相关图片</h4>
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+         </div>
+
+
+        <div>
+            <h3 id="list17">气动隔膜阀</h3>
+            <table class="code">
+               <tr>
+                    <td><h4>代码：SV</h4></td>
+                    <td><h4>全称：Sampling Valve</h4></td>
+                    <td><span>图例：</span><img class="legend" src="\\NAS.xdsw.local\UserFolder\pengyun.xu\桌面\1.png"></td>
+               </tr>
+            </table>
+            <h4>工作原理</h4>
+                 <video style="border-radius: 10px;" width="500px" controls="controls" src="http://inn-qc.iqiaomai.com/0915%E5%90%AF%E8%88%AA%E8%AE%A1%E5%88%92%E5%9F%B9%E8%AE%AD%E6%80%BB%28%E9%AB%98%E6%B8%85%29.mp4"></video>
+            <h4>介绍</h4>
+                  <p>Y型过滤器是输送介质的管道系统不可缺少的一种过滤装置，Y型过滤器通常安装在减压阀、泄压阀、定水位阀或其它设备的进口端，用来清除介质中的杂质，以保护阀门及设备的正常使用。Y型过滤器具有结构先进，阻力小，排污方便等特点。Y型过滤器适用介质可为水、油、气。一般通水网为18~30目，通气网为10~100目，通油网为100~480目。 篮式过滤器主要由接管、主管、滤蓝、法兰、法兰盖及紧固件等组成。当液体通过主管进入滤蓝后，固体杂质颗粒被阻挡在滤蓝内，而洁净的流体通过滤蓝、由过滤器出口排出。</p>
+            <h4>相关图片</h4>
+                  <img class="components" src="..\..\..\images\管罐系统部件\气动隔膜阀1.jpg" />
+                  <img class="components" src="..\..\..\images\管罐系统部件\气动隔膜阀2.jpg" />
+                  <img class="components" src="..\..\..\images\管罐系统部件\气动隔膜阀3.jpg" />
+
+         </div>
+
+
+        <div>
+            <h3 id="list18">流量计</h3>
+            <table class="code">
+               <tr>
+                    <td><h4>代码：SV</h4></td>
+                    <td><h4>全称：Sampling Valve</h4></td>
+                    <td><span>图例：</span><img class="legend" src="\\NAS.xdsw.local\UserFolder\pengyun.xu\桌面\1.png"></td>
+               </tr>
+            </table>
+            <h4>工作原理</h4>
+                 <video style="border-radius: 10px;" width="500px" controls="controls" src="http://inn-qc.iqiaomai.com/0915%E5%90%AF%E8%88%AA%E8%AE%A1%E5%88%92%E5%9F%B9%E8%AE%AD%E6%80%BB%28%E9%AB%98%E6%B8%85%29.mp4"></video>
+            <h4>介绍</h4>
+                  <p>Y型过滤器是输送介质的管道系统不可缺少的一种过滤装置，Y型过滤器通常安装在减压阀、泄压阀、定水位阀或其它设备的进口端，用来清除介质中的杂质，以保护阀门及设备的正常使用。Y型过滤器具有结构先进，阻力小，排污方便等特点。Y型过滤器适用介质可为水、油、气。一般通水网为18~30目，通气网为10~100目，通油网为100~480目。 篮式过滤器主要由接管、主管、滤蓝、法兰、法兰盖及紧固件等组成。当液体通过主管进入滤蓝后，固体杂质颗粒被阻挡在滤蓝内，而洁净的流体通过滤蓝、由过滤器出口排出。</p>
+            <h4>相关图片</h4>
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+         </div>
+
+
+        <div>
+            <h3 id="list19">浮球式疏水阀</h3>
+            <table class="code">
+               <tr>
+                    <td><h4>代码：SV</h4></td>
+                    <td><h4>全称：Sampling Valve</h4></td>
+                    <td><span>图例：</span><img class="legend" src="\\NAS.xdsw.local\UserFolder\pengyun.xu\桌面\1.png"></td>
+               </tr>
+            </table>
+            <h4>工作原理</h4>
+                 <video style="border-radius: 10px;" width="500px" controls="controls" src="http://inn-qc.iqiaomai.com/0915%E5%90%AF%E8%88%AA%E8%AE%A1%E5%88%92%E5%9F%B9%E8%AE%AD%E6%80%BB%28%E9%AB%98%E6%B8%85%29.mp4"></video>
+            <h4>介绍</h4>
+                  <p>Y型过滤器是输送介质的管道系统不可缺少的一种过滤装置，Y型过滤器通常安装在减压阀、泄压阀、定水位阀或其它设备的进口端，用来清除介质中的杂质，以保护阀门及设备的正常使用。Y型过滤器具有结构先进，阻力小，排污方便等特点。Y型过滤器适用介质可为水、油、气。一般通水网为18~30目，通气网为10~100目，通油网为100~480目。 篮式过滤器主要由接管、主管、滤蓝、法兰、法兰盖及紧固件等组成。当液体通过主管进入滤蓝后，固体杂质颗粒被阻挡在滤蓝内，而洁净的流体通过滤蓝、由过滤器出口排出。</p>
+            <h4>相关图片</h4>
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+         </div>
+
+
+        <div>
+            <h3 id="list20">液位传感器</h3>
+            <table class="code">
+               <tr>
+                    <td><h4>代码：SV</h4></td>
+                    <td><h4>全称：Sampling Valve</h4></td>
+                    <td><span>图例：</span><img class="legend" src="\\NAS.xdsw.local\UserFolder\pengyun.xu\桌面\1.png"></td>
+               </tr>
+            </table>
+            <h4>工作原理</h4>
+                 <video style="border-radius: 10px;" width="500px" controls="controls" src="http://inn-qc.iqiaomai.com/0915%E5%90%AF%E8%88%AA%E8%AE%A1%E5%88%92%E5%9F%B9%E8%AE%AD%E6%80%BB%28%E9%AB%98%E6%B8%85%29.mp4"></video>
+            <h4>介绍</h4>
+                  <p>Y型过滤器是输送介质的管道系统不可缺少的一种过滤装置，Y型过滤器通常安装在减压阀、泄压阀、定水位阀或其它设备的进口端，用来清除介质中的杂质，以保护阀门及设备的正常使用。Y型过滤器具有结构先进，阻力小，排污方便等特点。Y型过滤器适用介质可为水、油、气。一般通水网为18~30目，通气网为10~100目，通油网为100~480目。 篮式过滤器主要由接管、主管、滤蓝、法兰、法兰盖及紧固件等组成。当液体通过主管进入滤蓝后，固体杂质颗粒被阻挡在滤蓝内，而洁净的流体通过滤蓝、由过滤器出口排出。</p>
+            <h4>相关图片</h4>
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+         </div>
+
+
+        <div>
+            <h3 id="list21">温度传感器</h3>
+            <table class="code">
+               <tr>
+                    <td><h4>代码：SV</h4></td>
+                    <td><h4>全称：Sampling Valve</h4></td>
+                    <td><span>图例：</span><img class="legend" src="\\NAS.xdsw.local\UserFolder\pengyun.xu\桌面\1.png"></td>
+               </tr>
+            </table>
+            <h4>工作原理</h4>
+                 <video style="border-radius: 10px;" width="500px" controls="controls" src="http://inn-qc.iqiaomai.com/0915%E5%90%AF%E8%88%AA%E8%AE%A1%E5%88%92%E5%9F%B9%E8%AE%AD%E6%80%BB%28%E9%AB%98%E6%B8%85%29.mp4"></video>
+            <h4>介绍</h4>
+                  <p>Y型过滤器是输送介质的管道系统不可缺少的一种过滤装置，Y型过滤器通常安装在减压阀、泄压阀、定水位阀或其它设备的进口端，用来清除介质中的杂质，以保护阀门及设备的正常使用。Y型过滤器具有结构先进，阻力小，排污方便等特点。Y型过滤器适用介质可为水、油、气。一般通水网为18~30目，通气网为10~100目，通油网为100~480目。 篮式过滤器主要由接管、主管、滤蓝、法兰、法兰盖及紧固件等组成。当液体通过主管进入滤蓝后，固体杂质颗粒被阻挡在滤蓝内，而洁净的流体通过滤蓝、由过滤器出口排出。</p>
+            <h4>相关图片</h4>
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+         </div>
+
+
+        <div>
+            <h3 id="list22">温度控制阀</h3>
+            <table class="code">
+               <tr>
+                    <td><h4>代码：SV</h4></td>
+                    <td><h4>全称：Sampling Valve</h4></td>
+                    <td><span>图例：</span><img class="legend" src="\\NAS.xdsw.local\UserFolder\pengyun.xu\桌面\1.png"></td>
+               </tr>
+            </table>
+            <h4>工作原理</h4>
+                 <video style="border-radius: 10px;" width="500px" controls="controls" src="http://inn-qc.iqiaomai.com/0915%E5%90%AF%E8%88%AA%E8%AE%A1%E5%88%92%E5%9F%B9%E8%AE%AD%E6%80%BB%28%E9%AB%98%E6%B8%85%29.mp4"></video>
+            <h4>介绍</h4>
+                  <p>Y型过滤器是输送介质的管道系统不可缺少的一种过滤装置，Y型过滤器通常安装在减压阀、泄压阀、定水位阀或其它设备的进口端，用来清除介质中的杂质，以保护阀门及设备的正常使用。Y型过滤器具有结构先进，阻力小，排污方便等特点。Y型过滤器适用介质可为水、油、气。一般通水网为18~30目，通气网为10~100目，通油网为100~480目。 篮式过滤器主要由接管、主管、滤蓝、法兰、法兰盖及紧固件等组成。当液体通过主管进入滤蓝后，固体杂质颗粒被阻挡在滤蓝内，而洁净的流体通过滤蓝、由过滤器出口排出。</p>
+            <h4>相关图片</h4>
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+         </div>
+
+
+        <div>
+            <h3 id="list23">温度表</h3>
+            <table class="code">
+               <tr>
+                    <td><h4>代码：SV</h4></td>
+                    <td><h4>全称：Sampling Valve</h4></td>
+                    <td><span>图例：</span><img class="legend" src="\\NAS.xdsw.local\UserFolder\pengyun.xu\桌面\1.png"></td>
+               </tr>
+            </table>
+            <h4>工作原理</h4>
+                 <video style="border-radius: 10px;" width="500px" controls="controls" src="http://inn-qc.iqiaomai.com/0915%E5%90%AF%E8%88%AA%E8%AE%A1%E5%88%92%E5%9F%B9%E8%AE%AD%E6%80%BB%28%E9%AB%98%E6%B8%85%29.mp4"></video>
+            <h4>介绍</h4>
+                  <p>Y型过滤器是输送介质的管道系统不可缺少的一种过滤装置，Y型过滤器通常安装在减压阀、泄压阀、定水位阀或其它设备的进口端，用来清除介质中的杂质，以保护阀门及设备的正常使用。Y型过滤器具有结构先进，阻力小，排污方便等特点。Y型过滤器适用介质可为水、油、气。一般通水网为18~30目，通气网为10~100目，通油网为100~480目。 篮式过滤器主要由接管、主管、滤蓝、法兰、法兰盖及紧固件等组成。当液体通过主管进入滤蓝后，固体杂质颗粒被阻挡在滤蓝内，而洁净的流体通过滤蓝、由过滤器出口排出。</p>
+            <h4>相关图片</h4>
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+         </div>
+
+
+        <div>
+            <h3 id="list24">滤壳</h3>
+            <table class="code">
+               <tr>
+                    <td><h4>代码：SV</h4></td>
+                    <td><h4>全称：Sampling Valve</h4></td>
+                    <td><span>图例：</span><img class="legend" src="\\NAS.xdsw.local\UserFolder\pengyun.xu\桌面\1.png"></td>
+               </tr>
+            </table>
+            <h4>工作原理</h4>
+                 <video style="border-radius: 10px;" width="500px" controls="controls" src="http://inn-qc.iqiaomai.com/0915%E5%90%AF%E8%88%AA%E8%AE%A1%E5%88%92%E5%9F%B9%E8%AE%AD%E6%80%BB%28%E9%AB%98%E6%B8%85%29.mp4"></video>
+            <h4>介绍</h4>
+                  <p>Y型过滤器是输送介质的管道系统不可缺少的一种过滤装置，Y型过滤器通常安装在减压阀、泄压阀、定水位阀或其它设备的进口端，用来清除介质中的杂质，以保护阀门及设备的正常使用。Y型过滤器具有结构先进，阻力小，排污方便等特点。Y型过滤器适用介质可为水、油、气。一般通水网为18~30目，通气网为10~100目，通油网为100~480目。 篮式过滤器主要由接管、主管、滤蓝、法兰、法兰盖及紧固件等组成。当液体通过主管进入滤蓝后，固体杂质颗粒被阻挡在滤蓝内，而洁净的流体通过滤蓝、由过滤器出口排出。</p>
+            <h4>相关图片</h4>
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+         </div>
+
+
+        <div>
+            <h3 id="list25">漏斗</h3>
+            <table class="code">
+               <tr>
+                    <td><h4>代码：SV</h4></td>
+                    <td><h4>全称：Sampling Valve</h4></td>
+                    <td><span>图例：</span><img class="legend" src="\\NAS.xdsw.local\UserFolder\pengyun.xu\桌面\1.png"></td>
+               </tr>
+            </table>
+            <h4>工作原理</h4>
+                 <video style="border-radius: 10px;" width="500px" controls="controls" src="http://inn-qc.iqiaomai.com/0915%E5%90%AF%E8%88%AA%E8%AE%A1%E5%88%92%E5%9F%B9%E8%AE%AD%E6%80%BB%28%E9%AB%98%E6%B8%85%29.mp4"></video>
+            <h4>介绍</h4>
+                  <p>Y型过滤器是输送介质的管道系统不可缺少的一种过滤装置，Y型过滤器通常安装在减压阀、泄压阀、定水位阀或其它设备的进口端，用来清除介质中的杂质，以保护阀门及设备的正常使用。Y型过滤器具有结构先进，阻力小，排污方便等特点。Y型过滤器适用介质可为水、油、气。一般通水网为18~30目，通气网为10~100目，通油网为100~480目。 篮式过滤器主要由接管、主管、滤蓝、法兰、法兰盖及紧固件等组成。当液体通过主管进入滤蓝后，固体杂质颗粒被阻挡在滤蓝内，而洁净的流体通过滤蓝、由过滤器出口排出。</p>
+            <h4>相关图片</h4>
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+         </div>
+
+
+        <div>
+            <h3 id="list26">热排换热器</h3>
+            <table class="code">
+               <tr>
+                    <td><h4>代码：SV</h4></td>
+                    <td><h4>全称：Sampling Valve</h4></td>
+                    <td><span>图例：</span><img class="legend" src="\\NAS.xdsw.local\UserFolder\pengyun.xu\桌面\1.png"></td>
+               </tr>
+            </table>
+            <h4>工作原理</h4>
+                 <video style="border-radius: 10px;" width="500px" controls="controls" src="http://inn-qc.iqiaomai.com/0915%E5%90%AF%E8%88%AA%E8%AE%A1%E5%88%92%E5%9F%B9%E8%AE%AD%E6%80%BB%28%E9%AB%98%E6%B8%85%29.mp4"></video>
+            <h4>介绍</h4>
+                  <p>Y型过滤器是输送介质的管道系统不可缺少的一种过滤装置，Y型过滤器通常安装在减压阀、泄压阀、定水位阀或其它设备的进口端，用来清除介质中的杂质，以保护阀门及设备的正常使用。Y型过滤器具有结构先进，阻力小，排污方便等特点。Y型过滤器适用介质可为水、油、气。一般通水网为18~30目，通气网为10~100目，通油网为100~480目。 篮式过滤器主要由接管、主管、滤蓝、法兰、法兰盖及紧固件等组成。当液体通过主管进入滤蓝后，固体杂质颗粒被阻挡在滤蓝内，而洁净的流体通过滤蓝、由过滤器出口排出。</p>
+            <h4>相关图片</h4>
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+         </div>
+
+
+        <div>
+            <h3 id="list27">疏水阀</h3>
+            <table class="code">
+               <tr>
+                    <td><h4>代码：SV</h4></td>
+                    <td><h4>全称：Sampling Valve</h4></td>
+                    <td><span>图例：</span><img class="legend" src="\\NAS.xdsw.local\UserFolder\pengyun.xu\桌面\1.png"></td>
+               </tr>
+            </table>
+            <h4>工作原理</h4>
+                 <video style="border-radius: 10px;" width="500px" controls="controls" src="http://inn-qc.iqiaomai.com/0915%E5%90%AF%E8%88%AA%E8%AE%A1%E5%88%92%E5%9F%B9%E8%AE%AD%E6%80%BB%28%E9%AB%98%E6%B8%85%29.mp4"></video>
+            <h4>介绍</h4>
+                  <p>Y型过滤器是输送介质的管道系统不可缺少的一种过滤装置，Y型过滤器通常安装在减压阀、泄压阀、定水位阀或其它设备的进口端，用来清除介质中的杂质，以保护阀门及设备的正常使用。Y型过滤器具有结构先进，阻力小，排污方便等特点。Y型过滤器适用介质可为水、油、气。一般通水网为18~30目，通气网为10~100目，通油网为100~480目。 篮式过滤器主要由接管、主管、滤蓝、法兰、法兰盖及紧固件等组成。当液体通过主管进入滤蓝后，固体杂质颗粒被阻挡在滤蓝内，而洁净的流体通过滤蓝、由过滤器出口排出。</p>
+            <h4>相关图片</h4>
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+         </div>
+
+
+        <div>
+            <h3 id="list28">磁力搅拌</h3>
+            <table class="code">
+               <tr>
+                    <td><h4>代码：SV</h4></td>
+                    <td><h4>全称：Sampling Valve</h4></td>
+                    <td><span>图例：</span><img class="legend" src="\\NAS.xdsw.local\UserFolder\pengyun.xu\桌面\1.png"></td>
+               </tr>
+            </table>
+            <h4>工作原理</h4>
+                 <video style="border-radius: 10px;" width="500px" controls="controls" src="http://inn-qc.iqiaomai.com/0915%E5%90%AF%E8%88%AA%E8%AE%A1%E5%88%92%E5%9F%B9%E8%AE%AD%E6%80%BB%28%E9%AB%98%E6%B8%85%29.mp4"></video>
+            <h4>介绍</h4>
+                  <p>Y型过滤器是输送介质的管道系统不可缺少的一种过滤装置，Y型过滤器通常安装在减压阀、泄压阀、定水位阀或其它设备的进口端，用来清除介质中的杂质，以保护阀门及设备的正常使用。Y型过滤器具有结构先进，阻力小，排污方便等特点。Y型过滤器适用介质可为水、油、气。一般通水网为18~30目，通气网为10~100目，通油网为100~480目。 篮式过滤器主要由接管、主管、滤蓝、法兰、法兰盖及紧固件等组成。当液体通过主管进入滤蓝后，固体杂质颗粒被阻挡在滤蓝内，而洁净的流体通过滤蓝、由过滤器出口排出。</p>
+            <h4>相关图片</h4>
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+         </div>
+
+
+        <div>
+            <h3 id="list29">离心泵</h3>
+            <table class="code">
+               <tr>
+                    <td><h4>代码：SV</h4></td>
+                    <td><h4>全称：Sampling Valve</h4></td>
+                    <td><span>图例：</span><img class="legend" src="\\NAS.xdsw.local\UserFolder\pengyun.xu\桌面\1.png"></td>
+               </tr>
+            </table>
+            <h4>工作原理</h4>
+                 <video style="border-radius: 10px;" width="500px" controls="controls" src="http://inn-qc.iqiaomai.com/0915%E5%90%AF%E8%88%AA%E8%AE%A1%E5%88%92%E5%9F%B9%E8%AE%AD%E6%80%BB%28%E9%AB%98%E6%B8%85%29.mp4"></video>
+            <h4>介绍</h4>
+                  <p>Y型过滤器是输送介质的管道系统不可缺少的一种过滤装置，Y型过滤器通常安装在减压阀、泄压阀、定水位阀或其它设备的进口端，用来清除介质中的杂质，以保护阀门及设备的正常使用。Y型过滤器具有结构先进，阻力小，排污方便等特点。Y型过滤器适用介质可为水、油、气。一般通水网为18~30目，通气网为10~100目，通油网为100~480目。 篮式过滤器主要由接管、主管、滤蓝、法兰、法兰盖及紧固件等组成。当液体通过主管进入滤蓝后，固体杂质颗粒被阻挡在滤蓝内，而洁净的流体通过滤蓝、由过滤器出口排出。</p>
+            <h4>相关图片</h4>
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+         </div>
+
+
+        <div>
+            <h3 id="list30">称重单元</h3>
+            <table class="code">
+               <tr>
+                    <td><h4>代码：SV</h4></td>
+                    <td><h4>全称：Sampling Valve</h4></td>
+                    <td><span>图例：</span><img class="legend" src="\\NAS.xdsw.local\UserFolder\pengyun.xu\桌面\1.png"></td>
+               </tr>
+            </table>
+            <h4>工作原理</h4>
+                 <video style="border-radius: 10px;" width="500px" controls="controls" src="http://inn-qc.iqiaomai.com/0915%E5%90%AF%E8%88%AA%E8%AE%A1%E5%88%92%E5%9F%B9%E8%AE%AD%E6%80%BB%28%E9%AB%98%E6%B8%85%29.mp4"></video>
+            <h4>介绍</h4>
+                  <p>Y型过滤器是输送介质的管道系统不可缺少的一种过滤装置，Y型过滤器通常安装在减压阀、泄压阀、定水位阀或其它设备的进口端，用来清除介质中的杂质，以保护阀门及设备的正常使用。Y型过滤器具有结构先进，阻力小，排污方便等特点。Y型过滤器适用介质可为水、油、气。一般通水网为18~30目，通气网为10~100目，通油网为100~480目。 篮式过滤器主要由接管、主管、滤蓝、法兰、法兰盖及紧固件等组成。当液体通过主管进入滤蓝后，固体杂质颗粒被阻挡在滤蓝内，而洁净的流体通过滤蓝、由过滤器出口排出。</p>
+            <h4>相关图片</h4>
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+         </div>
+
+
+        <div>
+            <h3 id="list31">组合阀</h3>
+            <table class="code">
+               <tr>
+                    <td><h4>代码：SV</h4></td>
+                    <td><h4>全称：Sampling Valve</h4></td>
+                    <td><span>图例：</span><img class="legend" src="\\NAS.xdsw.local\UserFolder\pengyun.xu\桌面\1.png"></td>
+               </tr>
+            </table>
+            <h4>工作原理</h4>
+                 <video style="border-radius: 10px;" width="500px" controls="controls" src="http://inn-qc.iqiaomai.com/0915%E5%90%AF%E8%88%AA%E8%AE%A1%E5%88%92%E5%9F%B9%E8%AE%AD%E6%80%BB%28%E9%AB%98%E6%B8%85%29.mp4"></video>
+            <h4>介绍</h4>
+                  <p>Y型过滤器是输送介质的管道系统不可缺少的一种过滤装置，Y型过滤器通常安装在减压阀、泄压阀、定水位阀或其它设备的进口端，用来清除介质中的杂质，以保护阀门及设备的正常使用。Y型过滤器具有结构先进，阻力小，排污方便等特点。Y型过滤器适用介质可为水、油、气。一般通水网为18~30目，通气网为10~100目，通油网为100~480目。 篮式过滤器主要由接管、主管、滤蓝、法兰、法兰盖及紧固件等组成。当液体通过主管进入滤蓝后，固体杂质颗粒被阻挡在滤蓝内，而洁净的流体通过滤蓝、由过滤器出口排出。</p>
+            <h4>相关图片</h4>
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+         </div>
+
+
+        <div>
+            <h3 id="list32">罐壳式换热器</h3>
+            <table class="code">
+               <tr>
+                    <td><h4>代码：SV</h4></td>
+                    <td><h4>全称：Sampling Valve</h4></td>
+                    <td><span>图例：</span><img class="legend" src="\\NAS.xdsw.local\UserFolder\pengyun.xu\桌面\1.png"></td>
+               </tr>
+            </table>
+            <h4>工作原理</h4>
+                 <video style="border-radius: 10px;" width="500px" controls="controls" src="http://inn-qc.iqiaomai.com/0915%E5%90%AF%E8%88%AA%E8%AE%A1%E5%88%92%E5%9F%B9%E8%AE%AD%E6%80%BB%28%E9%AB%98%E6%B8%85%29.mp4"></video>
+            <h4>介绍</h4>
+                  <p>Y型过滤器是输送介质的管道系统不可缺少的一种过滤装置，Y型过滤器通常安装在减压阀、泄压阀、定水位阀或其它设备的进口端，用来清除介质中的杂质，以保护阀门及设备的正常使用。Y型过滤器具有结构先进，阻力小，排污方便等特点。Y型过滤器适用介质可为水、油、气。一般通水网为18~30目，通气网为10~100目，通油网为100~480目。 篮式过滤器主要由接管、主管、滤蓝、法兰、法兰盖及紧固件等组成。当液体通过主管进入滤蓝后，固体杂质颗粒被阻挡在滤蓝内，而洁净的流体通过滤蓝、由过滤器出口排出。</p>
+            <h4>相关图片</h4>
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+         </div>
+
+
+        <div>
+            <h3 id="list33">罐底阀</h3>
+            <table class="code">
+               <tr>
+                    <td><h4>代码：SV</h4></td>
+                    <td><h4>全称：Sampling Valve</h4></td>
+                    <td><span>图例：</span><img class="legend" src="\\NAS.xdsw.local\UserFolder\pengyun.xu\桌面\1.png"></td>
+               </tr>
+            </table>
+            <h4>工作原理</h4>
+                 <video style="border-radius: 10px;" width="500px" controls="controls" src="http://inn-qc.iqiaomai.com/0915%E5%90%AF%E8%88%AA%E8%AE%A1%E5%88%92%E5%9F%B9%E8%AE%AD%E6%80%BB%28%E9%AB%98%E6%B8%85%29.mp4"></video>
+            <h4>介绍</h4>
+                  <p>Y型过滤器是输送介质的管道系统不可缺少的一种过滤装置，Y型过滤器通常安装在减压阀、泄压阀、定水位阀或其它设备的进口端，用来清除介质中的杂质，以保护阀门及设备的正常使用。Y型过滤器具有结构先进，阻力小，排污方便等特点。Y型过滤器适用介质可为水、油、气。一般通水网为18~30目，通气网为10~100目，通油网为100~480目。 篮式过滤器主要由接管、主管、滤蓝、法兰、法兰盖及紧固件等组成。当液体通过主管进入滤蓝后，固体杂质颗粒被阻挡在滤蓝内，而洁净的流体通过滤蓝、由过滤器出口排出。</p>
+            <h4>相关图片</h4>
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+         </div>
+
+
+        <div>
+            <h3 id="list34">膨胀箱</h3>
+            <table class="code">
+               <tr>
+                    <td><h4>代码：SV</h4></td>
+                    <td><h4>全称：Sampling Valve</h4></td>
+                    <td><span>图例：</span><img class="legend" src="\\NAS.xdsw.local\UserFolder\pengyun.xu\桌面\1.png"></td>
+               </tr>
+            </table>
+            <h4>工作原理</h4>
+                 <video style="border-radius: 10px;" width="500px" controls="controls" src="http://inn-qc.iqiaomai.com/0915%E5%90%AF%E8%88%AA%E8%AE%A1%E5%88%92%E5%9F%B9%E8%AE%AD%E6%80%BB%28%E9%AB%98%E6%B8%85%29.mp4"></video>
+            <h4>介绍</h4>
+                  <p>Y型过滤器是输送介质的管道系统不可缺少的一种过滤装置，Y型过滤器通常安装在减压阀、泄压阀、定水位阀或其它设备的进口端，用来清除介质中的杂质，以保护阀门及设备的正常使用。Y型过滤器具有结构先进，阻力小，排污方便等特点。Y型过滤器适用介质可为水、油、气。一般通水网为18~30目，通气网为10~100目，通油网为100~480目。 篮式过滤器主要由接管、主管、滤蓝、法兰、法兰盖及紧固件等组成。当液体通过主管进入滤蓝后，固体杂质颗粒被阻挡在滤蓝内，而洁净的流体通过滤蓝、由过滤器出口排出。</p>
+            <h4>相关图片</h4>
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+         </div>
+
+
+        <div>
+            <h3 id="list35">自力式减压阀</h3>
+            <table class="code">
+               <tr>
+                    <td><h4>代码：SV</h4></td>
+                    <td><h4>全称：Sampling Valve</h4></td>
+                    <td><span>图例：</span><img class="legend" src="\\NAS.xdsw.local\UserFolder\pengyun.xu\桌面\1.png"></td>
+               </tr>
+            </table>
+            <h4>工作原理</h4>
+                 <video style="border-radius: 10px;" width="500px" controls="controls" src="http://inn-qc.iqiaomai.com/0915%E5%90%AF%E8%88%AA%E8%AE%A1%E5%88%92%E5%9F%B9%E8%AE%AD%E6%80%BB%28%E9%AB%98%E6%B8%85%29.mp4"></video>
+            <h4>介绍</h4>
+                  <p>Y型过滤器是输送介质的管道系统不可缺少的一种过滤装置，Y型过滤器通常安装在减压阀、泄压阀、定水位阀或其它设备的进口端，用来清除介质中的杂质，以保护阀门及设备的正常使用。Y型过滤器具有结构先进，阻力小，排污方便等特点。Y型过滤器适用介质可为水、油、气。一般通水网为18~30目，通气网为10~100目，通油网为100~480目。 篮式过滤器主要由接管、主管、滤蓝、法兰、法兰盖及紧固件等组成。当液体通过主管进入滤蓝后，固体杂质颗粒被阻挡在滤蓝内，而洁净的流体通过滤蓝、由过滤器出口排出。</p>
+            <h4>相关图片</h4>
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+         </div>
+
+
+        <div>
+            <h3 id="list36">视灯</h3>
+            <table class="code">
+               <tr>
+                    <td><h4>代码：SV</h4></td>
+                    <td><h4>全称：Sampling Valve</h4></td>
+                    <td><span>图例：</span><img class="legend" src="\\NAS.xdsw.local\UserFolder\pengyun.xu\桌面\1.png"></td>
+               </tr>
+            </table>
+            <h4>工作原理</h4>
+                 <video style="border-radius: 10px;" width="500px" controls="controls" src="http://inn-qc.iqiaomai.com/0915%E5%90%AF%E8%88%AA%E8%AE%A1%E5%88%92%E5%9F%B9%E8%AE%AD%E6%80%BB%28%E9%AB%98%E6%B8%85%29.mp4"></video>
+            <h4>介绍</h4>
+                  <p>Y型过滤器是输送介质的管道系统不可缺少的一种过滤装置，Y型过滤器通常安装在减压阀、泄压阀、定水位阀或其它设备的进口端，用来清除介质中的杂质，以保护阀门及设备的正常使用。Y型过滤器具有结构先进，阻力小，排污方便等特点。Y型过滤器适用介质可为水、油、气。一般通水网为18~30目，通气网为10~100目，通油网为100~480目。 篮式过滤器主要由接管、主管、滤蓝、法兰、法兰盖及紧固件等组成。当液体通过主管进入滤蓝后，固体杂质颗粒被阻挡在滤蓝内，而洁净的流体通过滤蓝、由过滤器出口排出。</p>
+            <h4>相关图片</h4>
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+         </div>
+
+
+        <div>
+            <h3 id="list37">视镜</h3>
+            <table class="code">
+               <tr>
+                    <td><h4>代码：SV</h4></td>
+                    <td><h4>全称：Sampling Valve</h4></td>
+                    <td><span>图例：</span><img class="legend" src="\\NAS.xdsw.local\UserFolder\pengyun.xu\桌面\1.png"></td>
+               </tr>
+            </table>
+            <h4>工作原理</h4>
+                 <video style="border-radius: 10px;" width="500px" controls="controls" src="http://inn-qc.iqiaomai.com/0915%E5%90%AF%E8%88%AA%E8%AE%A1%E5%88%92%E5%9F%B9%E8%AE%AD%E6%80%BB%28%E9%AB%98%E6%B8%85%29.mp4"></video>
+            <h4>介绍</h4>
+                  <p>Y型过滤器是输送介质的管道系统不可缺少的一种过滤装置，Y型过滤器通常安装在减压阀、泄压阀、定水位阀或其它设备的进口端，用来清除介质中的杂质，以保护阀门及设备的正常使用。Y型过滤器具有结构先进，阻力小，排污方便等特点。Y型过滤器适用介质可为水、油、气。一般通水网为18~30目，通气网为10~100目，通油网为100~480目。 篮式过滤器主要由接管、主管、滤蓝、法兰、法兰盖及紧固件等组成。当液体通过主管进入滤蓝后，固体杂质颗粒被阻挡在滤蓝内，而洁净的流体通过滤蓝、由过滤器出口排出。</p>
+            <h4>相关图片</h4>
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+         </div>
+
+
+        <div>
+            <h3 id="list38">计量泵</h3>
+            <table class="code">
+               <tr>
+                    <td><h4>代码：SV</h4></td>
+                    <td><h4>全称：Sampling Valve</h4></td>
+                    <td><span>图例：</span><img class="legend" src="\\NAS.xdsw.local\UserFolder\pengyun.xu\桌面\1.png"></td>
+               </tr>
+            </table>
+            <h4>工作原理</h4>
+                 <video style="border-radius: 10px;" width="500px" controls="controls" src="http://inn-qc.iqiaomai.com/0915%E5%90%AF%E8%88%AA%E8%AE%A1%E5%88%92%E5%9F%B9%E8%AE%AD%E6%80%BB%28%E9%AB%98%E6%B8%85%29.mp4"></video>
+            <h4>介绍</h4>
+                  <p>Y型过滤器是输送介质的管道系统不可缺少的一种过滤装置，Y型过滤器通常安装在减压阀、泄压阀、定水位阀或其它设备的进口端，用来清除介质中的杂质，以保护阀门及设备的正常使用。Y型过滤器具有结构先进，阻力小，排污方便等特点。Y型过滤器适用介质可为水、油、气。一般通水网为18~30目，通气网为10~100目，通油网为100~480目。 篮式过滤器主要由接管、主管、滤蓝、法兰、法兰盖及紧固件等组成。当液体通过主管进入滤蓝后，固体杂质颗粒被阻挡在滤蓝内，而洁净的流体通过滤蓝、由过滤器出口排出。</p>
+            <h4>相关图片</h4>
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+         </div>
+
+
+        <div>
+            <h3 id="list39">质量流量计</h3>
+            <table class="code">
+               <tr>
+                    <td><h4>代码：SV</h4></td>
+                    <td><h4>全称：Sampling Valve</h4></td>
+                    <td><span>图例：</span><img class="legend" src="\\NAS.xdsw.local\UserFolder\pengyun.xu\桌面\1.png"></td>
+               </tr>
+            </table>
+            <h4>工作原理</h4>
+                 <video style="border-radius: 10px;" width="500px" controls="controls" src="http://inn-qc.iqiaomai.com/0915%E5%90%AF%E8%88%AA%E8%AE%A1%E5%88%92%E5%9F%B9%E8%AE%AD%E6%80%BB%28%E9%AB%98%E6%B8%85%29.mp4"></video>
+            <h4>介绍</h4>
+                  <p>Y型过滤器是输送介质的管道系统不可缺少的一种过滤装置，Y型过滤器通常安装在减压阀、泄压阀、定水位阀或其它设备的进口端，用来清除介质中的杂质，以保护阀门及设备的正常使用。Y型过滤器具有结构先进，阻力小，排污方便等特点。Y型过滤器适用介质可为水、油、气。一般通水网为18~30目，通气网为10~100目，通油网为100~480目。 篮式过滤器主要由接管、主管、滤蓝、法兰、法兰盖及紧固件等组成。当液体通过主管进入滤蓝后，固体杂质颗粒被阻挡在滤蓝内，而洁净的流体通过滤蓝、由过滤器出口排出。</p>
+            <h4>相关图片</h4>
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+         </div>
+
+
+        <div>
+            <h3 id="list40">软管</h3>
+            <table class="code">
+               <tr>
+                    <td><h4>代码：SV</h4></td>
+                    <td><h4>全称：Sampling Valve</h4></td>
+                    <td><span>图例：</span><img class="legend" src="\\NAS.xdsw.local\UserFolder\pengyun.xu\桌面\1.png"></td>
+               </tr>
+            </table>
+            <h4>工作原理</h4>
+                 <video style="border-radius: 10px;" width="500px" controls="controls" src="http://inn-qc.iqiaomai.com/0915%E5%90%AF%E8%88%AA%E8%AE%A1%E5%88%92%E5%9F%B9%E8%AE%AD%E6%80%BB%28%E9%AB%98%E6%B8%85%29.mp4"></video>
+            <h4>介绍</h4>
+                  <p>Y型过滤器是输送介质的管道系统不可缺少的一种过滤装置，Y型过滤器通常安装在减压阀、泄压阀、定水位阀或其它设备的进口端，用来清除介质中的杂质，以保护阀门及设备的正常使用。Y型过滤器具有结构先进，阻力小，排污方便等特点。Y型过滤器适用介质可为水、油、气。一般通水网为18~30目，通气网为10~100目，通油网为100~480目。 篮式过滤器主要由接管、主管、滤蓝、法兰、法兰盖及紧固件等组成。当液体通过主管进入滤蓝后，固体杂质颗粒被阻挡在滤蓝内，而洁净的流体通过滤蓝、由过滤器出口排出。</p>
+            <h4>相关图片</h4>
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+         </div>
+
+
+        <div>
+            <h3 id="list41">过滤器</h3>
+            <table class="code">
+               <tr>
+                    <td><h4>代码：SV</h4></td>
+                    <td><h4>全称：Sampling Valve</h4></td>
+                    <td><span>图例：</span><img class="legend" src="\\NAS.xdsw.local\UserFolder\pengyun.xu\桌面\1.png"></td>
+               </tr>
+            </table>
+            <h4>工作原理</h4>
+                 <video style="border-radius: 10px;" width="500px" controls="controls" src="http://inn-qc.iqiaomai.com/0915%E5%90%AF%E8%88%AA%E8%AE%A1%E5%88%92%E5%9F%B9%E8%AE%AD%E6%80%BB%28%E9%AB%98%E6%B8%85%29.mp4"></video>
+            <h4>介绍</h4>
+                  <p>Y型过滤器是输送介质的管道系统不可缺少的一种过滤装置，Y型过滤器通常安装在减压阀、泄压阀、定水位阀或其它设备的进口端，用来清除介质中的杂质，以保护阀门及设备的正常使用。Y型过滤器具有结构先进，阻力小，排污方便等特点。Y型过滤器适用介质可为水、油、气。一般通水网为18~30目，通气网为10~100目，通油网为100~480目。 篮式过滤器主要由接管、主管、滤蓝、法兰、法兰盖及紧固件等组成。当液体通过主管进入滤蓝后，固体杂质颗粒被阻挡在滤蓝内，而洁净的流体通过滤蓝、由过滤器出口排出。</p>
+            <h4>相关图片</h4>
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+         </div>
+
+
+        <div>
+            <h3 id="list42">隔膜泵</h3>
+            <table class="code">
+               <tr>
+                    <td><h4>代码：SV</h4></td>
+                    <td><h4>全称：Sampling Valve</h4></td>
+                    <td><span>图例：</span><img class="legend" src="\\NAS.xdsw.local\UserFolder\pengyun.xu\桌面\1.png"></td>
+               </tr>
+            </table>
+            <h4>工作原理</h4>
+                 <video style="border-radius: 10px;" width="500px" controls="controls" src="http://inn-qc.iqiaomai.com/0915%E5%90%AF%E8%88%AA%E8%AE%A1%E5%88%92%E5%9F%B9%E8%AE%AD%E6%80%BB%28%E9%AB%98%E6%B8%85%29.mp4"></video>
+            <h4>介绍</h4>
+                  <p>Y型过滤器是输送介质的管道系统不可缺少的一种过滤装置，Y型过滤器通常安装在减压阀、泄压阀、定水位阀或其它设备的进口端，用来清除介质中的杂质，以保护阀门及设备的正常使用。Y型过滤器具有结构先进，阻力小，排污方便等特点。Y型过滤器适用介质可为水、油、气。一般通水网为18~30目，通气网为10~100目，通油网为100~480目。 篮式过滤器主要由接管、主管、滤蓝、法兰、法兰盖及紧固件等组成。当液体通过主管进入滤蓝后，固体杂质颗粒被阻挡在滤蓝内，而洁净的流体通过滤蓝、由过滤器出口排出。</p>
+            <h4>相关图片</h4>
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+                  <img class="components" src="..\..\..\..\images\管罐系统部件\Y型过滤器.jpg" />
+         </div>
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+<!--回到顶部--> 
+    <div id="article"></div> 
+    <div id="back_top"> 
+        <div class="arrow"></div> 
+        <div class="stick"></div> 
+    </div> 
+    <script src="http://cdn.staticfile.org/jquery/1.11.1-rc2/jquery.min.js"></script> 
+    <script> 
+        $(function(){ 
+ 
+            $(window).scroll(function(){  //只要窗口滚动,就触发下面代码 
+ 
+                var scrollt = document.documentElement.scrollTop + document.body.scrollTop; //获取滚动后的高度 
+ 
+                if( scrollt >200 ){  //判断滚动后高度超过200px,就显示 
+ 
+                    $("#back_top").fadeIn(400); //淡入 
+ 
+                }else{ 
+ 
+                    $("#back_top").stop().fadeOut(400); //如果返回或者没有超过,就淡出.必须加上stop()停止之前动画,否则会出现闪动 
+ 
+                } 
+ 
+            }); 
+ 
+            $("#back_top").click(function(){ //当点击标签的时候,使用animate在200毫秒的时间内,滚到顶部 
+ 
+                $("html,body").animate({scrollTop:"0px"},200); 
+ 
+            }); 
+ 
+        }); 
+    </script> 
+<!--回到顶部结束--> 
+
+
+</body>
+
+
+
+</html>

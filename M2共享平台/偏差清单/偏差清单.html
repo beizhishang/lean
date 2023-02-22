@@ -1,0 +1,454 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>偏差清单</title>
+    <meta charset="GBK">
+    <link href="https://trello-attachments.s3.amazonaws.com/5d870c0418f7104546584cfb/5dcbcaedb6ca803685cc6fa0/a83d2af9b74ca6ddceec6ed84190fa15/Purification_(2).ico"
+      rel="shortcut icon">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+
+<style>
+    body {
+        font-family: 'Roboto', sans-serif;
+    }
+
+    *{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        text-decoration: none;
+    }
+
+     #home{
+        cursor: pointer;
+    }
+
+    .sidebar{
+        position: fixed;
+        left: -250px;
+        width: 250px;
+        height: 100%;
+        background: #042331;
+        transition: all .5s ease;
+        overflow-Y: scroll;
+    }
+
+    .sidebar header{
+        font-size: 22px;
+        color: white;
+        text-align: left;
+        padding-left: 30px;
+        line-height: 70px;
+        background: #063146;
+        user-select: none;
+    }
+
+    .sidebar ul a{
+        display: block;
+        height: 100%;
+        width: 100%;
+        line-height: 50px;
+        font-size: 16px;
+        color: white;
+        padding-left: 20px;
+        box-sizing: border-box;
+        border-top: 1px solid rgba(255,255,255,.1);
+        border-bottom: 1px solid black;
+        transition: .4s;
+        cursor: pointer;
+    }
+
+    ul li:hover a{
+        padding-left: 25px;
+        background-image: linear-gradient( 177.9deg,  rgba(58,62,88,1) 3.6%, rgba(119,127,148,1) 105.8% );
+    }
+
+    .sidebar ul a i{
+        margin-right: 16px;
+    }
+
+    #check{
+        display: none;
+    }
+
+    label #btn, label #cancel{
+        position: absolute;
+        cursor: pointer;
+        background: #042331;
+        border-radius: 3px;
+    }
+
+    label #btn{
+        left: 40px;
+        top: 25px;
+        font-size: 35px;
+        color: white;
+        padding: 6px 12px;
+        transition: all .5s;
+        position: fixed;
+    }
+
+    label #cancel{
+        z-index: 1111;
+        left: -195px;
+        top: 17px;
+        font-size: 30px;
+        color: #0a5275;
+        padding: 4px 9px;
+        transition: all .5s ease;
+        position: fixed;
+    }
+
+    #check:checked ~ .sidebar{
+        left: 0;
+        
+    }
+
+    #check:checked ~ label #btn{
+        left: 250px;
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    #check:checked ~ label #cancel{
+        left: 195px;
+    }
+
+    section{
+        height: 100vh;
+        transition: all .5s ease;
+        
+    }
+
+    #check:checked ~ section{
+        margin-left: 250px;
+    }
+
+    .Minor:after, .Major:after, .Critical:after{
+        border-radius: 4px;
+        padding: 2px 4px;
+        position: relative;
+        font-size: 5px;
+        left: 15px;
+    }
+
+    .Minor:after{
+        color: black;
+        content: "Minor";
+        background-color: pink;
+    }
+
+    .Major:after{
+        color: black;
+        content: "Major";
+        background-color: yellow;
+    }
+
+    .Critical:after{
+        color: white;
+        content: "Critical";
+        background-color: red;
+    }
+
+</style>
+
+<body>
+
+    <input type="checkbox" id="check">
+    <label for="check">
+        <i class="fa fa-bars" id="btn"></i>
+        <i class="fa fa-times" id="cancel"></i>
+    </label>
+
+    <div class="sidebar">
+        
+        <header><i class="fa fa-home" id="home" title="偏差清单" onclick="javascript:window.location.href='http://shareedit/_layouts/15/WopiFrame.aspx?sourcedoc={AFE1F6EF-6EA1-41AD-B195-5C89F041B824}&file=M1b%E5%81%8F%E5%B7%AE%E6%B8%85%E5%8D%95.xlsx&action=default'"></i>&nbsp;&nbsp;&nbsp;&nbsp;偏差清单</header>
+        <p >
+        <ul>
+            <li><a onClick="parent.show.location.href='D-2020-0131.pdf'" title="生产部 尘埃粒子计数仪不符合连续三次自净结果为0  Particle counter failure to meet three consecutive self-purification results is 0">
+                  <i class="fas fa-bong"></i><span class="Minor">D-2020-0131</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2020-0147.pdf'" title="M1b DS1 2M Tris Base一次性储液袋漏液偏差 M1b DS1 2M Tris Base Disposable Storage Bag Leakage Deviation">
+                  <i class="fas fa-file-contract"></i><span class="Major">D-2020-0147</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2020-0151.pdf'" title="M1b DS2 750L生物反应器底通空气超工艺规程范围 M1b DS2 750L Bioreactor Sparge Air Flow out of PFD Range">
+                  <i class="fas fa-bong"></i><span class="Minor">D-2020-0151</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2020-0153.pdf'" title="M1b DS 细胞培养间周清超期 Cell Culture Room weekly clean exceed SOP allotted time">
+                  <i class="fas fa-bong"></i><span class="Minor">D-2020-0153</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2020-0155.pdf'" title="M1b DS2EM模块被占用所以不能开启自动搅拌EM module is occupied, so automatic mixing cannot be started">
+                  <i class="fas fa-file-contract"></i><span class="Major">D-2020-0155</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2020-0160.pdf'" title="M1b信迪利单抗注射液原液糖基化G0F超过原液质量准备限度 M1b Sintilimab DS G0F Glycosylation OOS">
+                  <i class="fas fa-file-contract"></i><span class="Major">D-2020-0160</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2020-0162.pdf'" title="M1b DS1 纯化管罐DHT超时限 Purification tube and tank DHT exceeded time limit">
+                  <i class="fas fa-file-contract"></i><span class="Minor">D-2020-0162</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2020-0163.pdf'" title="M1b DS2  IBI379MCB活细胞密度超范围。IBI379MCB Viable cells density is over range。">
+                  <i class="fas fa-bong"></i><span class="Minor">D-2020-0163</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2020-0173.pdf'" title="M1b DS2 750L反应器计划性停电期间pH、DO信号中断偏差  M1b DS2pH and DO signals  Interruption deviation during 750L planned power outage">
+                  <i class="fas fa-bong"></i><span class="Major">D-2020-0173</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2020-0176.pdf'" title="M1b DS1 MFG-M1b2-127冷藏冷冻箱确认过程中温度超限 the temperature below limit happened during qualification">
+                  <i class="fas fa-bong"></i><span class="Major">D-2020-0176</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2020-0180.pdf'" title="M1b DS2培养基转移管路清洁验证淋洗水电导率超标M1b DS2 Rinse water conductivity of media filtration line cleaning validation out of criteria">
+                  <i class="fas fa-bong"></i><span class="Major">D-2020-0180</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2020-0183.pdf'" title="M1b DS1纯化区域地漏周清洁超过有效期 Floor drain weekly cleaning exceed the time limit">
+                  <i class="fas fa-file-contract"></i><span class="Major">D-2020-0183</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2020-0186.pdf'" title="M1b DS2 301VF步骤产品过滤部分时间段压力低于范围 Pressure of 301vf step product filtration part of time is lower than the range">
+                  <i class="fas fa-file-contract"></i><span class="Major">D-2020-0186</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2020-0187.pdf'" title="M1b DS1冷藏冷冻箱验证中使用了错误的温度探头 Incorrect Datalogger was used in fridge qualificaiton in M1b DS1">
+                  <i class="fas fa-bong"></i><span class="Minor">D-2020-0187</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2020-0199.pdf'" title="M1b DS2 C级洁净区发现蚂蚁 M1b DS2 Class C clean areas found an ant">
+                  <i class="fas fa-file-contract"></i><span class="Major">D-2020-0199</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2020-0203.pdf'" title="M1b DS2 CIP清洗站（CIP-05-06）数据丢失 CIP cleaning station (CIP-05-06) data loss">
+                  <i class="fas fa-bong"></i><span class="Major">D-2020-0203</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2020-0209.pdf'" title="M1b DS2  IBI325MCB倍增时间超范围IBI325MCB doubling time out of range">
+                  <i class="fas fa-bong"></i><span class="Minor">D-2020-0209</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2020-0214.pdf'" title="M1b DS2 IBI301中间产品混合均一性不符合要求  M1b DS2 IBI301 Intermediate product mixing uniformity does not meet the requirements.">
+                  <i class="fas fa-file-contract"></i><span class="Major">D-2020-0214</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2020-0218.pdf'" title="M1b DS1 150L生物反应器罐体清洁状态显示异常The cleaning state of M1b DS1 150L bioreactor tank is abnormal">
+                  <i class="fas fa-bong"></i><span class="Minor">D-2020-0218</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2020-0219.pdf'" title="M1b DS1  种子扩增间发现虫子。M1bDS1 Bugs found during seed amplification。">
+                  <i class="fas fa-bong"></i><span class="Minor">D-2020-0219</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2020-0220.pdf'" title="M1b DS1 3000L流加培养第7天参数未调整 The parameters of 3000L stream culture were not adjusted on the 7th day">
+                  <i class="fas fa-bong"></i><span class="Minor">D-2020-0220</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2020-0221.pdf'" title="M1b DS2 150L生物反应器pH电极故障 M1b DS2 150L bioreactor pH electrode failure">
+                  <i class="fas fa-bong"></i><span class="Minor">D-2020-0221</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2020-0227.pdf'" title="M1b DS2亲和层析柱CIP后平衡液与程序设定不符 The equilibrium solution after CIP was inconsistent with the program">
+                  <i class="fas fa-file-contract"></i><span class="Major">D-2020-0227</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2020-0229.pdf'" title="M1b DS1 未按照工艺规程要求补加葡萄糖 Not adding glucose in accordance with the requirements of the PFD">
+                  <i class="fas fa-bong"></i><span class="Minor">D-2020-0229</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2020-0230.pdf'" title="M1b DS1 DS2006009批次AC1上样管道未及时排气泡 The sample pipe did not discharge bubbles in time during AC1 of DS2006009">
+                  <i class="fas fa-file-contract"></i><span class="Minor">D-2020-0230</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2020-0232.pdf'" title="M1b DS1 IBI308阴离子交换层析上样液在线电导值超范围 IBI308 anion exchange chromatography load sample on line conductance value out of scope">
+                  <i class="fas fa-file-contract"></i><span class="Minor">D-2020-0232</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2020-0235.pdf'" title="M1b DS1 DS2007001批次AC2收集液混合器螺栓未悬空 The collecting liquid mixer bolt was not suspended during AC2 of DS2007001">
+                  <i class="fas fa-file-contract"></i><span class="Minor">D-2020-0235</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2020-0236.pdf'" title="M1b DS1  DS2007001AC3层析柱保存过程中系统断电 DS2007001AC3 column Stroage process system power off">
+                  <i class="fas fa-file-contract"></i><span class="Minor">D-2020-0236</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2020-0240.pdf'" title="M1b DS2 IBI188AC1洗脱时除菌过滤顺序与工艺规程不符 IBI188 AC1 sterile filter operation of elution inconsistent with PFD00149">
+                  <i class="fas fa-file-contract"></i><span class="Major">D-2020-0240</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2020-0241.pdf'" title="M1b DS2 IBI188 DS2007004批次WAVE50L培养袋无法扣料 IBI188 DS2007004 could not buckle the material WAVE50L culture bag">
+                  <i class="fas fa-bong"></i><span class="Minor">D-2020-0241</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2020-0242.pdf'" title="M1b DS2 IBI188收获工序偏离工艺流程M1bDS2 IBI188 harvest process deviate from the process">
+                  <i class="fas fa-bong"></i><span class="Major">D-2020-0242</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2020-0244.pdf'" title="M1b DS2物净间传入物品物净时间不足M1b DS2 Insufficient net time for incoming items between objects">
+                  <i class="fas fa-bong"></i><span class="Minor">D-2020-0244</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2020-0245.pdf'" title="M1b DS1在洁净区发现活的虫子 Live bugs found in clean areas">
+                  <i class="fas fa-bong"></i><span class="Major">D-2020-0245</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2020-0246.pdf'" title="M1b DS2 IBI301中间体混合均一性取样时间与方案不符 Mixing uniformity sample time of IBI301 intermediate product inconsistent with VALP00124">
+                  <i class="fas fa-file-contract"></i><span class="Major">D-2020-0246</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2020-0248.pdf'" title="M1b DS2 IBI188VF纯化收集罐T0406手动开启搅拌Mixer of VF pool tank T0406 is manually started">
+                  <i class="fas fa-file-contract"></i><span class="Major">D-2020-0248</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2020-0254.pdf'" title="M1b DS2物气锁自净时间不足M1b DS2 air lock self-cleaning time is insufficient">
+                  <i class="fas fa-bong"></i><span class="Minor">D-2020-0254</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2020-0258.pdf'" title="M1b DS1  DS2007013AC cycle2层析系统Outlet2收集口未封住 DS2007013AC Cycle2 AKTA System Outlet2 collection port is not plug">
+                  <i class="fas fa-file-contract"></i><span class="Major">D-2020-0258</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2020-0271.pdf'" title="M1b DS2 1000L补料罐罐底漏液 M1b DS2 1000 l supplementary food jars of leakage">
+                  <i class="fas fa-bong"></i><span class="Major">D-2020-0271</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2020-0272.pdf'" title="M1b DS2 IBI188 阳离子层析cycle2上样时层析柱柱位阀为by-pass状态 IBI188 CEX cycle2 column valve was by-pass when loading">
+                  <i class="fas fa-file-contract"></i><span class="Minor">D-2020-0272</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2020-0278.pdf'" title="M1b DS2  IBI188 VF收集液蛋白含量检测方法与工艺规程要求不符 M1b DS2 VF pool protein content detection method does not meet the requirements">
+                  <i class="fas fa-file-contract"></i><span class="Minor">D-2020-0278</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2020-0290.pdf'" title="M1b DS2 DS2007012 IBI188阳离子上样罐pH电极处漏液偏差  Deviation of leakage in electrode sensor happened the step of  DS2000712 CEX">
+                  <i class="fas fa-file-contract"></i><span class="Major">D-2020-0290</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2020-0304.pdf'" title="M1b DS1 培养基中有异物Foreign matter in the medium">
+                  <i class="fas fa-bong"></i><span class="Minor">D-2020-0304</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2020-0306.pdf'" title="M1b DS2 使用错误批记录Use error batch records">
+                  <i class="fas fa-bong"></i><span class="Minor">D-2020-0306</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2020-0307.pdf'" title="M1b DS2 DS2007012 IBI188除病毒过滤膜包使用后完整性检测结果异常 Deviation of Integrity testing virus filtration membrane in DS2007012">
+                  <i class="fas fa-file-contract"></i><span class="Major">D-2020-0307</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2020-0314.pdf'" title="M1b DS1收获区域（26D09）V-T0111-11取样手阀被打开导致地面有积水 The M1b DS1 harvesting area (26D09) V-T0111-11 sampling hand valve was opened">
+                  <i class="fas fa-bong"></i><span class="Minor">D-2020-0314</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2020-0320.pdf'" title="M1b DS2 错误校正150L反应器在线pH M1b DS2 error correction 150L reactor online pH">
+                  <i class="fas fa-bong"></i><span class="Minor">D-2020-0320</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2020-0324.pdf'" title="M1b DS2渗透压仪时钟日期错误  M1bDS2 osmotic meter clock date error">
+                  <i class="fas fa-bong"></i><span class="Major">D-2020-0324</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2020-0333.pdf'" title="M1b DS2层析柱下筛网有明显异物残留 M1b DS2 Column have obvious residue">
+                  <i class="fas fa-file-contract"></i><span class="Major">D-2020-0333</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2020-0335.pdf'" title="M1b DS2  尘埃粒子计数仪不符合连续三次自净结果为0  Particle counter failure to meet three consecutive self-purification results is 0">
+                  <i class="fas fa-bong"></i><span class="Major">D-2020-0335</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2020-0336.pdf'" title="M1b DS1 原液分装滤器三次完整性测试未通过偏差Three integrity tests of the DS fill filter failed to pass deviation">
+                  <i class="fas fa-file-contract"></i><span class="Minor">D-2020-0336</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2020-0338.pdf'" title="M1b DS1 人员操作与UV法专属性补充验证方案不符 The M1b DS1  operatior activity is inconsistent with MVP100080">
+                  <i class="fas fa-file-contract"></i><span class="Minor">D-2020-0338</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2020-0341.pdf'" title="M1b DS1 物品未按规定流程传入反应器房间的偏差 Deviation of wrong item transfer in  bioreactor room">
+                  <i class="fas fa-bong"></i><span class="Minor">D-2020-0341</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2020-0347.pdf'" title="M1b DS1取样袋出液口连接处漏液 M1b DS1 sample bag leaks at the outlet connection">
+                  <i class="fas fa-bong"></i><span class="Major">D-2020-0347</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2020-0357.pdf'" title="M1b DS1 DS2009016VF预过滤膜排气管路超期 The vent tubing of VF pre-filtration membrane is overdue">
+                  <i class="fas fa-file-contract"></i><span class="Minor">D-2020-0357</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2020-0364.pdf'" title="M1b 一线收获离心机程序卡死导致报表部分数据丢失 M1b line1 Harvest centrifuge program was stucked causing some data in the report  to be lost">
+                  <i class="fas fa-bong"></i><span class="Major">D-2020-0364</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2020-0366.pdf'" title="M1b DS2补料罐罐体状态计时准确性确认的偏差  Deviation of M1b DS2 feed tank state timing accuracy confirmed">
+                  <i class="fas fa-bong"></i><span class="Minor">D-2020-0366</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2020-0371.pdf'" title="M1b DS1 文件自净时间不满足30分钟 Document self-cleaning time does not meet 30 minutes.">
+                  <i class="fas fa-file-contract"></i><span class="Major">D-2020-0371</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2020-0375.pdf'" title="M1b DS1 人员方案执行时试剂超效期 The reagent expired when M1b DS1 personnel  MVP10080 was implemented">
+                  <i class="fas fa-file-contract"></i><span class="Minor">D-2020-0375</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2020-0385.pdf'" title="M1b DS1超滤系统登入后无法正常运行 The ultrafiltration system cannot operate normally after login">
+                  <i class="fas fa-file-contract"></i><span class="Minor">D-2020-0385</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2020-0387.pdf'" title="M1b DS1 2mol/L枸橼酸漏液。M1b DS1 2mol/L citric acid leakage.">
+                  <i class="fas fa-file-contract"></i><span class="Major">D-2020-0387</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2020-0388.pdf'" title="MFG 操作员使用pH计管理员账户 MFG pH Meter administrator account used by operator">
+                  <i class="fas fa-file-contract"></i><span class="Major">D-2020-0388</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2020-0389.pdf'" title="M1b DS1 IBI308阳离子Cycle2洗脱步骤与程序不符 The elution block of IBI308 CEX Cycle2 inconsisitent with method">
+                  <i class="fas fa-file-contract"></i><span class="Major">D-2020-0389</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2020-0390.pdf'" title="M1b DS1复苏四天后活细胞密度不符合接种要求 The viable cell density does not meet the inoculation requirements after four days of recovery">
+                  <i class="fas fa-bong"></i><span class="Major">D-2020-0390</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2020-0391.pdf'" title="M1b DS2 细胞计数未按SOP操作Cell count does not follow SOP">
+                  <i class="fas fa-bong"></i><span class="Minor">D-2020-0391</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2020-0392.pdf'" title="M1b DS2 超滤KIT接错偏差  M1b DS2 Ultrafiltration KIT misconnection error">
+                  <i class="fas fa-file-contract"></i><span class="Minor">D-2020-0392</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2020-0394.pdf'" title="M1b DS1 完整性检测未记录滤器货号、批号、序列号Integrity test did not record the article number, batch number and serial number of the filter">
+                  <i class="fas fa-file-contract"></i><span class="Minor">D-2020-0394</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2020-0407.pdf'" title="M1b DS1装柱后层析柱表面泛黄The surface of the chromatographic column is yellow after column installation">
+                  <i class="fas fa-file-contract"></i><span class="Major">D-2020-0407</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2020-0412.pdf'" title="M1b DS1 3000L流加培养温度超出操作范围 M1b DS1 3000L cell culture temperature exceeded the operating range">
+                  <i class="fas fa-bong"></i><span class="Minor">D-2020-0412</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2020-0413.pdf'" title="M1b DS2 IBI305原液分装滤器物料编码与文件要求不一致 Material code of IBI305 Bulk fill filter inconsistent with SOP and PFD">
+                  <i class="fas fa-file-contract"></i><span class="Major">D-2020-0413</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2020-0418.pdf'" title="M1b DS1 150L-D1样品细胞计数命名错误 M1b DS1 The cell count of 150L-D1 sample was incorrectly named">
+                  <i class="fas fa-bong"></i><span class="Minor">D-2020-0418</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2020-0424.pdf'" title="M1b DS2 IBI305 CA称量前未记录设备检查结果 M1b DS2 IBI305  weighed CA without equipment inspection records">
+                  <i class="fas fa-file-contract"></i><span class="Minor">D-2020-0424</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2020-0429.pdf'" title="M1b DS2 细胞计数仪软件登陆不进去故障Failure to log in to the cell counter software">
+                  <i class="fas fa-bong"></i><span class="Minor">D-2020-0429</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2020-0431.pdf'" title="M1b DS1 补加谷氨酰胺计算错误 M1b DS1 Wrong calculation of glutamine">
+                  <i class="fas fa-bong"></i><span class="Minor">D-2020-0431</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2020-0432.pdf'" title="M1b DS2 CF样品未按工艺规程要求进行送样The M1b DS2 CF sample was not sent according to the process specification">
+                  <i class="fas fa-bong"></i><span class="Minor">D-2020-0432</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2020-0433.pdf'" title="M1b DS1复苏四天后活细胞密度低 Low viable cell density after four days of recovery">
+                  <i class="fas fa-bong"></i><span class="Major">D-2020-0433</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2020-0434.pdf'" title="M1b DS1 CEX结束收集时间过早 M1b DS1 CEX process end collection time is too early">
+                  <i class="fas fa-file-contract"></i><span class="Major">D-2020-0434</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2020-0436.pdf'" title="M1b DS1 未释放程序用于生产 The M1b DS1 unreleased program is used for production">
+                  <i class="fas fa-file-contract"></i><span class="Minor">D-2020-0436</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2020-0439.pdf'" title="M1b DS2 DS2011008批次HIC上样前样品过滤漏液 M1b DS2 DS2011008 Filtrate leakage of sample before hydrophobic chromatography">
+                  <i class="fas fa-file-contract"></i><span class="Major">D-2020-0439</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2021-0003.pdf'" title="M1b DS1+750L反应器后处理过程中pH电极破裂的偏差 M1b DS1+750L BR pH probe broken while post-processing">
+                  <i class="fas fa-bong"></i><span class="Major">D-2021-0003</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2021-0004.pdf'" title="M1b DS1 人员使用旧版本的拆柱记录 M1b DS1 personnel use older versions of unpacking records">
+                  <i class="fas fa-file-contract"></i><span class="Minor">D-2021-0004</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2021-0015.pdf'" title="M1b DS2 IBI301 DS2003007 UFDF2 工序部分时间段TMP和FI001超工艺规程范围 IBI301 UFDF2 TMP and FI001 didn't meet the PFD criteria">
+                  <i class="fas fa-file-contract"></i><span class="Major">D-2021-0015</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2021-0028.pdf'" title="M1b DS2 IBI305 DS2011010原液稳定性样品取样未进行环境监测 Stability samples were sampled without environmental monitoring">
+                  <i class="fas fa-file-contract"></i><span class="Major">D-2021-0028</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2021-0030.pdf'" title="M1b DS1 DS2012002 T0301罐电导显示值超出记录要求范围T0301 conductivity display value beyond the range of recording requirements">
+                  <i class="fas fa-file-contract"></i><span class="Major">D-2021-0030</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2021-0032.pdf'" title="M1b DS1 26C15房间灯罩破裂  The lampshade in room 26C15 is broken">
+                  <i class="fas fa-file-contract"></i><span class="Minor">D-2021-0032</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2021-0035.pdf'" title="M1b DS2层析柱下筛网有黑色异物 M1b DS2 Black unknown substance on the bottom column plate">
+                  <i class="fas fa-file-contract"></i><span class="Major">D-2021-0035</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2021-0036.pdf'" title="M1b DS2 错误使用其他批次的消泡剂 M1B DS2 wrongly used an antifoaming agent other than this batch">
+                  <i class="fas fa-bong"></i><span class="Minor">D-2021-0036</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2021-0040.pdf'" title="M1b DS1低pH病毒灭活未记录整个过程温度Low pH inactivation does not record the temperature of the entire process">
+                  <i class="fas fa-file-contract"></i><span class="Major">D-2021-0040</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2021-0049.pdf'" title="M1b DS1 DS2012006批次阳离子cycle1收集异常 Abnormal collection of cycle 1 in cation chromatography in batch DS2012006">
+                  <i class="fas fa-file-contract"></i><span class="Major">D-2021-0049</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2021-0051.pdf'" title="M1b DS2 S/D灭活搅拌时间与工艺规程操作范围不符  S/D VI mixing time is inconsistent with the operating range of theprocess description">
+                  <i class="fas fa-file-contract"></i><span class="Major">D-2021-0051</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2021-0052.pdf'" title="M1b DS1原液分装系统故障 The M1b DS1  DS Fill system failure">
+                  <i class="fas fa-file-contract"></i><span class="Minor">D-2021-0052</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2021-0053.pdf'" title="M1b DS2 EM-FA0404抓取失败。M1b DS EM-FA0404 Acquire Failed.">
+                  <i class="fas fa-file-contract"></i><span class="Minor">D-2021-0053</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2021-0056.pdf'" title="M1b DS2 启动IBI305 2nd CEX PR 前T0401没有ready  M1b DS2 T0401 is not ready before starting IBI305 2nd CEX PR">
+                  <i class="fas fa-file-contract"></i><span class="Minor">D-2021-0056</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2021-0062.pdf'" title="M1b DS2 IBI305中间体微限及内毒样品漏取 IBI305 bioburden and endotoxin samples of intermediate product were omitted">
+                  <i class="fas fa-file-contract"></i><span class="Major">D-2021-0062</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2021-0087.pdf'" title="M1b DS1 多参数仪终点类型与SOP不一致 Endpoint style of the multi-parameter meter is inconsistent with the SOP">
+                  <i class="fas fa-file-contract"></i><span class="Major">D-2021-0087</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2021-0088.pdf'" title="M1b DS1 生物反应器（3000L）DHT超过历史最大确认时间 M1b DS1 The bioreactor (3000L) DHT exceeded the historical maximum confirmation time">
+                  <i class="fas fa-bong"></i><span class="Major">D-2021-0088</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2021-0090.pdf'" title="M1b DS1 50L种子培养工序培养基未按照要求开启控制 M1b DS1 50L cell culture process medium does not open control as required">
+                  <i class="fas fa-bong"></i><span class="Minor">D-2021-0090</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2021-0095.pdf'" title="M1b DS1 AC 图谱保存路径错误 M1B DS1 AC report save path error">
+                  <i class="fas fa-file-contract"></i><span class="Major">D-2021-0095</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2021-0100.pdf'" title="M1b DS1 亲和Cycle2跳过上样后平衡步骤 M1b DS1 AC Cycle2 skip post loading equilibration">
+                  <i class="fas fa-file-contract"></i><span class="Major">D-2021-0100</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2021-0102.pdf'" title="M1b DS1 IBI308 AC process DS2101010 03程序流量计显示为零 The flowmeter shows zero in procedure IBI308 AC process DS2101010 03">
+                  <i class="fas fa-file-contract"></i><span class="Minor">D-2021-0102</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2021-0105.pdf'" title="M1b DS1 3000L流加培养DO低于操作范围下限 M1b DS1 3000L Fed-Batch DO below operating limit">
+                  <i class="fas fa-bong"></i><span class="Minor">D-2021-0105</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2021-0108.pdf'" title="M1b DS1 IBI308 阴离子层析入口连接错误   M1b DS1 IBI308Anion chromatography inlet connection error">
+                  <i class="fas fa-file-contract"></i><span class="Critical">D-2021-0108</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2021-0121.pdf'" title="M1b DS1 T0304空气滤芯状态异常 M1b DS1 air filter of T0304 is abnormal">
+                  <i class="fas fa-file-contract"></i><span class="Major">D-2021-0121</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2021-0128.pdf'" title="M1b DS1 T0305罐顶部空气滤芯第三次完整性检测未通过The third integrity test of the top air filter element of T0305 tank failed">
+                  <i class="fas fa-file-contract"></i><span class="Major">D-2021-0128</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2021-0132.pdf'" title="M1b DS2 IBI305超滤洗滤工序29min电子数据显示“0” 29 minutes electronic data of IBI305 UF/DF showed “0”">
+                  <i class="fas fa-file-contract"></i><span class="Major">D-2021-0132</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2021-0155.pdf'" title="M1b DS2 IBI305 UFDF工序提前点击“NO”  M1b DS2 click "NO“  advanced in IBI305 UFDF process.">
+                  <i class="fas fa-file-contract"></i><span class="Minor">D-2021-0155</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2021-0156.pdf'" title="M1b DS1 DCS程序执行错误 M1b DS1 DCS Recipe program execution error">
+                  <i class="fas fa-file-contract"></i><span class="Minor">D-2021-0156</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2021-0157.pdf'" title="M1b DS2 IBI305中间体收集液取样时间节点与制检规程偏离Intermediate sampling time deviation with production and inspection procedures">
+                  <i class="fas fa-file-contract"></i><span class="Major">D-2021-0157</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2021-0165.pdf'" title="M1b DS2IBI305PAI批次微限取样节点与核定版制检规程不一致IBI305 PAI batches sample points deviated from manufacturing & testing procedure">
+                  <i class="fas fa-file-contract"></i><span class="Major">D-2021-0165</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2021-0171.pdf'" title="M1b DS1 IBI308 VI孵育阶段pH离线检测异常   M1b DS1 IBI308 VI pH off-line detection abnormal in incubation stage">
+                  <i class="fas fa-file-contract"></i><span class="Major">D-2021-0171</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2021-0175.pdf'" title="M1b DS1 碟片离心机CHT样品微生物限度超标  M1b DS1 Bioburden of dics centrifuge CHT sample out of limits">
+                  <i class="fas fa-bong"></i><span class="Major">D-2021-0175</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2021-0179.pdf'" title="M1b DS1 IBI308 2nd活细胞密度超出工艺范围  IBI308 2nd The density of viable cells is beyond the acceptable range of the process">
+                  <i class="fas fa-bong"></i><span class="Major">D-2021-0179</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2021-0180.pdf'" title="M1b DS2  WFI冲洗一级膜包程序体积设定错误    M1b DS2 WFI flushing first-stage filter program volume setting error">
+                  <i class="fas fa-bong"></i><span class="Minor">D-2021-0180</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2021-0184.pdf'" title="M1b DS1 液体滤芯完整性检测3次未通过 M1b DS1 the integrity test of liquid filter element failed for 3 times">
+                  <i class="fas fa-bong"></i><span class="Minor">D-2021-0184</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2021-0185.pdf'" title="M1b DS1 T0303罐呼吸器测试3次未通过 M1b DS1 T0303 tank air filter test failed 3 times">
+                  <i class="fas fa-file-contract"></i><span class="Major">D-2021-0185</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2021-0192.pdf'" title="M1b DS1 3000L-A反应器消泡剂补料手阀出现渗漏 Leakage of hand valve for Antifoam feed in M1b DS 3000L-A Bioreactor">
+                  <i class="fas fa-bong"></i><span class="Major">D-2021-0192</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2021-0203.pdf'" title="M1b DS1 收获程序无法运行至下一步The M1b DS1 harvest program could not run to the next step">
+                  <i class="fas fa-bong"></i><span class="Minor">D-2021-0203</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2021-0204.pdf'" title="M1b DS1 膜包前压力高，程序报警并HOLD,The high pressure in front of the membrane package causes the program alarm and hold">
+                  <i class="fas fa-bong"></i><span class="Minor">D-2021-0204</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2021-0210.pdf'" title="M1b DS1DS2103013AEX收集后平衡流量与BPR要求不符DS2103013 The flow of equilibration after AEX collection is not  in conformity with BPR">
+                  <i class="fas fa-file-contract"></i><span class="Minor">D-2021-0210</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2021-0216.pdf'" title="M1b DS1 3000L流加培养DO低于操作范围下限 M1b DS1 3000L Fed-Batch DO below operating limit">
+                  <i class="fas fa-bong"></i><span class="Major">D-2021-0216</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2021-0223.pdf'" title="M1b 2线种子扩增间未记录摇床培养参数   Parameters of incubator for M1b cell culture room were not recorded">
+                  <i class="fas fa-bong"></i><span class="Major">D-2021-0223</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2021-0224.pdf'" title="M1b DS2 IBI305 HIC wash阶段线性流速超出工艺规程上限IBI305 HIC wash linear flow rate beyond the upper limit of PFD00097">
+                  <i class="fas fa-file-contract"></i><span class="Critical">D-2021-0224</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2021-0225.pdf'" title="M1b DS1 IBI308 2ndAC层析柱清洁验证TOC样品破损 Damage of TOC sample for IBI308 2nd AC chromatographic column cleaning validation">
+                  <i class="fas fa-file-contract"></i><span class="Major">D-2021-0225</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2021-0227.pdf'" title="M1b CIP站(MFG-M1b2-115)淋洗水电导率超标 The conductivity of rinse water exceeds the standard  in M1b CIP station（(MFG-M1b2-115)）">
+                  <i class="fas fa-bong"></i><span class="Major">D-2021-0227</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2021-0230.pdf'" title="M1b DS1 IBI308 2nd CEX步骤上样载量低于操作范围 The sample load of IBI308 2nd CEX step is below the operating range">
+                  <i class="fas fa-file-contract"></i><span class="Minor">D-2021-0230</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2021-0234.pdf'" title="M1b DS2 CIP站(MFG-M1b3-114)淋洗水电导率超标  The conductivity of  CIP station（MFG-M1b2-114）rinse water exceeds the standard">
+                  <i class="fas fa-bong"></i><span class="Major">D-2021-0234</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2021-0239.pdf'" title="M1b DS1 IBI308 2nd VF收集液蛋白检测数据丢失 Protein detection data of IBI308 2nd VF pool was lost">
+                  <i class="fas fa-file-contract"></i><span class="Major">D-2021-0239</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2021-0243.pdf'" title="M1b DS1 IBI308 2nd EOPC活细胞密度超出范围  Viable cell density of EOPC  for IBI308 (2nd) out of operating range in M1b DS line 1">
+                  <i class="fas fa-bong"></i><span class="Minor">D-2021-0243</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2021-0244.pdf'" title="M1b DS1亲和层析cycle1 UV检测用稀释溶液pH未调中性 The pH of the buffer for UV testing sample dilution is not neutralized in DS2103015AC1">
+                  <i class="fas fa-file-contract"></i><span class="Minor">D-2021-0244</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2021-0248.pdf'" title="M1b DS2 人员使用超24小时效期的单页记录签批上岗证 M1b DS2 operator use the records beyond 24 hours validity to sign the work licence">
+                  <i class="fas fa-file-contract"></i><span class="Minor">D-2021-0248</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2021-0250.pdf'" title="M1b DS2 IBI305 超滤膜包使用后完整性测试误点击OK跳步IBI305 UFDF membrane post-use integrity test skipped due to click OK by mistake">
+                  <i class="fas fa-file-contract"></i><span class="Minor">D-2021-0250</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2021-0257.pdf'" title="M1b DS2 IBI305原液C6袋冻融容器漏液 the freeze-thaw container of C6 DS bulk is leaking">
+                  <i class="fas fa-file-contract"></i><span class="Major">D-2021-0257</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2021-0262.pdf'" title="MFG IBI308二代亲和层析系统清洁验证TOC超限IBI308 second generation affinity chromatography system cleaning validation TOC over limit">
+                  <i class="fas fa-file-contract"></i><span class="Major">D-2021-0262</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2021-0267.pdf'" title="M1b DS1 IBI308摇瓶内壁有异物 Foreign matter in the inner wall of shake flask for IBI308 in M1b DS1">
+                  <i class="fas fa-bong"></i><span class="Minor">D-2021-0267</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2021-0269.pdf'" title="M1b DS1 谷氨酰胺浓缩液储物袋取样口脱落 samling tubing of Glutamine solution storage bag was broken">
+                  <i class="fas fa-bong"></i><span class="Minor">D-2021-0269</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2021-0272.pdf'" title="M1b DS1 IBI308 2nd原液2-8℃暂存验证时间与方案不一致   M1b DS1  IBI308 2nd DS 2-8℃ storage validation time is inconsistent with protocol">
+                  <i class="fas fa-file-contract"></i><span class="Major">D-2021-0272</span></a></li> 
+            <li><a onClick="parent.show.location.href='D-2021-0276.pdf'" title="M1b DS1 SIP和CIP程序共用阀冲突导致WFI进入补料管路 SIP and CIP program  conflict with shared valve caused  WFI into feeding line">
+                  <i class="fas fa-bong"></i><span class="Major">D-2021-0276</span></a></li> 
+
+
+
+
+
+        </ul>
+    </div>
+    <section>
+        <iframe name="show" height="100%" width="100%" frameborder="0" src="D-2020-0131.pdf"></iframe>
+    </section>
+
+</body>
+
+</html>

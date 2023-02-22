@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<!-- saved from url=(0308)file:///R:/%E5%B7%A5%E8%89%BA%E5%BC%80%E5%8F%91%E9%83%A8/M2%E7%94%9F%E4%BA%A7%E7%BA%BF%E5%BB%BA%E8%AE%BE/02-M2b/01-DS%E5%91%98%E5%B7%A5%E5%9F%B9%E8%AE%AD%E8%B5%84%E6%96%99/%E4%B8%8B%E6%B8%B8%E7%BA%AF%E5%8C%96/M2%E5%85%B1%E4%BA%AB%E5%B9%B3%E5%8F%B0/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/%E9%A1%B9%E7%9B%AE.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=GBK">
+    
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" name="viewport">
+    <title>项目</title>
+    <link rel="shortcut icon" href="https://trello-attachments.s3.amazonaws.com/5d870c0418f7104546584cfb/5dcbcaedb6ca803685cc6fa0/a83d2af9b74ca6ddceec6ed84190fa15/Purification_(2).ico">
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+       
+        a{
+             text-decoration: none;
+             color: black;
+       }
+
+        #logo{
+             position: fixed;
+             width: 140px;
+             height: 40px;
+             padding: 10px;
+             margin-top: 25px;
+             margin-left:  30px;
+             cursor: pointer;
+             transition: all .5s ease;
+             border-radius: 5px;
+        }
+        
+       #logo:hover{
+             box-shadow: 0 0 20px;
+        }
+
+       #logo:active{
+             transform: translateY(8px);
+        }
+
+        .space{
+            width: 100vw;
+            height: 80px;
+            text-align: right;
+            position: relative;
+            right: 250px;
+            top: 60px;
+            font-size: 16px;
+            font-weight: 700;
+       }
+
+       #selectItem{
+            font-size: 16px;
+            width: 100px;
+            height: 30px;
+            border-radius: 5px;
+      }
+
+       body{
+			background-image: radial-gradient( circle farthest-corner at 6.6% 12%,  rgba(64,0,126,1) 20.8%, rgba(0,255,160,1) 100.2% );           
+           
+       }
+
+      .container{
+           display: flex;
+           position: relative;
+           flex-wrap: wrap;
+           width: 80vw;
+           height: 91.8vh;
+           left: 9vw;
+           justify-content: center;
+           align-items: center;
+          
+      }
+
+       .project{
+           width: 14vw;
+           padding: 20px;
+           background-color: white;
+           margin: 25px;
+           border-radius: 10px;
+           transition: .5s ease;
+           box-shadow: 4px -4px 3px #739EFE;
+      }
+
+
+
+      .project:hover{
+           box-shadow: 0 0 100px;
+           transform: translateY(3px);
+      }   
+
+     .xiangmu{
+           font-size: 30px;
+           margin-bottom: 70px;
+           margin-top: 20px;
+      }    
+
+ /*回到顶部*/ 
+        .arrow{ 
+            border: 9px solid transparent; 
+            border-bottom-color: #3DA0DB; 
+            width: 0; 
+            height: 0; 
+            top:0; 
+        } 
+        .stick{ 
+            width: 8px; 
+            height: 14px; 
+            border-radius: 1px; 
+            background-color: #3DA0DB; 
+            top:15px; 
+        } 
+        #back_top div{ 
+            position: absolute; 
+            margin: auto; 
+            right: 0; 
+            left: 0; 
+        } 
+        #back_top{ 
+            background-color: #dddddd; 
+            height: 38px; 
+            width: 38px; 
+            border-radius: 3px; 
+            display: block; 
+            cursor: pointer; 
+            position: fixed; 
+            right: 50px; 
+            bottom: 100px; 
+            display: none; 
+        } 
+        /*回到顶部结束*/ 
+
+
+    </style>
+</head>
+<body>
+
+<div id="logo" onclick="javascript:window.location.href='../M2共享平台.html'"><img width="140px" src="http://innoventbio.com/static/img/footer-logo-zh-new.284f4f5.png"></div>
+
+<div class="space">
+     <span>其它项目</span>
+    <select id="selectItem" onchange="selectItem()" onload="selectItem()">
+        <option>请选择</option>
+        <option value="IBI322">IBI322</option>
+        <option value="IBI318">IBI318</option>
+    </select>
+</div>
+<div class="container">
+
+
+<div class="project">
+<a href="IBI308/IBI308.html" target="_blank">
+    <p class="xiangmu">IBI308</p>
+    <img width="80%" src="http://inn-qc.iqiaomai.com/5f7133c58a3f5">
+</a>
+</div>
+
+
+
+<div class="project">
+<a href="IBI305/IBI305.html" target="_blank">
+    <p class="xiangmu">IBI305</p>
+    <img width="80%" src="http://inn-qc.iqiaomai.com/5fb7c1a2b71a2">
+</a>
+</div>
+
+
+
+<div class="project">
+<a href="IBI303/IBI303.html" target="_blank">
+    <p class="xiangmu">IBI303</p>
+    <img width="80%" src="http://inn-qc.iqiaomai.com/5fb7c1e3258b3">
+</a>
+</div>
+
+
+
+<div class="project">
+<a href="IBI301/IBI301.html" target="_blank">
+    <p class="xiangmu">IBI301</p>
+    <img width="80%" src="http://inn-qc.iqiaomai.com/5fb7c1f2e2ba5">
+</a>
+</div>
+
+
+</div>
+
+
+<!--回到顶部--> 
+    <div id="article"></div> 
+    <div id="back_top"> 
+        <div class="arrow"></div> 
+        <div class="stick"></div> 
+    </div> 
+    <script src="./项目_files/jquery.min.js.下载"></script> 
+    <script> 
+        $(function(){ 
+ 
+            $(window).scroll(function(){  //只要窗口滚动,就触发下面代码 
+ 
+                var scrollt = document.documentElement.scrollTop + document.body.scrollTop; //获取滚动后的高度 
+ 
+                if( scrollt >200 ){  //判断滚动后高度超过200px,就显示 
+ 
+                    $("#back_top").fadeIn(400); //淡入 
+ 
+                }else{ 
+ 
+                    $("#back_top").stop().fadeOut(400); //如果返回或者没有超过,就淡出.必须加上stop()停止之前动画,否则会出现闪动 
+ 
+                } 
+ 
+            }); 
+ 
+            $("#back_top").click(function(){ //当点击标签的时候,使用animate在200毫秒的时间内,滚到顶部 
+ 
+                $("html,body").animate({scrollTop:"0px"},200); 
+ 
+            }); 
+ 
+        }); 
+    </script> 
+<!--回到顶部结束--> 
+
+<script>
+
+
+
+function selectItem(){
+
+var i = document.getElementById("selectItem").value;
+
+switch(i){
+
+case "IBI322":
+window.location.href="IBI322/IBI322.html";
+break;
+
+case "IBI318":
+window.location.href="IBI318/IBI318.html";
+break;
+
+    };
+};
+
+(selectItem())();
+
+</script>
+
+
+
+
+
+</body></html>
